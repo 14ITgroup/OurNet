@@ -1,0 +1,942 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0051)http://www.cnblogs.com/cs_net/articles/2059097.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>C#里边的控件缩写大全（比较规范）</title>
+<style type="text/css"></style>  
+</head>
+<body>
+<a name="top"></a>
+
+<h1>C#里边的控件缩写大全（比较规范）</h1>
+<h2><a href="http://zh.wikipedia.org/zh-cn/%E9%A7%9D%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%AF%AB" target="_blank">驼峰式大小写（Camel-Case，Camel Case，camel case）</a></h2>
+<p>
+<strong>
+变量</strong>请使用小驼峰式命名法（lower camel case）：
+第一个单字以小写字母开始；第二个单字的首字母大写，例如：firstName、lastName。<br />
+<strong>控件</strong>请使用大驼峰式命名法（upper camel case）：
+以控件名缩写开头，每一个单字的首字母都采用大写字母，例如：TxtTitle,BtnSubmit。
+</p>
+
+<hr />
+
+<div id="main">
+	<div class="post">
+		<div id="cnblogs_post_body">
+<p><span size="4" style="font-size: medium;"><strong>标准控件</strong><br>1 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>btn <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>Button&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>chk <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>CheckBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ckl <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>CheckedListBox <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>4 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>cmb <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ComboBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>dtp <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>DateTimePicker&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>lbl <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>Label <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>7 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>llb <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>LinkLabel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>lst <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ListBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>lvw <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ListView <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>10 mtx <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>MaskedTextBox&nbsp; 11 cdr <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>MonthCalendar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 icn <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>NotifyIcon <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>13 nud <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>NumeircUpDown&nbsp;&nbsp; 14 pic <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>PictureBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15 prg <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ProgressBar <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>16 rdo <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>RadioButton&nbsp;&nbsp;&nbsp;&nbsp; 17 rtx <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>RichTextBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18 txt <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>TextBox <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>19 tip <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ToolTip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20 tvw <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>TreeView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21 wbs <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>WebBrowser <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br><strong>容器控件</strong><br>1 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>flp <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>FlowLayoutPanel&nbsp;&nbsp; 2 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>grp <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>GroupBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>pnl <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>Panel <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>4 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>spl <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>SplitContainer&nbsp;&nbsp;&nbsp; 5 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>tab <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>TabControl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>tlp <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>TableLayoutPanel <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br><strong>菜单和工具栏</strong><br>1 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>cms <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ContextMenuStrip <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>2 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>mns <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>MenuStrip <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>3 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ssr <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>StatusStrip <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>4 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>tsr <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ToolStrip <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>5 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>tsc <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ToolStripContainer <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br><strong>数据</strong><br>1 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>dts <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>DataSet <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>2 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>dgv <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>DataGridView <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>3 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>bds <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>BindingSource <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>4 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>bdn <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>BindingNavigator <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>5 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>rpv <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ReportViewer <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br><strong>对话框</strong><br>1 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>cld <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ColorDialog <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>2 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>fbd <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>FolderBrowserDialog <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>3 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>fnd <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>FontDialog <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>4 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ofd <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>OpenFileDialog <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>5 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>sfd <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>SaveFileDialog <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br><strong>组件</strong><br>1 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>bgw <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>BackgroundWorker <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>2 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>dre <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>DirectoryEntry <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>3 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>drs <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>DirectorySearcher <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>4 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>err <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ErrorProvider <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>5 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>evl <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>EventLog <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>6 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>fsw <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>FileSystemWatcher <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>7 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>hlp <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>HelpProvider <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>8 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>img <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ImageList <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>9 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>msq <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>MessageQueue <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>10 pfc <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>PerformanceCounter <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>11 prc <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>Process <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>12 spt <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>SerialPort <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>13 scl <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ServiceController <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>14 tmr <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>Timer <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br><strong>印刷</strong><br>1 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>psd <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>PageSetupDialog <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>2 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>prd <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>PrintDialog <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>3 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>pdc <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>PrintDocument <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>4 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>prv <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>PrintPreviewControl <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>5 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ppd <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>PrintPreviewDialog <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br><strong>水晶报表</strong><br>1 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>crv <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>CrystalReportViewer <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>2 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>rpd <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>ReportDocument <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br><strong>其他</strong><br>1 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>dud <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>DomainUpDown <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>2 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>hsc <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>HScrollBar <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>3 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>prg <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>PropertyGrid <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>4 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>spl <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>Splitter <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>5 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>trb <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>TrackBar <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><br>6 <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>vsc <wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr>VScrollBar</span></p>
+<p><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><wbr><span size="4" style="font-size: medium;">==============================================</span></p>
+<p><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------A-----------------&gt;</span></strong><br>AdRotator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ar</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------B-----------------&gt;</span></strong><br>Button&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; btn</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------C-----------------&gt;</span></strong><br>Calender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cal<br>CheckBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chk<br>CheckBoxList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chklst<br>Column (DataGridView的)&nbsp;&nbsp;&nbsp;&nbsp; col<br>ColumnHeader (ListView 的) ch<br>Combobox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cbo<br>CompareValidator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cv<br>CrystalReportViewer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rptvew</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------D-----------------&gt;</span></strong><br>DataGrid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dg<br>DataGridView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dgv<br>DataList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dl<br>DomainUpDown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dud<br>DropDownList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ddl</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------F-----------------&gt;</span></strong><br>FileUpload&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ful<br>Form&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; frm</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------G-----------------&gt;</span></strong><br>GridView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gv<br>GroupBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grp</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------H-----------------&gt;</span></strong><br>HiddenField&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hf</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------I-----------------&gt;</span></strong><br>Image&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; img<br>ImageButton&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; imgbtn<br>ImageList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; il</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------L-----------------&gt;</span></strong><br>Label&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lbl<br>LinkButton&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lnkbtn<br>ListBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lst<br>ListView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lv</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------M-----------------&gt;</span></strong><br>MenuStrip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ms</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------O-----------------&gt;</span></strong><br>ObjectDataSource&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ods</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------P-----------------&gt;<br></span></strong>PagedDataSource&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pds<br>Panel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pnl<br>PictureBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pic</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------R-----------------&gt;</span></strong><br>RadioButton&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rdo<br>RadioButtonList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rdolst<br>RangeValidator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rv<br>RegularExpressionValidator rev<br>Repeater&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rpt<br>RequiredFieldValidator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rfv</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------S-----------------&gt;</span></strong><br>StatusLabel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; slbl<br>StatusStrip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ss</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------T-----------------&gt;</span></strong><br>TabControl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tab<br>Table&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tbl<br>TabPage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tp<br>TextBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; txt <br>Timer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tmr<br>ToolStrip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ts<br>ToolStripButton&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tsbtn<br>ToolStripDropDownButton&nbsp;&nbsp;&nbsp;&nbsp; tsddb<br>ToolStripLabel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tslbl<br>ToolStripMenuItem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tsmi<br>TreeView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tv/tvw</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------V-----------------&gt;</span></strong><br>ValidatorSummary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vs</span></span></p>
+<p><br><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;"><strong><span color="#0000ff" style="color: #0000ff;">&lt;!--------------W-----------------&gt;</span></strong><br>WebBrowser</span></span></p>
+<p><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;">&nbsp;</span></span></p>
+<p><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;">&nbsp;</span></span></p>
+<p><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;">&nbsp;</span></span></p>
+<p><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;">&nbsp;</span></span></p>
+<p><span color="#003366" style="color: #003366;"><span size="4" style="font-size: medium;">__________________________________________Version2</span></span></p>
+<span style="text-decoration: underline;"><span color="#993300" size="3" style="color: #993300; font-size: small;">标准</span></span><a href="http://www.cnblogs.com/vincent_shi/archive/2009/11/25/1610251.html" id="ctl04_TitleUrl"><span color="#993300" size="3" style="color: #993300; font-size: small;">控件缩写规范</span></a><span color="#993300" size="3" style="color: #993300; font-size: small;"> </span><br>
+<table width="560" cellpadding="0" cellspacing="0" border="1">
+<tbody>
+<tr>
+<td width="250">
+<p style="text-indent: 2em;">类 型 </p>
+</td>
+<td width="150">
+<p style="text-indent: 2em;">前 缀 </p>
+</td>
+<td width="160">
+<p style="text-indent: 2em;">示 例 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Adrotator </p>
+</td>
+<td>
+<p style="text-indent: 2em;">adrt </p>
+</td>
+<td>
+<p style="text-indent: 2em;">adrtTopAd </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">BulletedList </p>
+</td>
+<td>
+<p style="text-indent: 2em;">blst </p>
+</td>
+<td>
+<p style="text-indent: 2em;">blstCity </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Button </p>
+</td>
+<td>
+<p style="text-indent: 2em;">btn </p>
+</td>
+<td>
+<p style="text-indent: 2em;">btnSubmit </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Calendar </p>
+</td>
+<td>
+<p style="text-indent: 2em;">cal </p>
+</td>
+<td>
+<p style="text-indent: 2em;">calMettingDates </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">CheckBox </p>
+</td>
+<td>
+<p style="text-indent: 2em;">chk </p>
+</td>
+<td>
+<p style="text-indent: 2em;">chkBlue </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">CheckBoxList </p>
+</td>
+<td>
+<p style="text-indent: 2em;">chkl </p>
+</td>
+<td>
+<p style="text-indent: 2em;">chklFavColors </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">DropDownList </p>
+</td>
+<td>
+<p style="text-indent: 2em;">drop </p>
+</td>
+<td>
+<p style="text-indent: 2em;">dropCountries </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">FileUpLoad </p>
+</td>
+<td>
+<p style="text-indent: 2em;">fup </p>
+</td>
+<td>
+<p style="text-indent: 2em;">fupImage </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">HiddenField </p>
+</td>
+<td>
+<p style="text-indent: 2em;">hfld </p>
+</td>
+<td>
+<p style="text-indent: 2em;">hfldName </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">HyperLink </p>
+</td>
+<td>
+<p style="text-indent: 2em;">hlk </p>
+</td>
+<td>
+<p style="text-indent: 2em;">hlkDetails </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Image </p>
+</td>
+<td>
+<p style="text-indent: 2em;">img </p>
+</td>
+<td>
+<p style="text-indent: 2em;">imgAuntBetty </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">ImageButton </p>
+</td>
+<td>
+<p style="text-indent: 2em;">ibtn </p>
+</td>
+<td>
+<p style="text-indent: 2em;">ibtnSubmit </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">ImageMap </p>
+</td>
+<td>
+<p style="text-indent: 2em;">imap </p>
+</td>
+<td>
+<p style="text-indent: 2em;">imapSite </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Label </p>
+</td>
+<td>
+<p style="text-indent: 2em;">lbl </p>
+</td>
+<td>
+<p style="text-indent: 2em;">lblResults </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">LinkButton </p>
+</td>
+<td>
+<p style="text-indent: 2em;">lbtn </p>
+</td>
+<td>
+<p style="text-indent: 2em;">lbtnSubmit </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">ListBox </p>
+</td>
+<td>
+<p style="text-indent: 2em;">lst </p>
+</td>
+<td>
+<p style="text-indent: 2em;">lstCountries </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Literal </p>
+</td>
+<td>
+<p style="text-indent: 2em;">ltl </p>
+</td>
+<td>
+<p style="text-indent: 2em;">ltlTitle </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Localize </p>
+</td>
+<td>
+<p style="text-indent: 2em;">loc </p>
+</td>
+<td>
+<p style="text-indent: 2em;">locChina </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">MultiView </p>
+</td>
+<td>
+<p style="text-indent: 2em;">mvw </p>
+</td>
+<td>
+<p style="text-indent: 2em;">mvwForm1 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Panel </p>
+</td>
+<td>
+<p style="text-indent: 2em;">pnl </p>
+</td>
+<td>
+<p style="text-indent: 2em;">pnlForm2 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">PlaceHolder </p>
+</td>
+<td>
+<p style="text-indent: 2em;">plh </p>
+</td>
+<td>
+<p style="text-indent: 2em;">plhFormContents </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">RadioButton </p>
+</td>
+<td>
+<p style="text-indent: 2em;">rad </p>
+</td>
+<td>
+<p style="text-indent: 2em;">radFemale </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">RadioButtonList </p>
+</td>
+<td>
+<p style="text-indent: 2em;">radl </p>
+</td>
+<td>
+<p style="text-indent: 2em;">radlGender </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">SubStitution </p>
+</td>
+<td>
+<p style="text-indent: 2em;">subs </p>
+</td>
+<td>
+<p style="text-indent: 2em;">subsTime </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Table </p>
+</td>
+<td>
+<p style="text-indent: 2em;">tbl </p>
+</td>
+<td>
+<p style="text-indent: 2em;">tblCountryCodes </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">TextBox </p>
+</td>
+<td>
+<p style="text-indent: 2em;">txt </p>
+</td>
+<td>
+<p style="text-indent: 2em;">txtFirstName </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">View </p>
+</td>
+<td>
+<p style="text-indent: 2em;">vw </p>
+</td>
+<td>
+<p style="text-indent: 2em;">vwCity </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Wizard </p>
+</td>
+<td>
+<p style="text-indent: 2em;">wiz </p>
+</td>
+<td>
+<p style="text-indent: 2em;">wizRegister </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Xml </p>
+</td>
+<td>
+<p style="text-indent: 2em;">xml </p>
+</td>
+<td>
+<p style="text-indent: 2em;">xmlBooks</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-indent: 2em;">&nbsp;</p>
+<p style="text-indent: 2em;">Data Control</p>
+<p style="text-indent: 2em;">&nbsp;</p>
+<table width="560" cellpadding="0" cellspacing="0" border="1">
+<tbody>
+<tr>
+<td width="250">
+<p style="text-indent: 2em;">类 型 </p>
+</td>
+<td width="150">
+<p style="text-indent: 2em;">前 缀 </p>
+</td>
+<td width="160">
+<p style="text-indent: 2em;">示 例 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">AccessDataSource </p>
+</td>
+<td>
+<p style="text-indent: 2em;">ads </p>
+</td>
+<td>
+<p style="text-indent: 2em;">adsPubs </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">DataList </p>
+</td>
+<td>
+<p style="text-indent: 2em;">dlst </p>
+</td>
+<td>
+<p style="text-indent: 2em;">dlstTitles </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">DetailView </p>
+</td>
+<td>
+<p style="text-indent: 2em;">dvw </p>
+</td>
+<td>
+<p style="text-indent: 2em;">dvwTitles </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">FormView </p>
+</td>
+<td>
+<p style="text-indent: 2em;">fvw </p>
+</td>
+<td>
+<p style="text-indent: 2em;">fvwFonts </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">GridView </p>
+</td>
+<td>
+<p style="text-indent: 2em;">gvw </p>
+</td>
+<td>
+<p style="text-indent: 2em;">gvwCity </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">ObjectDataSource </p>
+</td>
+<td>
+<p style="text-indent: 2em;">ods </p>
+</td>
+<td>
+<p style="text-indent: 2em;">odsMenus </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Repeater </p>
+</td>
+<td>
+<p style="text-indent: 2em;">rpt </p>
+</td>
+<td>
+<p style="text-indent: 2em;">rptQueryResults </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">ReportViewer </p>
+</td>
+<td>
+<p style="text-indent: 2em;">rvw </p>
+</td>
+<td>
+<p style="text-indent: 2em;">rvwRecord </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">SiteMapDataSource </p>
+</td>
+<td>
+<p style="text-indent: 2em;">smds </p>
+</td>
+<td>
+<p style="text-indent: 2em;">smdsSite </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">SqlDataSource </p>
+</td>
+<td>
+<p style="text-indent: 2em;">sds </p>
+</td>
+<td>
+<p style="text-indent: 2em;">sdsBooks </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">XmlDataSource </p>
+</td>
+<td>
+<p style="text-indent: 2em;">xds </p>
+</td>
+<td>
+<p style="text-indent: 2em;">xdsTitles</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-indent: 2em;">&nbsp;</p>
+<p style="text-indent: 2em;">Validation Control</p>
+<p style="text-indent: 2em;">&nbsp;</p>
+<table width="560" cellpadding="0" cellspacing="0" border="1">
+<tbody>
+<tr>
+<td width="250">
+<p style="text-indent: 2em;">类 型 </p>
+</td>
+<td width="150">
+<p style="text-indent: 2em;">前 缀 </p>
+</td>
+<td width="160">
+<p style="text-indent: 2em;">示 例 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">CompareValidator </p>
+</td>
+<td>
+<p style="text-indent: 2em;">valc </p>
+</td>
+<td>
+<p style="text-indent: 2em;">valcValidAge </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">CustomValidator </p>
+</td>
+<td>
+<p style="text-indent: 2em;">valx </p>
+</td>
+<td>
+<p style="text-indent: 2em;">valxDBCheck </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">RangeValidator </p>
+</td>
+<td>
+<p style="text-indent: 2em;">valg </p>
+</td>
+<td>
+<p style="text-indent: 2em;">valgAge </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">RegularExpressionValidator </p>
+</td>
+<td>
+<p style="text-indent: 2em;">vale </p>
+</td>
+<td>
+<p style="text-indent: 2em;">valeEmail </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">RequiredFieldValidator </p>
+</td>
+<td>
+<p style="text-indent: 2em;">valr </p>
+</td>
+<td>
+<p style="text-indent: 2em;">valrFirstName </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">ValidationSummary </p>
+</td>
+<td>
+<p style="text-indent: 2em;">vals </p>
+</td>
+<td>
+<p style="text-indent: 2em;">valsFormErrors</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-indent: 2em;">&nbsp;</p>
+<p style="text-indent: 2em;">Navigation Control</p>
+<p style="text-indent: 2em;">&nbsp;</p>
+<table width="560" cellpadding="0" cellspacing="0" border="1">
+<tbody>
+<tr>
+<td width="250">
+<p style="text-indent: 2em;">类 型 </p>
+</td>
+<td width="150">
+<p style="text-indent: 2em;">前 缀 </p>
+</td>
+<td width="160">
+<p style="text-indent: 2em;">示 例 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Menu </p>
+</td>
+<td>
+<p style="text-indent: 2em;">mnu </p>
+</td>
+<td>
+<p style="text-indent: 2em;">mnuUser1 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">SiteMapPath </p>
+</td>
+<td>
+<p style="text-indent: 2em;">smp </p>
+</td>
+<td>
+<p style="text-indent: 2em;">smpSite1 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">TreeView </p>
+</td>
+<td>
+<p style="text-indent: 2em;">trvw </p>
+</td>
+<td>
+<p style="text-indent: 2em;">trvwMenu</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-indent: 2em;">&nbsp;</p>
+<p style="text-indent: 2em;">Login Control</p>
+<p style="text-indent: 2em;">&nbsp;</p>
+<table width="560" cellpadding="0" cellspacing="0" border="1">
+<tbody>
+<tr>
+<td width="250">
+<p style="text-indent: 2em;">类 型 </p>
+</td>
+<td width="150">
+<p style="text-indent: 2em;">前 缀 </p>
+</td>
+<td width="160">
+<p style="text-indent: 2em;">示 例 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">ChangePassword </p>
+</td>
+<td>
+<p style="text-indent: 2em;">cpwd </p>
+</td>
+<td>
+<p style="text-indent: 2em;">cpwdUser1 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">CreateUserWizard </p>
+</td>
+<td>
+<p style="text-indent: 2em;">cuw </p>
+</td>
+<td>
+<p style="text-indent: 2em;">cuwLogin </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">Login </p>
+</td>
+<td>
+<p style="text-indent: 2em;">log </p>
+</td>
+<td>
+<p style="text-indent: 2em;">logCenter </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">LoginName </p>
+</td>
+<td>
+<p style="text-indent: 2em;">logn </p>
+</td>
+<td>
+<p style="text-indent: 2em;">lognUser </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">LoginStatus </p>
+</td>
+<td>
+<p style="text-indent: 2em;">logs </p>
+</td>
+<td>
+<p style="text-indent: 2em;">logsUser </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">LoginView </p>
+</td>
+<td>
+<p style="text-indent: 2em;">logv </p>
+</td>
+<td>
+<p style="text-indent: 2em;">logvUser </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">PasswordRecovery </p>
+</td>
+<td>
+<p style="text-indent: 2em;">pwdr </p>
+</td>
+<td>
+<p style="text-indent: 2em;">pwdrUser</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-indent: 2em;">&nbsp;</p>
+<p style="text-indent: 2em;">WebParts Control</p>
+<p style="text-indent: 2em;">&nbsp;</p>
+<table width="560" cellpadding="0" cellspacing="0" border="1">
+<tbody>
+<tr>
+<td width="250">
+<p style="text-indent: 2em;">类 型 </p>
+</td>
+<td width="150">
+<p style="text-indent: 2em;">前 缀 </p>
+</td>
+<td width="160">
+<p style="text-indent: 2em;">示 例 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">AppearanceEditorPart </p>
+</td>
+<td>
+<p style="text-indent: 2em;">paed </p>
+</td>
+<td>
+<p style="text-indent: 2em;">paedPart1 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">BehaviorEditorPart </p>
+</td>
+<td>
+<p style="text-indent: 2em;">pbed </p>
+</td>
+<td>
+<p style="text-indent: 2em;">pbedPart2 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">CatalogZone </p>
+</td>
+<td>
+<p style="text-indent: 2em;">zca </p>
+</td>
+<td>
+<p style="text-indent: 2em;">zcatCity </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">ConnectionsZone </p>
+</td>
+<td>
+<p style="text-indent: 2em;">zcon </p>
+</td>
+<td>
+<p style="text-indent: 2em;">zconDataBase </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">DeclarativeCatalogPart </p>
+</td>
+<td>
+<p style="text-indent: 2em;">pdca </p>
+</td>
+<td>
+<p style="text-indent: 2em;">pdcaPart1 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">EditorZone </p>
+</td>
+<td>
+<p style="text-indent: 2em;">zed </p>
+</td>
+<td>
+<p style="text-indent: 2em;">zedNews </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">ImportCatalogPart </p>
+</td>
+<td>
+<p style="text-indent: 2em;">pica </p>
+</td>
+<td>
+<p style="text-indent: 2em;">picaPart </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">LayoutEditorPart </p>
+</td>
+<td>
+<p style="text-indent: 2em;">pled </p>
+</td>
+<td>
+<p style="text-indent: 2em;">pledNews </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">PageCatalogPart </p>
+</td>
+<td>
+<p style="text-indent: 2em;">ppca </p>
+</td>
+<td>
+<p style="text-indent: 2em;">ppcaMail </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">PropertyGridEditorPart </p>
+</td>
+<td>
+<p style="text-indent: 2em;">ppge </p>
+</td>
+<td>
+<p style="text-indent: 2em;">ppgeServer </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">ProxyWebPartManager </p>
+</td>
+<td>
+<p style="text-indent: 2em;">mpwp </p>
+</td>
+<td>
+<p style="text-indent: 2em;">mpwpWeb </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">WebPartManager </p>
+</td>
+<td>
+<p style="text-indent: 2em;">mwp </p>
+</td>
+<td>
+<p style="text-indent: 2em;">mwpSite1 </p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p style="text-indent: 2em;">WebPartZone </p>
+</td>
+<td>
+<p style="text-indent: 2em;">zwp </p>
+</td>
+<td>
+<p style="text-indent: 2em;">zwpSite2</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><span color="#800000" size="3" style="color: #800000; font-size: small;">.net控件名缩写规范</span></p>
+<p>∞<br>基本类型： 数据类型缩写&nbsp; <br>string str&nbsp; <br>int i&nbsp; <br>char chr&nbsp; <br>sbyte sb&nbsp; <br>byte bt&nbsp; <br>uint ui&nbsp; <br>long l&nbsp; <br>ulong ul&nbsp; <br>float f&nbsp; <br>double d&nbsp; <br>bool b&nbsp; <br>decimal dec&nbsp;&nbsp; </p>
+<p><br>——————————————————————————————————————————<br>A、web控件 控件名缩写&nbsp; <br>AdRotator art&nbsp; <br>Button btn&nbsp; <br>Calendar cd&nbsp; <br>CheckBox chk&nbsp; <br>CheckBoxList chkl&nbsp; <br>CompareValidator cpv<br>CustomValidator ctv&nbsp; <br>DataGrid dg&nbsp; <br>DataList dl&nbsp; <br>DropDownList ddl&nbsp; <br>HyperLink hl&nbsp; <br>Image img&nbsp; <br>ImageButton Ibtn&nbsp; <br>Label lbl&nbsp; <br>ListBox lst&nbsp; <br>Panel pl&nbsp; <br>PlaceHolder ph&nbsp; <br>RadioButton rb&nbsp; <br>RadioButtonList rbl&nbsp; <br>RangeValidator rv&nbsp; <br>RegularExpressionValidator rev&nbsp; <br>Repeater rp&nbsp; <br>RequiredFieldValidator rfv&nbsp; <br>Table tb&nbsp; <br>TableCell tc&nbsp; <br>TableRow tr&nbsp; <br>TextBox txt&nbsp; <br>ValidationSummary vs&nbsp; <br>XML XML&nbsp;&nbsp; <br>——————————————————————————————————————————<br>B 、html控件 控件名缩写&nbsp; <br>HtmlAnchor hah&nbsp; <br>HtmlButton hbtn<br>HtmlForm hform<br>HtmlGenericControl hgc&nbsp; <br>HtmlImage himg&nbsp; <br>HtmlInputButton（按钮） htxt&nbsp; <br>HtmlInputButton（重置） hrbtn&nbsp; <br>HtmlInputButton（提交） hcbtn&nbsp; <br>HtmlInputCheckBox hick&nbsp; <br>HtmlInputFile hifile&nbsp; <br>HtmlInputHidden hihidden&nbsp; <br>HtmlInputImage hiimg&nbsp; <br>HtmlInputRadioButton hirb&nbsp; <br>HtmlInputText（密码） hpwd&nbsp; <br>HtmlInputText（文本） hitxt&nbsp; <br>HtmlSelect hslt&nbsp; <br>HtmlTable htab&nbsp; <br>HtmlTableCell htc&nbsp; <br>HtmlTableRow htr&nbsp; <br>HtmlTextArea htxta&nbsp;&nbsp; </p>
+<p>————————————————————————————————————————————<br>C 、ADO.NET控件 命名规范 类型前缀示例</p>
+<p>Connection con conNorthwind&nbsp; <br>Command cmd cmdReturnProducts&nbsp; <br>Parameter parm parmProductID&nbsp; <br>DataAdapter dad dadProducts&nbsp; <br>DataReader dtr dtrProducts&nbsp; <br>DataSet dst dstNorthWind&nbsp; <br>DataTable dtbl dtblProduct&nbsp; <br>DataRow drow drowRow98&nbsp; <br>DataColumn dcol dcolProductID&nbsp; <br>DataRelation drel drelMasterDetail&nbsp; <br>DataView dvw dvwFilteredProducts</p>
+<p><br>————————————————————————————————————————————<br>标准控件<br>1 btn Button <br>2 chk CheckBox <br>3 ckl CheckedListBox <br>4 cmb ComboBox <br>5 dtp DateTimePicker <br>6 lbl Label <br>7 llb LinkLabel <br>8 lst ListBox <br>9 lvw ListView <br>10 mtx MaskedTextBox <br>11 cdr MonthCalendar <br>12 icn NotifyIcon <br>13 nud NumeircUpDown <br>14 pic PictureBox <br>15 prg ProgressBar <br>16 rdo RadioButton <br>17 rtx RichTextBox <br>18 txt TextBox <br>19 tip ToolTip <br>20 tvw TreeView <br>21 wbs WebBrowser <br>容器控件<br>1 flp FlowLayoutPanel <br>2 grp GroupBox <br>3 pnl Panel <br>4 spl SplitContainer <br>5 tab TabControl <br>6 tlp TableLayoutPanel <br>菜单和工具栏<br>1 cms ContextMenuStrip <br>2 mns MenuStrip <br>3 ssr StatusStrip <br>4 tsr ToolStrip <br>5 tsc ToolStripContainer <br>数据<br>1 dts DataSet <br>2 dgv DataGridView <br>3 bds BindingSource <br>4 bdn BindingNavigator <br>5 rpv ReportViewer <br>对话框<br>1 cld ColorDialog <br>2 fbd FolderBrowserDialog <br>3 fnd FontDialog <br>4 ofd OpenFileDialog <br>5 sfd SaveFileDialog <br>组件<br>1 bgw BackgroundWorker <br>2 dre DirectoryEntry <br>3 drs DirectorySearcher <br>4 err ErrorProvider <br>5 evl EventLog <br>6 fsw FileSystemWatcher <br>7 hlp HelpProvider <br>8 img ImageList <br>9 msq MessageQueue <br>10 pfc PerformanceCounter <br>11 prc Process <br>12 spt SerialPort <br>13 scl ServiceController <br>14 tmr Timer <br>印刷<br>1 psd PageSetupDialog <br>2 prd PrintDialog <br>3 pdc PrintDocument <br>4 prv PrintPreviewControl <br>5 ppd PrintPreviewDialog <br>水晶报表<br>1 crv CrystalReportViewer <br>2 rpd ReportDocument <br>其他<br>1 dud DomainUpDown <br>2 hsc HScrollBar <br>3 prg PropertyGrid <br>4 spl Splitter <br>5 trb TrackBar <br>6 vsc VScrollBar</p>
+<p><br>==============================================</p>
+<p>&lt;!--------------A-----------------&gt;<br>AdRotator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ar</p>
+<p><br>&lt;!--------------B-----------------&gt;<br>Button&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; btn</p>
+<p><br>&lt;!--------------C-----------------&gt;<br>Calender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cal<br>CheckBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chk<br>CheckBoxList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chklst<br>Column (DataGridView的)&nbsp;&nbsp;&nbsp;&nbsp; col<br>ColumnHeader (ListView 的) ch<br>Combobox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cbo<br>CompareValidator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cv<br>CrystalReportViewer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rptvew</p>
+<p><br>&lt;!--------------D-----------------&gt;<br>DataGrid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dg<br>DataGridView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dgv<br>DataList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dl<br>DomainUpDown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dud<br>DropDownList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ddl</p>
+<p><br>&lt;!--------------F-----------------&gt;<br>FileUpload&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ful<br>Form&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; frm</p>
+<p><br>&lt;!--------------G-----------------&gt;<br>GridView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gv<br>GroupBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; grp</p>
+<p><br>&lt;!--------------H-----------------&gt;<br>HiddenField&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hf</p>
+<p><br>&lt;!--------------I-----------------&gt;<br>Image&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; img<br>ImageButton&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; imgbtn<br>ImageList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; il</p>
+<p><br>&lt;!--------------L-----------------&gt;<br>Label&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lbl<br>LinkButton&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lnkbtn<br>ListBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lst<br>ListView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lv</p>
+<p><br>&lt;!--------------M-----------------&gt;<br>MenuStrip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ms</p>
+<p><br>&lt;!--------------O-----------------&gt;<br>ObjectDataSource&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ods</p>
+<p><br>&lt;!--------------P-----------------&gt;<br>PagedDataSource&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pds<br>Panel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pnl<br>PictureBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pic</p>
+<p><br>&lt;!--------------R-----------------&gt;<br>RadioButton&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rdo<br>RadioButtonList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rdolst<br>RangeValidator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rv<br>RegularExpressionValidator rev<br>Repeater&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rpt<br>RequiredFieldValidator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rfv</p>
+<p><br>&lt;!--------------S-----------------&gt;<br>StatusLabel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; slbl<br>StatusStrip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ss</p>
+<p><br>&lt;!--------------T-----------------&gt;<br>TabControl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tab<br>Table&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tbl<br>TabPage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tp<br>TextBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; txt <br>Timer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tmr<br>ToolStrip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ts<br>ToolStripButton&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tsbtn<br>ToolStripDropDownButton&nbsp;&nbsp;&nbsp;&nbsp; tsddb<br>ToolStripLabel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tslbl<br>ToolStripMenuItem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tsmi<br>TreeView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tv/tvw</p>
+<p><br>&lt;!--------------V-----------------&gt;<br>ValidatorSummary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vs</p>
+<p><br>&lt;!--------------W-----------------&gt;<br>WebBrowser&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wb</p></div>
+	  
+	</div>
+	</div>
+</body></html>
