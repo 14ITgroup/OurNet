@@ -359,6 +359,7 @@
     <Content Include="admin\ueditor\ueditor.config.js" />
     <Content Include="admin\ueditor\ueditor.parse.js" />
     <Content Include="admin\ueditor\ueditor.parse.min.js" />
+    <Content Include="classTest\test.aspx" />
     <Content Include="Images\logo.png" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -392,6 +393,14 @@
     <Compile Include="admin\ueditor\net\App_Code\NotSupportedHandler.cs" />
     <Compile Include="admin\ueditor\net\App_Code\PathFormater.cs" />
     <Compile Include="admin\ueditor\net\App_Code\UploadHandler.cs" />
+    <Content Include="App_Code\EFHelper.cs" />
+    <Compile Include="classTest\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classTest\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
