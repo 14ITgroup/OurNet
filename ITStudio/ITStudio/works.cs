@@ -22,7 +22,7 @@ namespace ITStudio
         public int id { get; set; }
         public int typeId { get; set; }
         public string title { get; set; }
-        public System.DateTime time { get; set; }
+        public string time { get; set; }
         public string picture { get; set; }
         public string link { get; set; }
         public string introduction { get; set; }

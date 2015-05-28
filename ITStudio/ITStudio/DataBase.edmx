@@ -34,6 +34,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="gender" Type="bit" Nullable="false" />
           <Property Name="major" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="tel" Type="nvarchar" Nullable="false" MaxLength="50" />
@@ -77,7 +78,7 @@
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="typeId" Type="int" Nullable="false" />
           <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="time" Type="datetime" Nullable="false" />
+          <Property Name="time" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="picture" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="link" Type="nvarchar(max)" />
           <Property Name="introduction" Type="nvarchar(max)" Nullable="false" />
@@ -144,6 +145,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="gender" Type="Boolean" Nullable="false" />
           <Property Name="major" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="tel" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
@@ -190,7 +192,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="typeId" Type="Int32" Nullable="false" />
           <Property Name="title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="time" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="picture" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="link" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="introduction" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
@@ -243,6 +245,7 @@
             <EntityTypeMapping TypeName="ITStudioModel.applications">
               <MappingFragment StoreEntitySet="applications">
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="gender" ColumnName="gender" />
                 <ScalarProperty Name="major" ColumnName="major" />
                 <ScalarProperty Name="tel" ColumnName="tel" />
