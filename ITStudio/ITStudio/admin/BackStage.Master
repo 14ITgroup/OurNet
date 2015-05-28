@@ -48,9 +48,13 @@
                     <nav>
                         <ul id="menu">
                             <li><a id="A3" runat="server" href="admin/index.aspx">后台管理首页</a></li>
-                            <li><a id="A4" runat="server" href="admin/articles.aspx">文章管理</a></li>
-                            <li><a id="A5" runat="server" href="admin/videos.aspx">视频管理</a></li>
-                            <li><a id="A6" runat="server" href="admin/categories.aspx">文章分类标签管理</a></li>
+                            <li><a id="A4" runat="server" href="admin/articles.aspx">公告管理</a>
+                                <ul id="A4-1" style="visibility:hidden">
+                                    <li><a href="addNotice.aspx" runat="server">添加公告</a></li>
+                                    <li><a href="addNotice.aspx" runat="server">管理公告</a></li>
+                                </ul>
+                            </li>
+                            <li><a id="A5" runat="server" href="admin/videos.aspx">作品管理</a></li>
                             <li><a id="A7" runat="server" href="admin/admins.aspx">管理员管理</a></li>
                         </ul>
                     </nav>
@@ -73,3 +77,13 @@
     </form>
 </body>
 </html>
+<script>
+    $(document).ready(function () {
+        $("#A4,#A4-1").click(function () {
+            $("p").hide();
+        });
+        $("##A4,#A4-1").click(function () {
+            $("p").show();
+        });
+    });
+</script>

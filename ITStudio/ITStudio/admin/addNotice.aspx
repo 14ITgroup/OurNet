@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/BackStage.Master" AutoEventWireup="true" CodeBehind="addArticle.aspx.cs" Inherits="ITStudio.admin.addArticle" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/BackStage.Master" AutoEventWireup="true" CodeBehind="addNotice.aspx.cs" Inherits="ITStudio.admin.addArticle" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
   <script type="text/javascript" charset="utf-8" src="../admin/ueditor/ueditor.config.js"></script>
     <script type="text/javascript" charset="utf-8" src="../admin/ueditor/ueditor.all.min.js"></script>
