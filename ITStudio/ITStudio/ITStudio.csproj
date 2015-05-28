@@ -88,7 +88,6 @@
     <Content Include="admin\Scripts\js\menu.js" />
     <Content Include="admin\Scripts\modernizr-2.6.2.js" />
     <Content Include="admin\Scripts\_references.js" />
-    <Content Include="admin\test.aspx" />
     <Content Include="admin\ueditor\dialogs\anchor\anchor.html" />
     <Content Include="admin\ueditor\dialogs\attachment\attachment.css" />
     <Content Include="admin\ueditor\dialogs\attachment\attachment.html" />
@@ -377,13 +376,6 @@
     </Compile>
     <Compile Include="admin\BackStage.Master.designer.cs">
       <DependentUpon>BackStage.Master</DependentUpon>
-    </Compile>
-    <Compile Include="admin\test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\ueditor\net\App_Code\Config.cs" />
     <Compile Include="admin\ueditor\net\App_Code\ConfigHandler.cs" />
