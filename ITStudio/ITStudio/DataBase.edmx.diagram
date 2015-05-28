@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bd3f36051c4c47c7be6fef01eedd97b1" Name="关系图1">
+      <Diagram DiagramId="77ac07bbfc474860a8ee75f7a9c1cb7d" Name="关系图1">
         <EntityTypeShape EntityType="ITStudioModel.admins" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ITStudioModel.applications" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ITStudioModel.members" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />

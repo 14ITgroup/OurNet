@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="getCaptcha.aspx.cs" Inherits="ITStudio.admin.getCaptcha" %>

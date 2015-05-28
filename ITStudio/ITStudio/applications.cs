@@ -15,6 +15,7 @@ namespace ITStudio
     public partial class applications
     {
         public int id { get; set; }
+        public string name { get; set; }
         public bool gender { get; set; }
         public string major { get; set; }
         public string tel { get; set; }
