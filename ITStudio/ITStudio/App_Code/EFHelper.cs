@@ -7,7 +7,8 @@ using System.Reflection;
 using System.Web;
 
 namespace ITStudio.App_Code
-{/// <summary>
+{
+    /// <summary>
     /// EFHelper 的摘要说明
     /// </summary>
     public class EFHelpler<T> where T : class
@@ -97,8 +98,6 @@ namespace ITStudio.App_Code
         */
 
 
-
-
         /// <summary>
         /// 按照条件修改数据
         /// </summary>
@@ -131,5 +130,18 @@ namespace ITStudio.App_Code
              helper.update(item => item.UserName.Contains("keso"), dic);
              Console.WriteLine("修改成功");
        */
+    }
+    public class validatint
+    {
+        bool validate(string userName, string password)
+        {
+            ITStudioEntities dbContext = new ITStudioEntities();
+            EFHelpler<admins> helper = new EFHelpler<admins>();
+            var query = helper.getSearchList(item => item.name==userName&&item.password==password);
+            if (query == null)
+                return false;
+            else
+                return true;
+        }
     }
 }
