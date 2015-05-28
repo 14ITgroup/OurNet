@@ -90,6 +90,7 @@
     <Content Include="admin\Images\orderedList7.png" />
     <Content Include="admin\Images\orderedList8.png" />
     <Content Include="admin\Images\orderedList9.png" />
+    <Content Include="admin\index.aspx" />
     <Content Include="admin\login.aspx" />
     <Content Include="admin\Scripts\jquery-1.8.2.js" />
     <Content Include="admin\Scripts\jquery-1.8.2.min.js" />
@@ -394,6 +395,16 @@
     <Compile Include="admin\BackStage.Master.designer.cs">
       <DependentUpon>BackStage.Master</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+>>>>>>> origin/master
     <Compile Include="App_Code\captcha.cs" />
     <Compile Include="admin\getCaptcha.aspx.cs">
       <DependentUpon>getCaptcha.aspx</DependentUpon>
@@ -409,6 +420,7 @@
     <Compile Include="admin\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="admin\test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -416,6 +428,8 @@
     <Compile Include="admin\test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
+=======
+>>>>>>> origin/master
     <Compile Include="admin\ueditor\net\App_Code\Config.cs" />
     <Compile Include="admin\ueditor\net\App_Code\ConfigHandler.cs" />
     <Compile Include="admin\ueditor\net\App_Code\CrawlerHandler.cs" />
