@@ -393,8 +393,6 @@
     <Compile Include="admin\BackStage.Master.designer.cs">
       <DependentUpon>BackStage.Master</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="App_Code\captcha.cs" />
     <Compile Include="admin\getCaptcha.aspx.cs">
       <DependentUpon>getCaptcha.aspx</DependentUpon>
@@ -410,14 +408,6 @@
     <Compile Include="admin\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-    </Compile>
->>>>>>> origin/master
     <Compile Include="admin\ueditor\net\App_Code\Config.cs" />
     <Compile Include="admin\ueditor\net\App_Code\ConfigHandler.cs" />
     <Compile Include="admin\ueditor\net\App_Code\CrawlerHandler.cs" />
