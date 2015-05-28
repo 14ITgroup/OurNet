@@ -47,16 +47,22 @@
                     </section>
                     <nav>
                         <ul id="menu">
-                            <li><a id="A3" runat="server" href="admin/index.aspx">后台管理首页</a></li>
-                            <li><a id="A4" runat="server" href="admin/articles.aspx">公告管理</a>
-                                <ul id="A4-1" style="visibility:hidden">
+                            <li><a id="A3" runat="server" href="#">后台管理首页</a></li>
+                            <li><a id="A4" runat="server" href="#">公告管理</a>
+                                <ul id="A4-1" style="display:none;float:left" >
                                     <li><a href="addNotice.aspx" runat="server">添加公告</a></li>
                                     <li><a href="addNotice.aspx" runat="server">管理公告</a></li>
                                 </ul>
                             </li>
-                            <li><a id="A5" runat="server" href="admin/videos.aspx">作品管理</a></li>
-                            <li><a id="A7" runat="server" href="admin/admins.aspx">管理员管理</a></li>
+                            <li><a id="A5" runat="server" href="#">作品管理</a>
+                                <ul id="A5-1" style="display:none;float:right">
+                                    <li><a href="addNotice.aspx" runat="server">添加作品</a></li>
+                                    <li><a href="addNotice.aspx" runat="server">管理作品</a></li>
+                                </ul>
+                            </li>
                         </ul>
+                        <p>
+                            &nbsp;</p>
                     </nav>
                 </div>
             </div>
@@ -79,11 +85,19 @@
 </html>
 <script>
     $(document).ready(function () {
-        $("#A4,#A4-1").click(function () {
-            $("p").hide();
+        $("#A4,#A4-1").mouseover(function () {
+            $("#A4-1").show();
         });
-        $("##A4,#A4-1").click(function () {
-            $("p").show();
+        $("#A4,#A4-1").mouseout(function () {
+            $("#A4-1").hide();
+        });
+    });
+    $(document).ready(function () {
+        $("#A5,#A5-1").mouseover(function () {
+            $("#A5-1").show();
+        });
+        $("#A5,#A5-1").mouseout(function () {
+            $("#A5-1").hide();
         });
     });
 </script>

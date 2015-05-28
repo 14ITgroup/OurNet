@@ -73,6 +73,7 @@
   <ItemGroup>
     <None Include="admin\Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="admin\addNotice.aspx" />
+    <Content Include="admin\addWorks.aspx" />
     <Content Include="admin\Content\Site.css" />
     <Content Include="admin\getCaptcha.aspx" />
     <Content Include="admin\Images\accent.png" />
@@ -386,6 +387,13 @@
     <Compile Include="admin\addNotice.aspx.designer.cs">
       <DependentUpon>addNotice.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\addWorks.aspx.cs">
+      <DependentUpon>addWorks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\addWorks.aspx.designer.cs">
+      <DependentUpon>addWorks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\BackStage.Master.cs">
       <DependentUpon>BackStage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -496,7 +504,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Images\workPicture\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
