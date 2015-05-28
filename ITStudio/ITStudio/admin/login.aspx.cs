@@ -25,7 +25,7 @@ namespace ITStudio.admin
                 }
             }
 
-            // ####此处可以尝试删除，反复测试登录时是否可以一次成功。
+            // ####最终完成时，此处可以尝试删除，反复测试登录时是否可以一次成功。
             // 在getCaptcha中使用Session["captcha"]=xxxx后，服务器有时不会自动response Cookie：sessionid，
             //导致下一次request的访问session为NULL
             if (Session["captcha"] == null)
@@ -56,10 +56,8 @@ namespace ITStudio.admin
                 return;
             }
 
-            // ### 说明：此处 EFHelper应提供验证函数。
-            //bool check = validate(name, password);
-
-            if (false) // ####
+            // 开始验证用户名和密码
+            if (!EFHelper.isAdminValidated(name,passwordHash))
             {
                 e.Authenticated = false; //表示登录失败
             }

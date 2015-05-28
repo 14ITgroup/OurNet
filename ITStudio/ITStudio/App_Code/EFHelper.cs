@@ -14,6 +14,7 @@ namespace ITStudio.App_Code
     public class EFHelpler<T> where T : class
     {
         ITStudioEntities dbContext = new ITStudioEntities();
+
         /// <summary>
         /// 实体新增
         /// </summary>
@@ -43,10 +44,6 @@ namespace ITStudio.App_Code
      */
 
 
-
-
-
-
         /// <summary>
         /// 实体查询
         /// </summary>
@@ -54,6 +51,8 @@ namespace ITStudio.App_Code
         {
             return dbContext.Set<T>().Where(where);
         }
+
+
         /// <summary>
         /// 实体分页查询
         /// </summary>
@@ -76,8 +75,6 @@ namespace ITStudio.App_Code
                Console.WriteLine(user.UserName);
            }
         */
-
-
 
 
         /// <summary>
@@ -131,14 +128,21 @@ namespace ITStudio.App_Code
              Console.WriteLine("修改成功");
        */
     }
-    public class validatint
+
+    public class EFHelper
     {
-        bool validate(string userName, string password)
+        /// <summary>
+        /// 验证管理员登录时输入的 用户名 密码（应提前Hash）
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <returns>返回 bool 类型值，true为通过验证。</returns>
+        static public bool isAdminValidated(string userName, string password)
         {
             ITStudioEntities dbContext = new ITStudioEntities();
             EFHelpler<admins> helper = new EFHelpler<admins>();
             var query = helper.getSearchList(item => item.name==userName&&item.password==password);
-            if (query == null)
+            if (query.Count() == 0)
                 return false;
             else
                 return true;
