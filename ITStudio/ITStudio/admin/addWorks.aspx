@@ -35,17 +35,17 @@
                 <asp:ListItem Value="4">其他作品</asp:ListItem>
             </asp:DropDownList>
             <br />
-            作品完成时间：<br />
-        <asp:TextBox ID="txtTime" runat="server" placeholder="请填写标题" Font-Bold="True" Font-Size="X-Large" MaxLength="40" Width="459px" onfocus="checkForm()" onblur="checkForm()"></asp:TextBox>
+            作品完成时间：<br /><asp:TextBox ID="txtTime" runat="server" placeholder="请填写时间" Font-Bold="True" Font-Size="X-Large" MaxLength="40" Width="459px" onfocus="checkForm()" onblur="checkForm()"></asp:TextBox>
+        
         
             <br />
             网站链接(可不填写)：<br />
-        <asp:TextBox ID="txtLink" runat="server" placeholder="请填写标题" Font-Bold="True" Font-Size="X-Large" MaxLength="40" Width="459px" onfocus="checkForm()" onblur="checkForm()"></asp:TextBox>
+        <asp:TextBox ID="txtLink" runat="server" placeholder="请填写网站链接" Font-Bold="True" Font-Size="X-Large" MaxLength="40" Width="459px" onfocus="checkForm()" onblur="checkForm()"></asp:TextBox>
         
             </span>
             <br />
 
-            <asp:Button ID="btnSubmit" runat="server" Text="提交" Font-Bold="True" Font-Size="XX-Large" OnClick="BtnSubmit_Click" Enabled="False" />
+            <asp:Button ID="btnSubmit" runat="server" Text="提交" Font-Bold="True" Font-Size="XX-Large" OnClick="BtnSubmit_Click" Enabled="False" Height="68px" />
             <asp:Label ID="LblStatus" runat="server" Font-Bold="True" Text="状态" Visible="False"></asp:Label>
         </div>
 

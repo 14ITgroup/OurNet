@@ -20,35 +20,36 @@ namespace ITStudio.admin
 
         protected void BtnSubmit_Click(object sender, EventArgs e)
         {
-            ////避免js失效，后端验证
-            //string title = "";
-            //if (txtTitle.Text != null || txtTitle.Text.Trim() != "")
-            //{
-            //    title = HttpUtility.HtmlEncode(txtTitle.Text);
-            //}
-            //else
-            //{
-            //    LblStatus.Text = "请填写标题";
-            //    LblStatus.Visible = true;
-            //    return;
-            //}
+            //避免js失效，后端验证
+            string title = txtTitle.Text;
+            if (txtTitle.Text == null || txtTitle.Text.Trim() == "")
+            {
+                LblStatus.Text = "请填写标题";
+                LblStatus.Visible = true;
+                return;
+            }
+            string content = txtIntroduction.InnerText;
+            if (content == null || content.Trim() == "")
+            {
+                LblStatus.Text = "请填写内容";
+                LblStatus.Visible = true;
+                return;
+            }
 
-            //string content = txtIntroduction.InnerText;
-            //if (content == null || content.Trim() == "")
-            //{
-            //    LblStatus.Text = "请填写内容";
-            //    LblStatus.Visible = true;
-            //    return;
-            //}
-
-            //string workPicName = uploadWorkPic();
-            //if (workPicName == null || workPicName.Trim() == "")
-            //{
-            //    LblStatus.Text = "请选择作品图片";
-            //    LblStatus.Visible = true;
-            //    return;
-            //}
-
+            string workPicName = uploadWorkPic();
+            if (workPicName == null || workPicName.Trim() == "")
+            {
+                LblStatus.Text = "请选择作品图片";
+                LblStatus.Visible = true;
+                return;
+            }
+            string time = txtTime.Text;
+            if (time == null || time.Trim() == "")
+            {
+                LblStatus.Text = "请填写时间";
+                LblStatus.Visible = true;
+                return;
+            }
             //存储作品到works表
             using (var db = new ITStudioEntities())
             {
@@ -61,7 +62,7 @@ namespace ITStudio.admin
                 work.link = txtLink.Text;
                 db.works.Add(work);
                 db.SaveChanges();
-            }
+            } 
             ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('添加成功');</script>");
             txtTitle.Text = "";
             txtIntroduction.InnerText = "";

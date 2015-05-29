@@ -47,22 +47,12 @@
                     </section>
                     <nav>
                         <ul id="menu">
-                            <li><a id="A3" runat="server" href="#">后台管理首页</a></li>
-                            <li><a id="A4" runat="server" href="#">公告管理</a>
-                                <ul id="A4-1" style="display:none;float:left" >
-                                    <li><a href="addNotice.aspx" runat="server">添加公告</a></li>
-                                    <li><a href="addNotice.aspx" runat="server">管理公告</a></li>
-                                </ul>
-                            </li>
-                            <li><a id="A5" runat="server" href="#">作品管理</a>
-                                <ul id="A5-1" style="display:none;float:right">
-                                    <li><a href="addNotice.aspx" runat="server">添加作品</a></li>
-                                    <li><a href="addNotice.aspx" runat="server">管理作品</a></li>
-                                </ul>
-                            </li>
+                            <li><a id="A3" runat="server" href="index.aspx">后台管理首页</a></li>              
+                            <li><a href="addNotice.aspx" runat="server">添加公告</a></li>
+                            <li><a href="myNotice.aspx" runat="server">编辑公告</a></li>
+                            <li><a href="addWorks.aspx" runat="server">添加作品</a></li>
+                            <li><a href="myWorks.aspx" runat="server">编辑作品</a></li>
                         </ul>
-                        <p>
-                            &nbsp;</p>
                     </nav>
                 </div>
             </div>
