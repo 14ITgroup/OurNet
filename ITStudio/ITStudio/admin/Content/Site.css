@@ -391,20 +391,20 @@ fieldset {
         }
 
     label {
-        display: b
+        display: block;
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    label.checkbox {
+        display: inline;
+    }
 
     input, textarea {
         border: 1px solid #e2e2e2;
         background: #fff;
         color: #333;
-        font-size: x-large;
-        margin: 5px 0 6px 0;
-        padding: 5px;
-        }
-
-    
-        color: #333;
-        font-size: x-large;
+        font-size: 1.2em;
         margin: 5px 0 6px 0;
         padding: 5px;
         }
@@ -434,8 +434,8 @@ fieldset {
         font-weight: 600;
         padding: 7px;
         margin-right: 8px;
-    margin-top: 0px;
-}
+        width: auto;
+    }
 
     td input[type="submit"],
     td input[type="button"],
@@ -731,5 +731,4 @@ tr.pager td {
             margin: 0;
         }
 }
-
 /* END: Mobile Styles */
