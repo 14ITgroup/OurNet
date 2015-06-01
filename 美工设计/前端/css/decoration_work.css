@@ -1,19 +1,21 @@
-.index_works{
-	margin: 10px 13% 10px 15%;
+/*work*/
+.all .index_works{
+	margin: 116px 13% 10px 13%;
+	width: 80%;
 	overflow: hidden;
 }
 .index_works li{
 	display: block;
 	float: left;
-	height: 50px;	
+	height: 50px;
 }
 .index_works img{
 	float: left;
 	margin:12px 10px 0 0;
 }
-.index_works a{
+.all .index_works a{
 	height: 50px;	
-	padding: 0 36px;	
+	padding: 0 40px;	
 	float: left;
 	font: 16px/50px '微软雅黑' san-serif;
 }
@@ -21,8 +23,10 @@
 	color: black;
 	background: url(../images/All_hover.jpg);
 }
-.display_works{
-	margin: 30px 0 0px 8.7%;
+.main .display_works{
+	margin: 0px 12% 0 12%;
+	float: left;
+	width: 80%;
 }
 .display_word {
 	margin: 30px 0 0px 30%;
@@ -30,13 +34,13 @@
 }
 .display_works li{
 	float: left;
-	width: 339px;
+	width: 30%;
 	margin: 30px 20px 0 0;
-	text-align: center;
 }
 .display_works>li>a>img{
 	display: block;
-	margin: 0 0 10px 14%;
+	width: 100%;
+	margin: 0 0 10px 10px;
 }
 .display_works .display_pic {
 	margin-bottom: 30px;
@@ -45,14 +49,13 @@
 	color: black;
 	text-decoration: underline;
 }
-.pages{
-	overflow: hidden;
-}
-.pages>ul{
+
+.main .pages>ul{
 	width: 334px;
 	margin:0 auto;
+	float: none;
 }
-.pages>ul>li{
+.main .pages>ul>li{
 	float: left;
 	display: block;
 	width: 27px;
@@ -60,33 +63,34 @@
 	margin: 50px 10px 30px 0;
 	text-align: center;
 }
-.pages>ul>li>a{
+.main .pages>ul>li>a{
 	display: block;
 	width: 27px;
 	height: 30px;
 }
-.pages>ul>li:first-child>a>div
+
+.main .pages>ul>li:first-child>a>div
 {
 	width: 100%;
 	height: 100%;
 	background: url(../images/page_arrow_l.png);
 }
-.pages>ul>li:first-child>a>div:hover{
+.main .pages>ul>li:first-child>a>div:hover{
 	background: url(../images/page_arrow_l_hover.png);
 }
-.pages>ul>li>a:hover{
+.main .pages>ul>li>a:hover{
 	color: white;
 	background: url(../images/page.png);
 }
-.pages>ul>li>a>div{
+.main .pages>ul>li>a>div{
 	width: 100%;
 	height: 100%;
 	background: url(../images/page_arrow_r.png);
 }
-.pages>ul>li>a>div:hover{
+.main .pages>ul>li>a>div:hover{
 	background: url(../images/page_arrow_r_hover.png);
 }
-
+/*work hover*/
 .hide{
 	width: 100%;
 	height: 100%;
@@ -102,7 +106,7 @@
 	position:fixed;
 	left: 84%;
 	top: 8%;
-	z-index: 100;
+	z-index: 1000;
 }
 .X a:hover{
 	background: url(../images/X_hover.png);
@@ -142,9 +146,99 @@
 .arrr a:hover{
 	background: url(../images/arrr_hover.png);
 }
-p{
+.hide>p{
 	color: white;
 	margin: 0px 14% ;
 	position: fixed;
 	top: 85%;
+}
+
+/*personal*/
+
+
+.main>img:first-child{
+	margin: 90px 0 0 33%;
+	width: 37.6%;
+}
+.main>img+div{
+	margin:10px 0 0 48%; 
+	float: left;
+	background: #fdcb56;
+	height:35px ;
+	width: 11px;
+}
+.main>h1{
+	margin: 0 33% 0 0;
+}
+.main>h1+ul{
+	margin: 5px 0 0 27%;
+	clear: both;
+}
+.main>h1+ul>img+p{
+	float: left;
+}
+.main>h1+ul>img{
+	margin: 14px 20px 20px 20px;	
+	float: left;
+	width: 26%;
+}
+.main>div+h1{
+	float: left;
+	margin: 10px 0 10px 30px;
+	font: 30px/36px '微软雅黑' san-serif ;
+	font-weight: bold;
+}
+.main>ul+h5{
+	clear: both;
+	margin: 0 13%;
+}
+.main>h5+p{
+	margin: 0 0 40px 15%;
+}
+.main>p+div{
+	margin:10px 0 0 13%; 
+	float: left;
+	background: #fdcb56;
+	height:35px ;
+	width: 11px;
+}
+.main>div+p{
+	float: left;
+	margin: 10px 0 10px 30px;
+	font: 30px/36px '微软雅黑' san-serif ;
+	font-weight: bold;
+}
+.main>ul>h3>a:hover{
+	color: #40c381;
+}
+.main>ul>p>a:hover{
+	color: #fdcb56;
+}
+.main>p>a:hover{
+	color: #40c381;
+}
+.main>ul+div{
+	width: 80%;
+	height:50% ;
+	margin: 10px 5px 0 13%;
+}
+.main>div>ul{
+	margin:30px 5px 0 0; 
+	float: left;
+	width: 32%;
+}
+.main>div>ul>a>img{
+	width: 100%;
+	height: 100%;
+}
+.main>div>ul>h3,.main>div>ul>p{
+	text-align: center;
+}
+.main>div>ul>p+p{
+	
+	margin: 0 0 20px 0;
+}
+
+.clr{
+	clear: both;
 }

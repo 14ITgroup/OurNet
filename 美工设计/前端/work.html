@@ -1,10 +1,10 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>Work</title>
-	<link rel="stylesheet" href="./css/decoration.css">
 	<link rel="stylesheet" href="./css/decoration_work.css">
+	<link rel="stylesheet" href="./css/home.css" />
 </head>
 <body>
 	<div class="hide" style="display:none;">
@@ -15,21 +15,16 @@
 			<p>After spending many afternoons learning and observing how we worked, Modulus was able to design different spaces for the needs of our team. They spent countless hours going back and forth with us discussing everything from lighting to acoustics. It was incredible. Designing for a bunch of designers isn't the easiest of jobs.</p>
 	</div>
 	<div class="countainer">
-		<div class="header">
-            <div class="neck">
-                <div class="index">
-                <img src="./images/band.png" alt="" />
-                    <ul class="indexs">
-                        <li><a href="home2.html" target="_blank">Home</a></li>
-                        <li><a href="team.html" target="_blank">Team</a></li>
-                        <li><a href="work.html">Work</a></li>
-                        <li><a href="service.html" target="_blank">Service</a></li>
-                        <li><a href="about.html" target="_blank">About</a></li>
-                    </ul>
-                <div class="re"><a href="#" >Register Now</a></div>
-                <div class="log"><a href="#">log in</a></div> 
-                </div>                
-            </div>			
+		<div id="header">
+	        <ul class="index">
+			<a href="home.html"></a>
+		    <li><a href="home.html">首页</a></li>
+		    <li><a href="team.html" target="_blank">简介</a></li>
+		    <li><a href="work.html" target="_blank">作品</a></li>
+		    <li><a href="service.html" target="_blank">团队</a></li>
+		    <li><a href="about.html" target="_blank">留言板</a></li>
+		    <div class="index-register"><a href="#">Join us now</a></div>
+			</ul>
 		</div>
 		<div class="main">
 			<div class="all">
@@ -97,21 +92,19 @@
 			</div>
 		</div>
 		<div class="clr"></div>
-		<div class="footer">
-                <ul class="contact">
-                    <li class="pic pic1"><a href=""></a></li>
-                    <li class="pic pic2"><a href=""></a></li>
-                    <li class="pic pic3"><a href=""></a></li>
-                    <li class="pic pic4"><a href=""></a></li>
-                </ul>
-                <div class="clr"></div>
-                <p>Copyrights@2014 All rights reserved.</p>      			
-		</div>
-	</div>
-	<script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="./js/lrtk.js"></script>
-	<script type="text/javascript" src="./js/jquery.js"></script>
-	<script type="text/javascript">
+	<div class="footer-bg">
+  		<div class="footer-container">
+		    <h1>Copyrights@2015</h1>
+		    <img src="./images/it-ico.png" alt="#" ></a>
+		    <h1>All rights reserved.</h1>
+		    <div style="clear: both"></div>
+  		</div>
+  	</div>
+</div>
+<script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="./js/lrtk.js"></script>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript">
 $(document).ready(function() {
 	$(".display_works>li>a").click(function(){
  	$(".hide").show();
