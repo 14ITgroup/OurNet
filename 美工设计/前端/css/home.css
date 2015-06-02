@@ -4,9 +4,9 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 }
 body { 
 	background:#fff;
-	 color:#555; font-size:
-	 14px; font-family:
-	  Verdana, Arial, Helvetica, sans-serif; 
+	 color:#555;
+	  font-size: 14px;
+	  font-family: Verdana, Arial, Helvetica, sans-serif; 
 	}
 td,th,caption { 
 	font-size:14px; 
@@ -22,9 +22,6 @@ a {
 	color:#555; 
 	text-decoration:none; 
 }
-a:hover { 
-	text-decoration:underline; 
-}
 img { 
 	border:none; 
 }
@@ -34,7 +31,7 @@ ol,ul,li {
 input, textarea, select, button { 
 	font:14px Verdana,Helvetica,Arial,sans-serif; 
 }
-table { 
+table {
 	border-collapse:collapse; 
 }
 html {
@@ -53,35 +50,13 @@ html {
 
 
 /*homebanner*/
-.banner-background	{
-	height: 614px;
+.container{
+	width: 100%;
+}
+.banner-background{
+	width: 100%;
 	background: #40c381;
-	padding: 20px 33px 0 24px;
-}
-.banner-ico{
-	float: left;
-	position: absolute;
-	top: 20px;
-	left: 24px;
-}
-.banner-register a 	{
-	border:2px solid white;
-	border-radius: 5px;			
-	width: 180px;
-	height: 36px;
-	position: absolute;
-	top: 20px;
-	right: 33px;
-	line-height: 38px;
-	text-align: center;
-	font-family: "Microsoft Yahei";
-	font-size: 18px;
-	color: white;
-}
-.banner-register a:hover {
-	color: #40c381;
-	background: white;
-	text-decoration: none;
+	/*padding: 20px 0px 0 0px;*/
 }
 .banner-markleft {
 	height: 62px;
@@ -98,11 +73,9 @@ html {
 	right: 33px;
 }
 .banner-container {
-	display: block;
 	width: 655px;
-	position: relative;
-	top: 58px;
 	margin: 0 auto;
+	padding-top: 140px;
 }
 .banner-container h1{
 	color: white;
@@ -149,6 +122,7 @@ html {
 	height: 20px;
 	clear: both;
 	margin: 0 auto;
+	margin-top: 30px;
 }
 
 
@@ -162,18 +136,19 @@ html {
 	background: #40c381;
 	position: fixed;
 	top: 0px;
-	z-index: 100;
+	z-index: 2;
 	overflow: hidden;
+	/*display: none;*/
 }
-.index img{
+.index>a{
 	float: left;
+	margin: 20px 45px 0 20px;
 	display: block;
-	position: relative;
-	margin-right: 45px;
-	top: 21px;
-	left: 24px;
+	width: 185px;
+	height: 42px;
+	background: url(../images/it-ico.png) no-repeat;
 }
-.index a{
+.index li a{
 	float: left;
 	font: 16px/38px 'Microsoft Yahei' san-serif;
 	line-height: 76px;
@@ -199,9 +174,8 @@ html {
 	font-size: 18px;
 	color: white;
 	float: right;
-	position: relative;
-	top: 18px;
-	right: 33px;
+	margin-top: 18px;
+	margin-right: 33px;
 }
 .index-register a:hover {
 	color: #40c381;
@@ -487,6 +461,9 @@ html {
 	font-weight: bold;
 	float: right;
 }
+.itpartment-container a:hover{
+	color: #fdcb56;
+}
 .itpartment-container p{
 	margin-left: 498px;
 	line-height:25px;
@@ -502,29 +479,27 @@ html {
 .enroll-container {
 	height: 523px;
 	margin: 0 auto;
-	width: 845px;
+	width: 936px;
 	clear: left;
 	padding: 41px 0;
 }
 .enroll {
-	padding: 0 0 0 62px;
-	width: 185px;
-	height: 68px;
 	margin: 0 auto;
-	/*background:  red;*/
-	background: url(../images/bottom.png);
 	margin-bottom: 32px;
 }
-.enroll a {
-	font-family: "Microsoft Yahei";
-	font-size: 28px;
+.enroll a{
 	font-weight: bold;
-	color: white;
-	line-height: 68px;
-	text-align: center;
+	display: block;
+  	width: 247px;
+  	height: 68px;
+  	font: 28px/62px 'Microsoft YaHei',sans-serif;
+  	color: white;
+  	background: url(../images/bottom.png) no-repeat;
+ 	margin: 0 auto;
+ 	text-align: center;
 }
 .enroll a:hover{
-	text-decoration: none;
+	background: url(../images/bottom_press.png);
 }
 .picture {
 	float: left;
@@ -534,23 +509,19 @@ html {
 	margin-bottom: 27px;
 }
 .picture p {
-	width: 302px;
-	font-family: "Microsoft Yahei";
-	font-size: 14px;
-	line-height: 24px;
-	color: #434040
+	font: 14px/24px "Microsoft YaHei",sans-serif;
+	color: #434040;
 }
 .picture p span {
-	position: relative;
 	display: block;
-	left: 43px;
+	padding-left: 41px;
 }
 .picture h1 {
 	font-family: "Microsoft Yahei";
 	float: left;
 	color: #434040;
 }
-.form {
+/*.form {
 	float: left;
 }
 .form span {
@@ -567,12 +538,58 @@ html {
 .input-big input {
 	width: 350px;
 	height: 132px;
+}*/
+.form{
+	float: left;
 }
-
+.form span{
+	color: red;
+}
+.form p{
+	font: 14px "Microsoft YaHei",sans-serif;
+	color: #434040;
+	margin-top: 40px;
+}
+.form p:last-child{
+	margin-top: 26px;
+}
+.form input{
+	/*margin-left: 30px;*/
+	float: right;
+	width: 354px;
+	height: 30px;
+	border-radius: 3px;
+	border-style: none;
+	border: 2px solid #cecece;
+}
+.form p:last-child input{
+	height: 134px;
+}
+.form input:focus{
+	border: 2px solid #fdcb56;
+	outline: none;
+}
+.form select{
+	width: 175px;
+	height: 30px;
+	margin-left: 5px;
+	border-radius: 3px;
+	border-style: none;
+	border: 2px solid #cecece;
+	text-align: center;
+}
+.form select:focus{
+	border: 2px solid #fdcb56;
+	outline: none;
+}
 /*footer*/
-.footer-container {
-	width: 100%;
+.footer-bg{
 	background: #40c381;
+	width: 100%;
+}
+.footer-container {
+	width: 470px;
+	margin: 0 auto;
 }
 .footer-container h1 {
 	float: left;
@@ -581,9 +598,9 @@ html {
 	color: white;
 	padding: 50px 0;
 }
-.footer-container h1:first-child{
+/*.footer-container h1:first-child{
 	margin-left: 35%;
-}
+}*/
 .footer-container img{
 	padding: 40px 0;
 	float: left;
