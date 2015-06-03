@@ -12,9 +12,10 @@
         篇文章
     </p>
     每页<asp:DropDownList ID="DdlPageSize" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DdlPageSize_SelectedIndexChanged" Height="16px">
-        <asp:ListItem>3</asp:ListItem>
         <asp:ListItem>10</asp:ListItem>
         <asp:ListItem>20</asp:ListItem>
+        <asp:ListItem>30</asp:ListItem>
+              <asp:ListItem>50</asp:ListItem>
     </asp:DropDownList>篇
     <asp:Repeater ID="RptArticles" runat="server" OnItemCommand="RptArticles_ItemCommand">
         <HeaderTemplate>
