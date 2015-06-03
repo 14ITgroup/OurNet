@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BackStage.master.cs" Inherits="admin_BackStage" %>
+
+<!DOCTYPE html>
+<html lang="zh">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title><%: Page.Title %>_爱特工作室</title>
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server">
+        <script src="<%: ResolveUrl("~/admin/Scripts/modernizr-2.6.2.js") %>"></script>
+    </asp:PlaceHolder>
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form id="Form1" runat="server">
+            <script src="Scripts/jquery-1.8.2.js"></script>
+            <script src="Scripts/jquery-ui-1.8.24.js"></script>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">
+                        <a id="A1" runat="server" href="~/">
+                            <img src="/Images/logo.png" height="50" width="50" /></a>
+                    </p>
+                </div>
+                <div class="float-right">
+                    <nav>
+                        <ul id="menu">
+                            <li><a id="A3" runat="server" href="index.aspx">后台管理首页</a></li>              
+                            <li><a id="A4" href="addNotice.aspx" runat="server">添加公告</a></li>
+                            <li><a id="A5" href="myNotice.aspx" runat="server">编辑公告</a></li>
+                            <li><a id="A6" href="addWorks.aspx" runat="server">添加作品</a></li>
+                            <li><a id="A7" href="myWorks.aspx" runat="server">编辑作品</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+            <section class="content-wrapper main-content clear-fix">
+                <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; <%: DateTime.Now.Year %> By 爱特工作室</p>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
