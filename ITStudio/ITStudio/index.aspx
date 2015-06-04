@@ -3,7 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    	<div class="banner-back" id="banner-back">
+        <a href="#" class="scroll-top">
+		<img src="images/top_02.png" alt="arrow-to-top" width="45" height="115"/>
+	    </a>
+        <div class="banner-back" id="banner-back">
 		<a href="index.html">
 			<img src="images/it-ico.png" alt="IT-Logo">
 		</a>

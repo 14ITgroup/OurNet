@@ -19,9 +19,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <a href="#" class="scroll-top">
-		<img src="images/top_02.png" alt="arrow-to-top" width="45" height="115"/>
-	</a>
+
 	<ul class="index-menu">
 		<a href="index.html"><img src="images/it-ico.png" alt="IT-Logo"/></a>
 		<li><a href="#">首页</a></li>
