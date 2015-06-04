@@ -81,9 +81,14 @@ a:hover{
 }
 .banner-back>a:nth-child(4){
 	position: absolute;
-	/*top: 268px;*/
 	top: 40%;
 	left: 3%;
+	width: 33px;
+	height: 61px;
+	background: url(../images/arrl.png) no-repeat;
+}
+.banner-back>a:nth-child(4):hover{
+	background: url(../images/arrl_hover.png) no-repeat;
 }
 .banner-container{
 	width: 36%;
