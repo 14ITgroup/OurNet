@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Itshow.master.cs" Inherits="ITStudio_Itshow" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" media="screen and (min-width: 1920px)" href="css/index-big.css"/>
+	<link rel="stylesheet"  href="css/index.css"/>
+	<link rel="stylesheet" media="screen and (max-width: 1440px)" href="css/index-small.css" />
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/jquery.scrollTo.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<script src="js/index.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <a href="#" class="scroll-top">
+		<img src="images/top_02.png" alt="arrow-to-top" width="45" height="115"/>
+	</a>
+	<ul class="index-menu">
+		<a href="index.html"><img src="images/it-ico.png" alt="IT-Logo"/></a>
+		<li><a href="#">首页</a></li>
+		<li><a href="#">简介</a></li>
+		<li><a href="#">作品</a></li>
+		<li><a href="#">团队</a></li>
+		<li><a href="#">留言板</a></li>
+		<a href="#" class="nav-join">Join us now</a>
+		<div style="clear: both"></div>
+	</ul>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    <div class="footer-bg">
+  		<div class="footer-container">
+		    <h1>Copyrights@2015</h1>
+		    <img src="./images/it-ico.png" alt="#" /></a>
+		    <h1>All rights reserved.</h1>
+		    <div style="clear: both"></div>
+  		</div>
+  	</div>
+    </div>
+    </form>
+</body>
+</html>
