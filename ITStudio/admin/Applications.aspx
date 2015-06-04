@@ -72,5 +72,11 @@
     <asp:Button ID="BtnTrailerPage" runat="server" OnClick="BtnTrailerPage_Click" Text="尾页" />
     <asp:TextBox ID="TxtPageNum" runat="server" Height="22px" style="font-size: large" Width="37px">1</asp:TextBox>
     <asp:Button ID="BtnJumpPage" runat="server" OnClick="BtnJumpPage_Click" Text="跳页" />
+    <asp:DropDownList ID="DdlSelect" runat="server" Height="36px"  Width="99px" CssClass="site-title" Font-Size="Large">
+        <asp:ListItem Value="1">美术设计</asp:ListItem>
+        <asp:ListItem Value="2">程序开发</asp:ListItem>
+        <asp:ListItem Value="3">系统维护</asp:ListItem>
+    </asp:DropDownList>
+    <asp:Button ID="BtnImport" runat="server" OnClick="BtnImport_Click" Text="导出" />
 </asp:Content>
 
