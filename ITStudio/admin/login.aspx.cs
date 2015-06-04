@@ -9,26 +9,7 @@ public partial class admin_login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        // 验证Cookie
-        if (Request.Cookies["admin"] != null &&
-                Request.Cookies["admin"]["name"] != null &&
-                Request.Cookies["admin"]["token"] != null)
-        {
-            string name = Request.Cookies["admin"]["name"].ToString();
-            string token = Request.Cookies["admin"]["token"].ToString();
-            if (validateCookie.isCookieValidated(name, token))
-            {
-                Response.Redirect("index.aspx");
-            }
-        }
-
-        // ####最终完成时，此处可以尝试删除，反复测试登录时是否可以一次成功。
-        // 在getCaptcha中使用Session["captcha"]=xxxx后，服务器有时不会自动response Cookie：sessionid，
-        //导致下一次request的访问session为NULL
-        if (Session["captcha"] == null)
-        {
-            Session["captcha"] = "";
-        }
+        this.Master.FindControl("PnlLogout").Visible = false;
     }
 
     protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
@@ -60,6 +41,10 @@ public partial class admin_login : System.Web.UI.Page
         }
         else //登录成功
         {
+            if (Request.QueryString["ReturnUrl"] != null && Request.QueryString["ReturnUrl"].Trim() != "")
+            {
+                Login1.DestinationPageUrl = Request.QueryString["ReturnUrl"];
+            }
             e.Authenticated = true;
             sendCookie(name, passwordHash);
         }

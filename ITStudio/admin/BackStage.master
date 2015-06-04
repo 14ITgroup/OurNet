@@ -16,8 +16,8 @@
 </head>
 <body>
     <form id="Form1" runat="server">
-            <script src="Scripts/jquery-1.8.2.js"></script>
-            <script src="Scripts/jquery-ui-1.8.24.js"></script>
+        <script src="Scripts/jquery-1.8.2.js"></script>
+        <script src="Scripts/jquery-ui-1.8.24.js"></script>
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
@@ -29,7 +29,7 @@
                 <div class="float-right">
                     <nav>
                         <ul id="menu">
-                            <li><a id="A3" runat="server" href="index.aspx">后台管理首页</a></li>              
+                            <li><a id="A3" runat="server" href="index.aspx">后台管理首页</a></li>
                             <li><a id="A4" href="addNotice.aspx" runat="server">添加公告</a></li>
                             <li><a id="A5" href="myNotice.aspx" runat="server">编辑公告</a></li>
                             <li><a id="A6" href="addWorks.aspx" runat="server">添加作品</a></li>
@@ -40,6 +40,10 @@
             </div>
         </header>
         <div id="body">
+                <asp:Panel ID="PnlLogout" runat="server" style="float: right">
+                    当前帐户：<asp:Label ID="LblAdminName" runat="server"></asp:Label>
+                    <asp:HyperLink ID="HlkLogout" runat="server" NavigateUrl="~/admin/logout.aspx" Target="_self">注销</asp:HyperLink>
+                </asp:Panel>
             <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
             <section class="content-wrapper main-content clear-fix">
                 <asp:ContentPlaceHolder runat="server" ID="MainContent" />

@@ -11,11 +11,6 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
-     <div style="float: right">
-        当前帐户：<asp:Label ID="LblAdminName" runat="server"></asp:Label>
-        <asp:HyperLink ID="HlkLogout" runat="server" NavigateUrl="~/admin/logout.aspx" Target="_self">注销</asp:HyperLink>
-        <a href="newArticle.aspx">写新文章</a>
-    </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
      <hgroup class="title">

@@ -5,7 +5,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-          <h2>文章列表</h2>
+    <hgroup class="title">
+        <h1><%: Title %></h1>
+    </hgroup>
+
+    <h2>公告列表</h2>
     <p>
         当前共有
         <asp:Literal ID="LtlArticlesCount" runat="server"></asp:Literal>
@@ -15,7 +19,7 @@
         <asp:ListItem>10</asp:ListItem>
         <asp:ListItem>20</asp:ListItem>
         <asp:ListItem>30</asp:ListItem>
-              <asp:ListItem>50</asp:ListItem>
+        <asp:ListItem>50</asp:ListItem>
     </asp:DropDownList>篇
     <asp:Repeater ID="RptArticles" runat="server" OnItemCommand="RptArticles_ItemCommand">
         <HeaderTemplate>
@@ -56,6 +60,6 @@
     <asp:Button ID="BtnNextPage" runat="server" OnClick="BtnNextPage_Click" Text="后一页" />
     <asp:Button ID="BtnHomePage" runat="server" OnClick="BtnHomePage_Click" Text="首页" />
     <asp:Button ID="BtnTrailerPage" runat="server" OnClick="BtnTrailerPage_Click" Text="尾页" />
-    <asp:TextBox ID="TxtPageNum" runat="server" Height="22px" style="font-size: large" Width="37px">1</asp:TextBox>
+    <asp:TextBox ID="TxtPageNum" runat="server" Height="22px" Style="font-size: large" Width="37px">1</asp:TextBox>
     <asp:Button ID="BtnJumpPage" runat="server" OnClick="BtnJumpPage_Click" Text="跳页" />
 </asp:Content>
