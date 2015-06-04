@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="添加公告" Language="C#" MasterPageFile="~/admin/BackStage.master" AutoEventWireup="true" CodeFile="addNotice.aspx.cs" Inherits="admin_addNotice" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <script type="text/javascript" charset="utf-8" src="../admin/ueditor/ueditor.config.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../admin/ueditor/ueditor.all.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="../admin/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.all.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/lang/zh-cn/zh-cn.js"></script>
     <style type="text/css">
         .auto-style1 {
             font-size: x-large;
