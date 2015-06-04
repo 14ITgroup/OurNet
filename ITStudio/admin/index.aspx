@@ -53,9 +53,9 @@
     <div style="clear: both">
     </div>
     <p>
-        <abbr title="文章分类标签管理">
-            <asp:HyperLink ID="HlkCategories" runat="server" NavigateUrl="~/admin/Categories.aspx">
-                <asp:Image ID="ImgCategories" runat="server" CssClass="pictureLeft" ImageUrl="~/admin/images/categories.png" />
+        <abbr title="申请管理">
+            <asp:HyperLink ID="HlkCategories" runat="server" NavigateUrl="Applications.aspx">
+                <asp:Image ID="ImgCategories" runat="server" CssClass="pictureLeft" ImageUrl="Images/applications.png" />
             </asp:HyperLink>
         </abbr>
         <abbr title="管理员管理">

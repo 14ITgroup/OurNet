@@ -52,7 +52,7 @@ public partial class admin_addWorks : System.Web.UI.Page
         using (var db = new ITStudioEntities())
         {
             var work = new works();
-            work.typeId = Convert.ToInt16(ddlType.SelectedValue);
+            work.typeId = Convert.ToInt32(ddlType.SelectedValue);
             work.picture = workPicName;
             work.title = title;
             work.introduction = content;
@@ -93,8 +93,8 @@ public partial class admin_addWorks : System.Web.UI.Page
             string picPath = fulPicture.PostedFile.FileName;
             string picFileName = fulPicture.FileName;
             string picFileExtension = picFileName.Substring(picFileName.LastIndexOf('.')); //带.的扩展名
-            string newName = Guid.NewGuid().ToString();//生成新的文件名，保证唯一性
-            picSaveName = DateTime.Now.ToString("yyyyMMddHHmmssffff") + newName + picFileExtension; //当前时间
+            string random = RandomStatic.ProduceIntRandom(0, 999999).ToString("D6"); //6位随机数
+            picSaveName = DateTime.Now.ToString("yyyyMMddHHmmssffff") + random + picFileExtension; //当前时间
 
             //取得文件在服务器上保存的位置C:\Inetpub\wwwroot\WebSite1\images\20022775_m.jpg 
             string serverpath = Server.MapPath("/Images/workPicture/") + picSaveName;

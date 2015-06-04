@@ -21,10 +21,6 @@
             <End Role="works" EntitySet="works" />
             <End Role="workmap" EntitySet="workmap" />
           </AssociationSet>
-          <AssociationSet Name="FK_works_worktypes" Association="ITStudioModel.Store.FK_works_worktypes">
-            <End Role="workTypes" EntitySet="workTypes" />
-            <End Role="works" EntitySet="works" />
-          </AssociationSet>
         </EntityContainer>
         <EntityType Name="admins">
           <Key>
@@ -92,7 +88,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
         <Association Name="FK_workmap_members">
@@ -123,20 +119,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_works_worktypes">
-          <End Role="workTypes" Type="ITStudioModel.Store.workTypes" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="works" Type="ITStudioModel.Store.works" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="workTypes">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="works">
-              <PropertyRef Name="typeId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
@@ -157,10 +139,6 @@
           <AssociationSet Name="FK_workmap_works" Association="ITStudioModel.FK_workmap_works">
             <End Role="works" EntitySet="works" />
             <End Role="workmap" EntitySet="workmap" />
-          </AssociationSet>
-          <AssociationSet Name="FK_works_worktypes" Association="ITStudioModel.FK_works_worktypes">
-            <End Role="workTypes" EntitySet="workTypes" />
-            <End Role="works" EntitySet="works" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="admins">
@@ -228,15 +206,13 @@
           <Property Name="link" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="introduction" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="workmap" Relationship="ITStudioModel.FK_workmap_works" FromRole="works" ToRole="workmap" />
-          <NavigationProperty Name="workTypes" Relationship="ITStudioModel.FK_works_worktypes" FromRole="works" ToRole="workTypes" />
         </EntityType>
         <EntityType Name="workTypes">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="works" Relationship="ITStudioModel.FK_works_worktypes" FromRole="workTypes" ToRole="works" />
         </EntityType>
         <Association Name="FK_workmap_members">
           <End Role="members" Type="ITStudioModel.members" Multiplicity="1">
@@ -263,20 +239,6 @@
             </Principal>
             <Dependent Role="workmap">
               <PropertyRef Name="workId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_works_worktypes">
-          <End Role="workTypes" Type="ITStudioModel.workTypes" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="works" Type="ITStudioModel.works" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="workTypes">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="works">
-              <PropertyRef Name="typeId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
