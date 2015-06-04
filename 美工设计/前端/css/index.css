@@ -201,28 +201,15 @@ a:hover{
 	width: 73%;
 	margin: 0 auto;
 }
-.index-des-contain>img{
+.index-des-contain>img:first-child{
 	margin: 0 auto;
 	margin-top: 50px;
 }
-.index-des-contain>img+div{
-	margin-left: 25.2%;
-	margin-top: 30px;
+.index-des-contain>img+img{
+	margin: 0 auto;
+	margin-top: 20px;
 }
-.index-des-contain>div div{
-	width: 240px;
-	height: 1px;
-	background-color: #f4bc39;
-	float: left;
-	margin-top: 10px;
-}
-.index-des-contain>div h4{
-	float: left;
-	font: 16px "Microsoft YaHei",sans-serif;
-	color:  #f4bc39;
-	margin: 0 10px;
-}
-.index-des-contain>div+p{
+.index-des-contain>img+p{
 	clear: both;
 	text-align: center;
 	color: #f4bc39;
@@ -241,14 +228,16 @@ a:hover{
 	padding: 30px 0;
 }
 .index-des-contain ul{
-	width: 69%;
+	width: 61%;
 	margin: 0 auto;
-	padding-left: 90px;
 	margin-bottom: 60px;
 }
 .index-des-contain li{
 	float: left;
 	margin-right: 80px;
+}
+.index-des-contain ul li:nth-child(4){
+	margin-right: 0;
 }
 .index-des-contain li a{
 	display: block;
