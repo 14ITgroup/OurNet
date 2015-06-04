@@ -100,6 +100,12 @@ a:hover{
 	position: absolute;
 	top: 40%;
 	right: 3%;
+	width: 33px;
+	height: 61px;
+	background: url(../images/arrr.png) no-repeat;
+}
+.banner-back>a:nth-child(6):hover{
+	background: url(../images/arrr_hover.png) no-repeat;
 }
 .banner-container h1{
 	font-size: 60px;
