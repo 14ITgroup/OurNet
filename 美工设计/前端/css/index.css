@@ -502,3 +502,58 @@ a:hover{
 	float: left;
 	margin: 0 2%;
 }
+
+
+/*媒体查询开始*/
+@media screen and (min-width: 1920px) {
+	div.banner-container{
+		margin-top: 10em;
+	}
+	div.banner-container h3+a{
+		margin-top: 150px;
+	}
+	.index-des-contain> h2+ul{
+		width: 51%;
+	}
+	div.apart{
+		width: 32.3%;
+	}
+}
+@media screen and (max-width: 1440px) {
+	.banner-container{
+		width: 48%;
+		margin-top: 1em;
+	}
+	.banner-container h1{
+		font-size: 39px;
+	}
+	.banner-container h2{
+		margin-right: 100px;
+	}
+	.banner-container h3 strong{
+		font-size: 44px;
+	}
+	.banner-container h3+a{
+		margin-top: 30px;
+	}
+	.index-des-contain ul{
+		width: 73%;
+		margin: 0 auto;
+		margin-bottom: 60px;
+	}
+	.intro-back li>div img+div.intro-culture{
+		width: 36%;
+	}
+	.intro-back li:nth-child(2)>div>div:first-child{
+		width: 42%;
+	}
+	.intro-back li>div img+div.intro-team{
+		width: 42%;
+	}
+	.apart{
+		width: 45.7%;
+	}
+	.footer-container{
+		width: 34.4%;
+	}
+}
