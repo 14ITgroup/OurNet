@@ -243,3 +243,79 @@
 .clr{
 	clear: both;
 }
+
+/*personal_display*/
+
+
+.main>ul{
+	float: none;
+	margin: 0 11.5%;
+}
+.main>div+a{
+	margin: 216px 0 0 0 ;
+	position: absolute;
+	top: -70px;
+	left:65%; 
+}
+/*  .main>ul>li>a>img:hover{
+	width: 144px;
+	height: 143px;
+	background: url(../images/Team_people_hover.png) no-repeat;
+	background-attachment:inherit;
+ 	background-position: -70px 65%;
+}  */
+.main>a+img{
+	position: absolute;
+	top: 103px;
+	left:78%; 
+}
+.main>img+p{
+	position: absolute;
+	top: 210px;
+	left:81%;
+	font:  14px/20px '微软雅黑' san-serif ;
+}
+.main #one{
+	min-height:260px;
+	width: 77%;
+	background: url(../images/Team_bg1.png) no-repeat 100% 100%;
+} 
+.main #two{
+	min-height:260px;
+	width: 77%;
+	background: url(../images/Team_bg2.png) no-repeat 100% 100%;
+}
+.main>ul>li{
+	width: 144px;
+	height: 143px;
+	float:left;
+	margin: 0 5% 0 5%;
+}
+.main>ul>li>a>img{
+	position: relative;
+	top: -70px;
+	margin-left:100%; 
+	width: 100%;
+}
+.main>ul>li>a>img+img{
+	display: none;
+	position: relative;
+	top: -216px;
+	z-index: 100;
+	width: 100%;
+}
+.main>ul+a{
+	position: absolute;
+	top: 925px;
+	left: 65%; 
+} 
+.main>a+p{
+	position: absolute;
+	top: 980px;
+	left: 81%; 
+}
+.main>p+img{
+	position: absolute;
+	top: 882px;
+	left: 78%; 
+}
