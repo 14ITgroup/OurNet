@@ -29,12 +29,14 @@ public partial class admin_logout : System.Web.UI.Page
                     deleteCookie.Expires = DateTime.Now.AddDays(-1);
                     Response.Cookies.Add(deleteCookie);
                 }
-                LblStatus.Text = "您已成功注销。";
+                LblStatus.Text = "您已成功注销。为保护信息安全，请关闭所有网页浏览器的窗口。";
+                LblLoginTxt.Text = "重新登录";
             }
         }
         else
         {
             LblStatus.Text = "您未登录，可以点击以下链接登录。";
+            LblLoginTxt.Text = "登录";
         }
     }
 }

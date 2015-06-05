@@ -81,18 +81,10 @@ public partial class works
     public string introduction { get; set; }
 
     public virtual ICollection<workmap> workmap { get; set; }
-    public virtual workTypes workTypes { get; set; }
 }
 
 public partial class workTypes
 {
-    public workTypes()
-    {
-        this.works = new HashSet<works>();
-    }
-
     public int id { get; set; }
     public string name { get; set; }
-
-    public virtual ICollection<works> works { get; set; }
 }
