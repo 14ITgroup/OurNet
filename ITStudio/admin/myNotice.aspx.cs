@@ -11,7 +11,7 @@ public partial class admin_myNotice : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            // querystring共有：page（文章的页码）、
+            // querystring共有：page（文章的页码）
             int currentPage = 1;
             int pageSize = getPageSize();
             if (Request.QueryString["page"] != null)
