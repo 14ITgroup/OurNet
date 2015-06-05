@@ -24,8 +24,10 @@
         <br />
         <br />
         <div onmouseover="checkForm()">
-            <span class="auto-style1">上传作品图片：<br />
-            </span><asp:FileUpload ID="fulPicture" runat="server" />
+            <span class="auto-style1">当前作品图片：</span><br />
+            <asp:Image ID="ImgCurrentWorkPic" runat="server" /><br />
+            <span class="auto-style1">上传作品图片：<br /></span>
+            <asp:FileUpload ID="fulPicture" runat="server" />
             <asp:Label ID="lblUploadMessage" runat="server" Font-Size="20pt" Text="状态正常" Visible="False"></asp:Label>
             <br />
             <span class="auto-style1">作品类型：<br />
@@ -54,11 +56,10 @@
             function checkForm() {
                 var txtTitle = document.getElementById('<%=txtTitle.ClientID%>');
                 var txtTime = document.getElementById('<%=txtTime.ClientID%>');
-                var fulPicture = document.getElementById('<%=fulPicture.ClientID%>');
                 var txtIntroduction = document.getElementById('<%=txtIntroduction.ClientID%>');
                 var btnSubmit = document.getElementById('<%=btnSubmit.ClientID%>');
 
-                if (txtTitle.value == '' || txtIntroduction.value == "" || fulPicture.value == '' || txtTime.value == "") {
+                if (txtTitle.value == '' || txtIntroduction.value == "" || txtTime.value == "") {
                     btnSubmit.disabled = true;
                     btnSubmit.value = '请填写完整';
                 }

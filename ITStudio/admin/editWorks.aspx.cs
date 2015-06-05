@@ -9,16 +9,17 @@ public partial class admin_editWorks : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!Filter.IsNumeric(Request.QueryString["id"]))
+        if (Request.QueryString["id"] == null || !Filter.IsNumeric(Request.QueryString["id"]))
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("error.aspx");
         }
+
         using (var db = new ITStudioEntities())
         {
-            int id = Convert.ToInt16(Request.QueryString["id"]);
-            if (db.notices.SingleOrDefault(a => a.id == id) == null)
+            int id = Convert.ToInt32(Request.QueryString["id"]);
+            if (db.works.SingleOrDefault(a => a.id == id) == null)
             {
-                Response.Redirect("Default.aspx");
+                Response.Redirect("error.aspx");
             }
         }
         btnSubmit.Enabled = true;
@@ -32,11 +33,17 @@ public partial class admin_editWorks : System.Web.UI.Page
                 txtIntroduction.InnerText = work.introduction;
                 txtLink.Text = work.link;
                 txtTime.Text = work.time;
+                ImgCurrentWorkPic.ImageUrl = "/upload/workPicture/" + work.picture;
                 ddlType.SelectedValue = work.typeId.ToString();
             }
         }
     }
 
+    /// <summary>
+    /// 提交修改键
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     protected void BtnSubmit_Click(object sender, EventArgs e)
     {
         //避免js失效，后端验证
@@ -56,12 +63,12 @@ public partial class admin_editWorks : System.Web.UI.Page
         }
 
         string workPicName = uploadWorkPic();
-        if (workPicName == null || workPicName.Trim() == "")
-        {
-            LblStatus.Text = "请选择作品图片";
-            LblStatus.Visible = true;
-            return;
-        }
+        //if (workPicName == null || workPicName.Trim() == "") // 可以不修改作品图片
+        //{
+        //    LblStatus.Text = "请选择作品图片";
+        //    LblStatus.Visible = true;
+        //    return;
+        //}
         string time = txtTime.Text;
         if (time == null || time.Trim() == "")
         {
@@ -69,12 +76,40 @@ public partial class admin_editWorks : System.Web.UI.Page
             LblStatus.Visible = true;
             return;
         }
-        int id = Convert.ToInt16(Request.QueryString["id"]);
+
+        int id = Convert.ToInt32(Request.QueryString["id"]);
+
+        //删除旧封面图片
+        if (workPicName != null) //此时：已上传新封面图片，文件名未写入数据库
+        {
+            string oldCoverPic = "";
+            using (var db = new ITStudioEntities())
+            {
+                works w = db.works.SingleOrDefault(a => a.id == id);
+                if (w == null)
+                {
+                    return;
+                }
+                oldCoverPic = w.picture;
+                string oldCoverPicPath = "/upload/workPicture/" + oldCoverPic; //相对路径
+                oldCoverPicPath = Server.MapPath(oldCoverPicPath); //必须经过这一步操作才能变成有效路径
+                if (System.IO.File.Exists(oldCoverPicPath))//先判断文件是否存在，再执行操作
+                {
+                    System.IO.File.Delete(oldCoverPicPath); //删除文件
+                }
+            }
+        }
+
+        // 写入数据库
         using (var db = new ITStudioEntities())
         {
             works work = db.works.SingleOrDefault(a => a.id == id);
-            work.typeId = Convert.ToInt16(ddlType.SelectedValue);
-            work.picture = workPicName;
+            work.typeId = Convert.ToInt32(ddlType.SelectedValue);
+            if (workPicName != null)
+            {
+                work.picture = workPicName; // 修改了图片的情况
+                ImgCurrentWorkPic.ImageUrl = "/upload/workPicture/" + workPicName;
+            }
             work.title = title;
             work.introduction = content;
             work.time = txtTime.Text;
@@ -83,6 +118,7 @@ public partial class admin_editWorks : System.Web.UI.Page
         }
         ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('修改成功');</script>");
     }
+
     string uploadWorkPic() //上传封面图片，返回文件名。
     {
         string picSaveName = null;
@@ -100,7 +136,7 @@ public partial class admin_editWorks : System.Web.UI.Page
 
             if (fulPicture.FileContent.Length > maxFileSize) // 限制为1MiB以下
             {
-                lblUploadMessage.Text = "图片文件大小不可超过 1 MB";
+                lblUploadMessage.Text = "图片文件大小不可超过 1 MB，未修改图片";
                 lblUploadMessage.Visible = true;
                 return null;
             }
@@ -108,8 +144,8 @@ public partial class admin_editWorks : System.Web.UI.Page
             string picPath = fulPicture.PostedFile.FileName;
             string picFileName = fulPicture.FileName;
             string picFileExtension = picFileName.Substring(picFileName.LastIndexOf('.')); //带.的扩展名
-            string newName = Guid.NewGuid().ToString();//生成新的文件名，保证唯一性
-            picSaveName = DateTime.Now.ToString("yyyyMMddHHmmssffff") + newName + picFileExtension; //当前时间
+            string random = RandomStatic.ProduceIntRandom(0, 999999).ToString("D6"); //6位随机数
+            picSaveName = DateTime.Now.ToString("yyyyMMddHHmmssffff") + random + picFileExtension; //当前时间
 
             //取得文件在服务器上保存的位置C:\Inetpub\wwwroot\WebSite1\images\20022775_m.jpg 
             string serverpath = Server.MapPath("/upload/workPicture/") + picSaveName;
