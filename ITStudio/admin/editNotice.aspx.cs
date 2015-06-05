@@ -11,14 +11,14 @@ public partial class admin_editNotice : System.Web.UI.Page
     {  
         if (!Filter.IsNumeric(Request.QueryString["id"]))
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("error.aspx");
         }
         using(var db=new ITStudioEntities())
         {
             int id = Convert.ToInt16(Request.QueryString["id"]);
             if(db.notices.SingleOrDefault(a => a.id == id)==null)
             {
-                Response.Redirect("Default.aspx");
+                Response.Redirect("error.aspx");
             }
         }
         btnSubmit.Enabled = true;
