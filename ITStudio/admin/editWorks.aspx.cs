@@ -9,6 +9,18 @@ public partial class admin_editWorks : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!Filter.IsNumeric(Request.QueryString["id"]))
+        {
+            Response.Redirect("Default.aspx");
+        }
+        using (var db = new ITStudioEntities())
+        {
+            int id = Convert.ToInt16(Request.QueryString["id"]);
+            if (db.notices.SingleOrDefault(a => a.id == id) == null)
+            {
+                Response.Redirect("Default.aspx");
+            }
+        }
         btnSubmit.Enabled = true;
         if (!IsPostBack)
         {
