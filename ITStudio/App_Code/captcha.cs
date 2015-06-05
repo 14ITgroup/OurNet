@@ -19,7 +19,7 @@ public class captcha
 
     #region 验证码长度
     //验证码长度
-    private int length = 6; // 已修改
+    private int length = 4; // 已修改
 
     /// <summary>
     /// 验证码长度(默认为4)

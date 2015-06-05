@@ -34,6 +34,21 @@ public partial class admin_BackStage : System.Web.UI.MasterPage
             }
             else
             {
+                //检索所有Cookie，创建新Cookie，但Expires（有效期）为昨天，已过期。从而删除Cookie。
+                HttpCookie deleteCookie;
+                string cookieName;
+                int limit = Request.Cookies.Count;
+
+                if (limit > 0)//若有Cookie
+                {
+                    for (int i = 0; i < limit; i++)
+                    {
+                        cookieName = Request.Cookies[i].Name;
+                        deleteCookie = new HttpCookie(cookieName);
+                        deleteCookie.Expires = DateTime.Now.AddDays(-1);
+                        Response.Cookies.Add(deleteCookie);
+                    }
+                }
                 Response.Redirect("login.aspx?ReturnUrl=" + Request.FilePath);
             }
         }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ITStudio/Itshow.master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="ITStudio_index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Itshow.master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="ITStudio_index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -7,7 +7,7 @@
 		<img src="images/top_02.png" alt="arrow-to-top" width="45" height="115"/>
 	    </a>
         <div class="banner-back" id="banner-back">
-		<a href="index.html">
+		<a href="index.aspx">
 			<img src="images/it-ico.png" alt="IT-Logo">
 		</a>
 		<a href="#" class="nav-join">Join us now</a>
@@ -142,7 +142,7 @@
       	<div class="picture">
 	        <img src="./images/map.jpg" alt="#">
 	        <p>
-	          QQ：09897765<br></br>工作室电话：1234567890<br></br>地址：中国 山东青岛 中国海洋大学（崂山校区）
+	          QQ：09897765<br />工作室电话：1234567890<br />地址：中国 山东青岛 中国海洋大学（崂山校区）
 	          <span>信息科学与工程学院北楼B503</span>
 	        </p>
       	</div>

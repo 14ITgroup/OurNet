@@ -29,11 +29,12 @@
                 <div class="float-right">
                     <nav>
                         <ul id="menu">
-                            <li><a id="A3" runat="server" href="index.aspx">后台管理首页</a></li>
-                            <li><a id="A4" href="addNotice.aspx" runat="server">添加公告</a></li>
-                            <li><a id="A5" href="myNotice.aspx" runat="server">编辑公告</a></li>
-                            <li><a id="A6" href="addWorks.aspx" runat="server">添加作品</a></li>
-                            <li><a id="A7" href="myWorks.aspx" runat="server">编辑作品</a></li>
+                            <li><a href="index.aspx">后台管理首页</a></li>
+                            <li><a href="myNotice.aspx">管理公告</a></li>
+                            <li><a href="addNotice.aspx">添加公告</a></li>
+                            <li><a href="myWorks.aspx">管理作品</a></li>
+                            <li><a href="addWorks.aspx">添加作品</a></li>
+                            <li><a href="Admins.aspx">帐号管理</a></li>
                         </ul>
                     </nav>
                 </div>

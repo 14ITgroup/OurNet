@@ -97,7 +97,7 @@ public partial class admin_addWorks : System.Web.UI.Page
             picSaveName = DateTime.Now.ToString("yyyyMMddHHmmssffff") + random + picFileExtension; //当前时间
 
             //取得文件在服务器上保存的位置C:\Inetpub\wwwroot\WebSite1\images\20022775_m.jpg 
-            string serverpath = Server.MapPath("/Images/workPicture/") + picSaveName;
+            string serverpath = Server.MapPath("/upload/workPicture/") + picSaveName;
             try
             {
                 fulPicture.PostedFile.SaveAs(serverpath);//将上传的文件另存为 
