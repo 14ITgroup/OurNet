@@ -3,13 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Home</title>
-	<link rel="stylesheet" media="screen and (min-width: 1920px)" href="css/index-big.css">
 	<link rel="stylesheet"  href="css/index.css">
-	<link rel="stylesheet" media="screen and (max-width: 1440px)" href="css/index-small.css" />
 	<script src="js/jquery-1.11.2.min.js"></script>
-	<script src="js/jquery.scrollTo.js"></script>
 	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/index.js"></script>
+	<!--Required libraries-->
+	<script src="js/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
+	<!--Include flickerplate-->
+	<script src="js/flickerplate.min.js" type="text/javascript"></script>
+	<!--Execute flickerplate-->
+
 </head>
 <body>
 	<div class="banner-back" id="banner-back">
@@ -18,18 +21,44 @@
 		</a>
 		<a href="#" class="nav-join">Join us now</a>
 		<div style="clear: both"></div>
-		<a href="#"></a>
-		<div class="banner-container">
-			<img src="images/banner.png" alt="banner">
-			<h1>{快乐;}</h1>
-			<h2>Creat</h2>
-			<h3>Happy <span>&</span><strong>创造</strong></h3>
-			<a href="#" class="scroll-bottom">
+		<div class="banner-container flicker-example"  data-block-text="false">
+			<ul>
+				<li >
+					<div class="flick-title">
+						<img src="images/banner-1_03.png" alt="banner">
+					</div>
+				</li>
+				<li>
+					<div class="flick-title">
+						<img src="images/banner-2_03.png" alt="banner">
+					</div>
+					<div class="flick-sub-text">
+						<a href="#" class="read-more"></a>
+					</div>
+				</li>
+				<li>
+					<div class="flick-title">
+						<img src="images/banner-3_03.png" alt="banner">
+					</div>
+					<div class="flick-sub-text">
+						<a href="#" class="read-more"></a>
+					</div>
+				</li>
+				<li>
+					<div class="flick-title">
+						<img src="images/banner-4_03.png" alt="banner">
+					</div>
+					<div class="flick-sub-text">
+						<a href="#" class="read-more"></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<a href="#" class="scroll-bottom">
 				<img src="images/arrow.png" alt="arrow">
 			</a>
-		</div>
-		<a href="#"></a>
 	</div>
+
 	<a href="#" class="scroll-top">
 		<img src="images/top_02.png" alt="arrow-to-top" width="45" height="115">
 	</a>
@@ -46,12 +75,6 @@
 	<div class="index-des" id="index-des">
 		<div class="index-des-contain">
 			<img src="images/itwork-ico.png" alt="IT">
-			<!-- <div>
-				<div></div>
-				<h4>Since 2002</h4>
-				<div></div>
-				<div style="clear: both"></div>
-			</div> -->
 			<img src="images/since-2002.png" alt="since 2002">
 			<p>用自己的指挥、思想、热情创造着未来</p>
 			<p>
@@ -75,11 +98,11 @@
 			<div>
 				<img src="images/part1.jpg" alt="picture">
 				<div class="intro-culture">
-					<div class="line"></div>
-					<a href="#">团队文化</a>
+					<img src="images/team-culture_03.png" alt="团队文化">
 					<p>
 						爱特以发现培养更多的计算机人才为宗旨，志在使团队能够在全国高校网络技术团队中达到领先地位；爱特让热爱互联网技术的人才在这里尽情发挥自己的技术,享受团队开发的乐趣。
 					</p>
+					<div class="clr"></div>
 				</div>
 				<div style="clear: both"></div>
 			</div>
@@ -87,11 +110,11 @@
 		<li>
 			<div>
 				<div class="intro-idea">
-					<div class="line"></div>
-					<a href="#">新奇的想法</a>
+					<img src="images/idea-creative_07.png" alt="新奇的想法">
 					<p>
 						我们在做一件足以使我们每个人自豪的事情，我们试图用我们的智慧、思考、热情和双手改变一切，这就是我们----爱特工作室，一群年轻的人把自己的诚挚表达出来的地方。
 					</p>
+					<div class="clr"></div>
 				</div>
 				<img src="images/part2.jpg" alt="picture">
 				<div style="clear: both"></div>
@@ -99,31 +122,27 @@
 		</li>
 		<li>
 			<div>
-				<img src="images/part3.jpg" alt="picture">
+				<img src="images/part3.jpg" alt="picture" >
 				<div class="intro-team">
-					<div class="line"></div>
-					<a href="#">优秀的团队</a>
+					<img src="images/team-good_11.png" alt="优秀的团队">
 					<p>
 						我们有优秀的团队，我们和谐的生活在一起，像家人一样互相关心，还能尽情地探讨问题，做自己喜欢做的事情。
 					</p>
+					<div class="clr"></div>
 				</div>
 				<div style="clear: both"></div>
 			</div>
 		</li>
 	</ul>
 	<div class="apart">
-		<div></div>
-		<h4>部门介绍</h3>
-		<div></div>
-		<div style="clear: both"></div>
+		<img src="images/apartment.png" alt="部门介绍">
 	</div>
 	<ul class="intro-back">
 		<li>
 			<div>
 				<img src="images/ps.png" alt="picture" style="margin: 40px 0">
 				<div class="apart-art">
-					<div class="line"></div>
-					<a href="#">美术设计</a>
+					<img src="images/art-design_15.png" alt="美术设计">
 					<p> 爱特工作室是在中国海洋大学信息科学与工程学院院领导主持下成立于2002年的、是以计算机技术人才培养，网站开发为特色的技术性团体。</p>
 				</div>
 				<div style="clear: both"></div>
@@ -132,8 +151,7 @@
 		<li>
 			<div>
 				<div class="apart-pro">
-					<div class="line"></div>
-					<a href="#">程序开发</a>
+					<img src="images/pro-design_19.png" alt="程序开发">
 					<p>
 						我们在做一件足以使我们每个人自豪的事情，我们试图用我们的智慧、思考、热情和双手改变一切，这就是我们----爱特工作室，一群年轻的人把自己的诚挚表达出来的地方。
 					</p>
@@ -146,8 +164,7 @@
 			<div>
 				<img src="images/维护-.png" alt="picture" width="371" height="261" style="margin: 40px 0">
 				<div class="apart-sys">
-					<div class="line"></div>
-					<a href="#">系统维护</a>
+					<img src="images/fix-pro_23.png" alt="系统维护">
 					<p>
 						我们有优秀的团队，我们和谐的生活在一起，像家人一样互相关心，还能尽情地探讨问题，做自己喜欢做的事情。
 					</p>
@@ -165,8 +182,8 @@
 	          <span>信息科学与工程学院北楼B503</span>
 	        </p>
       	</div>
-	    <div class="form">
-	      	<p>姓名<span>*</span><input type="text"></p>
+      	<form action="post" class="form">
+      		<p>姓名<span>*</span><input type="text"></p>
 	      	<p>院系(专业)<span>*</span><input type="text"></p>
 	      	<p>电话<span>*</span><input type="text"></p>
 	      	<p>方向选择<span>*</span>
@@ -178,18 +195,14 @@
 	      	</p>
 	      	<p>
 	      		个人简介<span>*</span>
-	      		<textarea name="vlaue">
-	      		</textarea>
+	      		<textarea name="vlaue" id="text" onKeyDown="textdown(event)" onKeyUp="textup()"></textarea>
 	      	</p>
-	    </div>
+      	</form>
 	    <div style="clear: both"></div>
   	</div>
 	<div class="footer-bg">
   		<div class="footer-container">
-		    <h1>Copyrights@2015</h1>
-		    <img src="./images/it-ico.png" alt="#" ></a>
-		    <h1>All rights reserved.</h1>
-		    <div style="clear: both"></div>
+		    <img src="images/bottom-img_03.png" alt="Copyrights@2015 爱特工作室 All rights reserved.">
   		</div>
   	</div>
 	<script type="text/javascript">
@@ -205,17 +218,30 @@
 		{ 
 			winHeight = document.documentElement.clientHeight;  
 		};
-		document.getElementById("banner-back").style.height = winHeight - 20 + 'px';
-		// document.getElementById("banner-back").style.height = winHeight - 60 + 'px';
+		// 获取窗口宽度
+		if(window.innerWidth)
+			winWidth = window.innerWidth;
+		else if ((document.body) && (document.body.
+			clientWidth))
+			winWidth = document.body.clientWidth;
+			//通过深入Document内部对body进行检测，获取窗口大小
+		if(document.documentElement && document.documentElement.clientWidth)
+		{
+			winWidth = document.documentElement.clientWidth;
+		}
+		if(winWidth > 1024 ){
+			document.getElementById("banner-back").style.height = winHeight - 20 + 'px';
 		};
+		};
+
 		findWH(); 
 		window.onresize=findWH;
-	</script>
-	<script type="text/javascript">
+
+		// Scroll to 效果
 		$(function(){
-			//导航栏在页面滑动至一定位置才会出现
-			$(".index-menu").css('display', 'none');
-			$(".scroll-top").css('display', 'none');
+			// if 判断窗口大小，移动端取消一些效果
+			if (winWidth > 1024) {
+				//导航栏在页面滑动至一定位置才会出现
 			// introduction of our team
 			$(".intro-culture").css('display', 'none');
 			$(".intro-idea").css('display', 'none');
@@ -267,30 +293,73 @@
 				}else{
 					$('.apart-sys').fadeOut();
 				};
+			});
 
-			});
-			// 点击join us now ,页面平滑滚动至相应位置
-			$(".nav-join").click(function(event) {
-				$.scrollTo('#enroll-container',800);
-			});
-			$(".scroll-top").click(function(event) {
-				$.scrollTo('#banner-back',900);
-			});
-			//点击banner中向下箭头，页面向下滚动
-			$(".scroll-bottom").click(function(event) {
-				$.scrollTo('#index-des',800);
-			});
-			// 点击导航栏中的简介，页面滑动至相应位置
-			$(".index-menu li:eq(1) a").click(function(event) {
-				$.scrollTo('#index-des',800);
-			});
+				var nice = $("html").niceScroll();  
+				// The document page (body) scroll smoothly
+			
+			};//if end
+			$(".scroll-top").css('display', 'none');
+
+				// 点击join us now ,页面平滑滚动至相应位置
+				$(".nav-join").click(function(event) {
+					$('html,body').animate({scrollTop:$('#enroll-container').offset().top}, 800);
+				});
+				$(".scroll-top").click(function(event) {
+					$('html,body').animate({scrollTop:$('#banner-back').offset().top}, 800);
+				});
+				//点击banner中向下箭头，页面向下滚动
+				$(".scroll-bottom").click(function(event) {
+					$('html,body').animate({scrollTop:$('#index-des').offset().top}, 800);
+				});
+				// 点击导航栏中的简介，页面滑动至相应位置
+				$(".index-menu li:eq(1) a").click(function(event) {
+					$('html,body').animate({scrollTop:$('#index-des').offset().top}, 800);
+				});
+				$(".read-more").click(function(event) {
+					$('html,body').animate({scrollTop:$('.apart').offset().top - 65}, 800);
+				});
+		
 		});
 	</script>
 	<script>
-  		$(document).ready(function() {
-			var nice = $("html").niceScroll();  
-			// The document page (body) scroll smoothly
-  		});
+		$(document).ready(function(){
+		$('.flicker-example').flicker();
+	});
 	</script>
+	<!-- textarea文本框字数限制 -->
+	<script language="javascript">
+		function textdown(e) 
+		{
+		 textevent = e ; 
+		if(textevent.keyCode == 8) 
+		{ 
+		return; 
+		} 
+		if(document.getElementById('text').value.length >= 200)  
+		{ 
+		alert("最多输入200个字")  
+		if(!document.all) 
+		{ 
+		textevent.preventDefault(); 
+		} 
+		else 
+		{ 
+		textevent.returnValue = false; 
+		} 
+		} 
+		} 
+		function textup() 
+		{ 
+		var s = document.getElementById('text').value; 
+		//判断ID为text的文本区域字数是否超过200个 
+		if(s.length > 200)  
+		{ 
+		document.getElementById('text').value=s.substring(0,200); 
+		} 
+		}
+	</script>
+
+
 </body>
 </html>
