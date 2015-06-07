@@ -681,10 +681,6 @@ font-size:1.667em;
 	}
 }
 @media screen and (max-width: 1440px) {
-	.banner-container{
-		width: 48%;
-		margin-top: 1em;
-	}
 	.flickerplate ul.flicks>li .flick-title img{
 		width: 695px;
 		height: 350px;
