@@ -153,7 +153,7 @@
 		</li>
 	</ul>
     <div class="enroll-container" id="enroll-container">
-	      <asp:Button runat="server" CssClass="enroll" ID="app" OnClick="Application_Click" OnClientClick="return Verification();" PostBackUrl="~/index.aspx" Text="我要报名!"> </asp:Button>
+	      <div class="enroll"><asp:LinkButton runat="server" ID="app" OnClick="Application1" OnClientClick="return Verification();" >我要报名! </asp:LinkButton></div>
         	<div class="picture">
 	         <img src="./images/map.jpg" alt="#"/>
 	            <p>
@@ -344,7 +344,6 @@
             }
             else
             {
-                //document.getElementById("Application").click();
                 return true;
             }
         }

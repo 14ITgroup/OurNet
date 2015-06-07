@@ -11,7 +11,7 @@ public partial class ITStudio_index : System.Web.UI.Page
     {
 
     }
-    public void Application_Click(object sender, EventArgs e)
+    public void Application1(object sender, EventArgs e)
     {
         using (var db = new ITStudioEntities())
         {
