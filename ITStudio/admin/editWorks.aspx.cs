@@ -9,11 +9,10 @@ public partial class admin_editWorks : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Request.QueryString["id"] == null || !Filter.IsNumeric(Request.QueryString["id"]))
+        if (Request.QueryString["id"] == null || Request.QueryString["id"].Length > 8 || !Filter.IsNumeric(Request.QueryString["id"]))
         {
             Response.Redirect("error.aspx");
         }
-
         using (var db = new ITStudioEntities())
         {
             int id = Convert.ToInt32(Request.QueryString["id"]);
