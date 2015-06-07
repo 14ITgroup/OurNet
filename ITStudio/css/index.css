@@ -79,33 +79,11 @@ a:hover{
 	color: #40c381;
 	background: white;
 }
-.banner-back>a:nth-child(4){
-	position: absolute;
-	top: 40%;
-	left: 3%;
-	width: 33px;
-	height: 61px;
-	background: url(../images/arrl.png) no-repeat;
-}
-.banner-back>a:nth-child(4):hover{
-	background: url(../images/arrl_hover.png) no-repeat;
-}
 .banner-container{
 	width: 36%;
 	margin: 0 auto;
-	margin-top: 4em;
+	/*margin-top: 4em;*/
 	text-align: center;
-}
-.banner-back>a:nth-child(6){
-	position: absolute;
-	top: 40%;
-	right: 3%;
-	width: 33px;
-	height: 61px;
-	background: url(../images/arrr.png) no-repeat;
-}
-.banner-back>a:nth-child(6):hover{
-	background: url(../images/arrr_hover.png) no-repeat;
 }
 .banner-container h1{
 	font-size: 60px;
@@ -132,13 +110,245 @@ a:hover{
 	font-size: 60px;
 	padding-left: 20px;
 }
-.banner-container h3+a{
+.banner-container+a{
 	display: block;
-	width: 30px;
+	width: 17px;
 	height: 30px;
 	margin: 0 auto;
-	margin-top: 80px;
+	margin-top: 3%;
 }
+
+/*banner*/
+.flickerplate {
+	position:relative;
+	width:100%;
+	height:80%;
+	overflow:hidden;
+}
+.flickerplate ul.flicks {
+	width:10000%;
+	height:100%;
+	padding:0px;
+	margin:0px;
+	list-style:none;
+	/*background: #40c381;*/
+}
+.flickerplate ul.flicks>li {
+	float:left;
+	width:1%;
+	height:100%;
+	background-position:center;
+	background-size:cover;
+	display:table;
+}
+.flickerplate ul.flicks>li .flick-inner {
+	height:100%;
+	padding:10px;
+	color:#fff;
+	display:table-cell;
+	vertical-align:middle;
+}
+.flickerplate ul.flicks>li .flick-inner .flick-content {
+	max-width:78.75em;
+	margin-left:auto;
+	margin-right:auto;
+}
+.flickerplate ul.flicks>li .flick-title {
+	padding:0px 0px;
+	font-size:2.778em;
+	line-height:1.995em;
+	text-align:center;
+}
+@media only screen and (max-width: 43.813em) {
+.flickerplate ul.flicks>li .flick-title {
+font-size:1.667em;
+}
+}
+.flickerplate ul.flicks>li .flick-sub-text {
+	padding:5px;
+	font-weight:300;
+	line-height:2.5em;
+	color:rgba(255, 255, 255, 0.8);
+	text-align:center;
+}
+.flickerplate ul.flicks>li .flick-sub-text a{
+	display: block;
+	width: 197px;
+	height: 54px;
+	margin-left: 80%;
+	background: url(../images/banner-button_03.png) no-repeat;
+}
+.flickerplate ul.flicks>li .flick-sub-text a:hover{
+	background: url(../images/banner-button-hover_03.png) no-repeat;
+}
+.flickerplate ul.flicks>li .flick-title span.flick-block-text,
+ .flickerplate ul.flicks>li .flick-sub-text span.flick-block-text {
+	padding:12px 18px;
+	background-color:rgba(0, 0, 0, 0.6);
+}
+.flickerplate .arrow-navigation {
+	position:absolute;
+	height:80%;
+	width:10%;
+	top:10%;
+	z-index:100;
+	overflow:hidden;
+}
+.flickerplate .arrow-navigation .arrow {
+	display:block;
+	height:100%;
+	width:90%;
+	-webkit-transition:all 0.2s ease-out;
+	-moz-transition:all 0.2s ease-out;
+	-o-transition:all 0.2s ease-out;
+	-ms-transition:all 0.2s ease-out;
+	transition:all 0.2s ease-out;
+}
+.flickerplate .arrow-navigation:hover, 
+.flickerplate .arrow-navigation .arrow:hover {
+	cursor:pointer;
+}
+.flickerplate .arrow-navigation.left {
+	left:0%;
+}
+.flickerplate .arrow-navigation.left .arrow {
+	opacity:0.8;
+	margin:0px 0px 0px 50%;
+	background-image: url(../images/arrl.png);
+	background-repeat:no-repeat;
+	background-position:left;
+}
+.flickerplate .arrow-navigation.right {
+	right:0%;
+}
+.flickerplate .arrow-navigation.right .arrow {
+	opacity:0.8;
+	margin:0px 0px 0px -50%;
+	background-image:url("../images/arrr.png");
+	background-repeat:no-repeat;
+	background-position:right;
+}
+.flickerplate .arrow-navigation.left.hover .arrow {
+	opacity:1;
+	margin:0px 0px 0px 20%;
+}
+.flickerplate .arrow-navigation.right.hover .arrow {
+	opacity:1;
+	margin:0px 0px 0px -20%;
+}
+.flickerplate .dot-navigation {
+	position:absolute;
+	bottom:15px;
+	width:100%;
+	text-align:center;
+	z-index:100;
+}
+.flickerplate .dot-navigation ul {
+	text-align:center;
+	list-style:none;
+	padding:0px 15px;
+}
+.flickerplate .dot-navigation ul li {
+	display:inline-block;
+	float:none;
+}
+.flickerplate .dot-navigation .dot {
+	width:14px;
+	height:14px;
+	margin:0px 6px;
+	background-color:rgba(255, 255, 255, 0.3);
+	border-radius:50%;
+	-o-border-radius:50%;
+	-ms-border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	-webkit-transition:background-color 0.2s ease-out;
+	-moz-transition:background-color 0.2s ease-out;
+	-o-transition:background-color 0.2s ease-out;
+	-ms-transition:background-color 0.2s ease-out;
+	transition:background-color 0.2s ease-out;
+}
+.flickerplate .dot-navigation .dot:hover {
+	cursor:pointer;
+	background-color:rgba(255, 255, 255, 0.6);
+}
+.flickerplate .dot-navigation .dot.active {
+	background-color:#fff;
+}
+.flickerplate .dot-navigation.left,
+ .flickerplate .dot-navigation.left ul {
+	text-align:left;
+}
+.flickerplate .dot-navigation.right, 
+.flickerplate .dot-navigation.right ul {
+	text-align:right;
+}
+.flickerplate.flicker-theme-dark .arrow-navigation.left .arrow {
+	background-image:url("../images/flickerplate/arrow-left-dark.png");
+}
+.flickerplate.flicker-theme-dark .arrow-navigation.right .arrow {
+	background-image:url("../images/flickerplate/arrow-right-dark.png");
+}
+.flickerplate.flicker-theme-dark .dot-navigation .dot {
+	background-color:rgba(0, 0, 0, 0.12);
+}
+.flickerplate.flicker-theme-dark .dot-navigation .dot:hover {
+	background-color:rgba(0, 0, 0, 0.6);
+}
+.flickerplate.flicker-theme-dark .dot-navigation .dot.active {
+	background-color:#000;
+}
+.flickerplate.flicker-theme-dark ul.flicks li .flick-inner {
+	color:rgba(0, 0, 0, 0.9);
+}
+.flickerplate.flicker-theme-dark ul.flicks li .flick-inner .flick-content .flick-sub-text {
+	color:rgba(0, 0, 0, 0.9);
+}
+.flickerplate.flicker-theme-dark ul.flicks li .flick-inner .flick-content .flick-title span.flick-block-text,
+ .flickerplate.flicker-theme-dark ul.flicks li .flick-inner .flick-content .flick-sub-text span.flick-block-text {
+	background-color:rgba(255, 255, 255, 0.5);
+}
+.flickerplate ul.flicks li.flick-theme-dark .flick-inner {
+	color:rgba(0, 0, 0, 0.9);
+}
+.flickerplate ul.flicks li.flick-theme-dark .flick-inner .flick-content .flick-sub-text {
+	color:rgba(0, 0, 0, 0.9);
+}
+.flickerplate ul.flicks li.flick-theme-dark .flick-inner .flick-content .flick-title span.flick-block-text, 
+.flickerplate ul.flicks li.flick-theme-dark .flick-inner .flick-content .flick-sub-text span.flick-block-text {
+	background-color:rgba(255, 255, 255, 0.5);
+}
+.flickerplate.animate-transform-slide ul.flicks {
+	-webkit-perspective:1000;
+	-webkit-backface-visibility:hidden;
+	transform:translate3d(0%, 0px, 0px);
+	-webkit-transform:translate3d(0%, 0px, 0px);
+	-webkit-transition:-webkit-transform 0.6s;
+	-o-transition:-o-transform 0.6s;
+	-moz-transition:-moz-transform 0.6s;
+	transition:transform 0.6s;
+}
+.flickerplate.animate-transition-slide ul.flicks {
+	position:relative;
+	left:0%;
+	-webkit-transition:left 0.4s ease-out;
+	-moz-transition:left 0.4s ease-out;
+	-o-transition:left 0.4s ease-out;
+	-ms-transition:left 0.4s ease-out;
+	transition:left 0.4s ease-out;
+}
+.flickerplate.animate-jquery-slide ul.flicks {
+	position:relative;
+	left:0%;
+}
+.flickerplate.animate-scroller-slide {
+	padding-bottom:0px;
+	overflow:auto;
+}
+.flickerplate.animate-scroller-slide ul.flicks {
+	position:auto;
+}
+
 
 /*scroll-top*/
 .scroll-top{
@@ -178,7 +388,7 @@ a:hover{
 	display: block;
 	width: 100px;
 	height: 76px;
-	font: 16px/76px 'Microsoft Yahei' sans-serif;
+	font: 16px/76px 'Microsoft Yahei',sans-serif;
 	text-align: center;
 	color: white;
 }
@@ -240,7 +450,7 @@ a:hover{
 	padding: 30px 0;
 }
 .index-des-contain ul{
-	width: 61%;
+	width: 62%;
 	margin: 0 auto;
 	margin-bottom: 60px;
 }
@@ -291,7 +501,7 @@ a:hover{
 	width: 73%;
 	margin: 0 auto;
 }
-.intro-back li>div img:first-child{
+.intro-back li>div>img:first-child{
 	float: left;
 }
 .intro-back li>div img+div{
@@ -300,23 +510,7 @@ a:hover{
 	margin: 80px 0 0 94px;
 	padding-right: 50px;
 }
-.line{
-	width: 19px;
-	height: 68px;
-	background: #fdcb56;
-	float: left;
-	margin-top: 15px;
-}
-.intro-back li>div img+div a{
-	float: left;
-	font-size: 72px;
-	color: #c4c1bd;
-	font-weight: bold;
-	padding-left: 30px;
-}
-.intro-back li>div img+div a:hover{
-	color: #a39d96;
-}
+
 .intro-back li>div img+div p{
 	clear: both;
 	font-size: 18px;
@@ -334,16 +528,6 @@ a:hover{
 }
 .intro-back li:nth-child(2)> div div+img{
 	float: right;
-}
-.intro-back li:nth-child(2)>div>div a{
-	float: left;
-	font-size: 72px;
-	color: #c4c1bd;
-	font-weight: bold;
-	padding-left: 30px;
-}
-.intro-back li:nth-child(2)>div>div a:hover{
-	color: #5eaa8c;
 }
 .intro-back li:nth-child(2)>div p{
 	clear: both;
@@ -368,22 +552,6 @@ a:hover{
 	margin: 0 auto;
 	padding: 50px 0;
 }
-.apart div:first-child, .apart h4+div{
-	width: 240px;
-	height: 1px;
-	background-color: #f4bc39;
-	float: left;
-	margin-top: 20px;
-}
-.apart h4{
-	float: left;
-	font: 16px "Microsoft YaHei",sans-serif;
-	color:  #f4bc39;
-	margin: 0 10px;
-	font-size: 30px;
-	font-weight: bold;
-}
-
 /*我要参加*/
 .enroll-container {
 	height: 523px;
@@ -439,7 +607,7 @@ a:hover{
 .form p{
 	font: 14px "Microsoft YaHei",sans-serif;
 	color: #434040;
-	margin-top: 40px;
+	margin-bottom: 40px;
 }
 .form p:last-child{
 	margin-top: 26px;
@@ -460,6 +628,7 @@ a:hover{
 	border-radius: 3px;
 	border-style: none;
 	border: 2px solid #cecece;
+	resize:none;
 }
 .form p textarea:focus{
 	border: 2px solid #fdcb56;
@@ -488,36 +657,27 @@ a:hover{
 	width: 100%;
 }
 .footer-container {
-	width: 71%;
+	width: 29.4%;
 	margin: 0 auto;
-}
-.footer-container h1 {
-	float: left;
-	font:14px "Microsoft Yahei";
-	font-weight: bold;
-	color: white;
-	padding: 50px 0;
 }
 .footer-container img{
 	padding: 40px 0;
-	float: left;
-	margin: 0 2%;
 }
 
 
 /*媒体查询开始*/
 @media screen and (min-width: 1920px) {
-	div.banner-container{
-		margin-top: 10em;
-	}
 	div.banner-container h3+a{
 		margin-top: 150px;
 	}
 	.index-des-contain> h2+ul{
 		width: 51%;
 	}
-	div.apart{
+	.apart{
 		width: 32.3%;
+	}
+	.footer-container{
+		width: 21.4%;
 	}
 }
 @media screen and (max-width: 1440px) {
@@ -525,17 +685,15 @@ a:hover{
 		width: 48%;
 		margin-top: 1em;
 	}
-	.banner-container h1{
-		font-size: 39px;
+	.flickerplate ul.flicks>li .flick-title img{
+		width: 695px;
+		height: 350px;
 	}
-	.banner-container h2{
-		margin-right: 100px;
+	.flickerplate ul.flicks>li .flick-inner div.flick-content{
+		max-width: 59.75em;
 	}
-	.banner-container h3 strong{
-		font-size: 44px;
-	}
-	.banner-container h3+a{
-		margin-top: 30px;
+	.banner-container+a{
+		margin-top: 1%;
 	}
 	.index-des-contain ul{
 		width: 73%;
@@ -551,10 +709,91 @@ a:hover{
 	.intro-back li>div img+div.intro-team{
 		width: 42%;
 	}
-	.apart{
-		width: 45.7%;
-	}
 	.footer-container{
 		width: 34.4%;
+	}
+}
+@media screen and (width: 1280px) {
+	.index-des-contain ul{
+		width: 77%;
+	}
+	.intro-back li>div img+div.intro-culture{
+		width: 32%;
+	}
+}
+/*适应移动端*/
+@media screen and (max-device-width: 1364px){
+	.banner-container{
+		width: 64%;
+	}
+	.flickerplate .arrow-navigation.left,
+	.flickerplate .arrow-navigation.right{
+		display: none;
+	}
+	.index-menu li{
+		float: left;
+		margin-right: 0;
+	}
+	.index-des-contain ul{
+		width: 47.5%;
+	}
+	.index-des-contain ul li:nth-child(2){
+		margin-right: 0;
+	}
+	.index-des-contain ul li{
+		margin-bottom: 30px;
+		margin-right: 100px;
+	}
+	.intro-back li>div>img:first-child{
+		display: none;
+	}
+	.intro-back li:nth-child(2)> div div+img{
+		display: none;
+	}
+	.intro-culture img,.intro-idea img,.intro-team img{
+		float: left;
+		padding-top: 82px;
+	}
+	.intro-back li>div img+div p,.intro-back li:nth-child(2)>div p{
+		float: right;
+		width: 38%;
+		clear: none;
+		padding: 60px 0;
+	}
+	.clr{
+		clear: both;
+	}
+	.intro-back li>div img+div{
+		float: none;
+	}
+	.intro-back li>div img+div.intro-culture,
+	.intro-back li:nth-child(2)>div>div:first-child,
+	.intro-back li>div img+div.intro-team{
+		width: 100%;
+		margin: 0;
+	}
+	.intro-team img{
+		float: left;
+	}
+
+	.apart{
+		width: 60.7%;
+	}
+	.intro-back li>div img+div{
+		margin: 0;
+	}
+	.apart+ul.intro-back li> div div{
+		margin: 0;
+	}
+	.intro-back li>div img+div{
+		width: 100%;
+	}
+	.apart+ul.intro-back li> div div img{
+		margin: 0 auto;
+		padding-top: 50px;
+	}
+	.apart+ul.intro-back li> div p{
+		width: 100%;
+		padding: 50px 0;
 	}
 }

@@ -1,14 +1,21 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Itshow.master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="ITStudio_index" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <script src="js/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<link rel="stylesheet"  href="css/index.css">
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<!--Required libraries-->
+	<script src="js/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
 	<script src="js/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
 	<!--Include flickerplate-->
 	<script src="js/flickerplate.min.js" type="text/javascript"></script>
 	<!--Execute flickerplate-->
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
- 	<div class="banner-back" id="banner-back">
+
+</head>
+<body>
+	<div class="banner-back" id="banner-back">
 		<a href="index.html">
 			<img src="images/it-ico.png" alt="IT-Logo">
 		</a>
@@ -55,6 +62,16 @@
 	<a href="#" class="scroll-top">
 		<img src="images/top_02.png" alt="arrow-to-top" width="45" height="115">
 	</a>
+	<ul class="index-menu">
+		<a href="index.html"><img src="images/it-ico.png" alt="IT-Logo"></a>
+		<li><a href="#">首页</a></li>
+		<li><a href="#">简介</a></li>
+		<li><a href="#">作品</a></li>
+		<li><a href="#">团队</a></li>
+		<li><a href="#">留言板</a></li>
+		<a href="#" class="nav-join">Join us now</a>
+		<div style="clear: both"></div>
+	</ul>
 	<div class="index-des" id="index-des">
 		<div class="index-des-contain">
 			<img src="images/itwork-ico.png" alt="IT">
@@ -161,7 +178,7 @@
       	<div class="picture">
 	        <img src="./images/map.jpg" alt="#">
 	        <p>
-	          QQ：09897765<br/>工作室电话：1234567890<br/>地址：中国 山东青岛 中国海洋大学（崂山校区）
+	          QQ：09897765</br>工作室电话：1234567890</br>地址：中国 山东青岛 中国海洋大学（崂山校区）
 	          <span>信息科学与工程学院北楼B503</span>
 	        </p>
       	</div>
@@ -183,153 +200,166 @@
       	</form>
 	    <div style="clear: both"></div>
   	</div>
-
+	<div class="footer-bg">
+  		<div class="footer-container">
+		    <img src="images/bottom-img_03.png" alt="Copyrights@2015 爱特工作室 All rights reserved.">
+  		</div>
+  	</div>
 	<script type="text/javascript">
-	    var winHeight = 0;
-	    function findWH() {
-	        //获取窗口高度 
-	        if (window.innerHeight)
-	            winHeight = window.innerHeight;
-	        else if ((document.body) && (document.body.clientHeight))
-	            winHeight = document.body.clientHeight;
-	        //通过深入Document内部对body进行检测，获取窗口大小 
-	        if (document.documentElement && document.documentElement.clientHeight) {
-	            winHeight = document.documentElement.clientHeight;
-	        };
-	        // 获取窗口宽度
-	        if (window.innerWidth)
-	            winWidth = window.innerWidth;
-	        else if ((document.body) && (document.body.
-                clientWidth))
-	            winWidth = document.body.clientWidth;
-	        //通过深入Document内部对body进行检测，获取窗口大小
-	        if (document.documentElement && document.documentElement.clientWidth) {
-	            winWidth = document.documentElement.clientWidth;
-	        }
-	        if (winWidth > 1024) {
-	            document.getElementById("banner-back").style.height = winHeight - 20 + 'px';
-	        };
-	    };
+		var winHeight = 0;
+		function findWH(){
+		//获取窗口高度 
+		if (window.innerHeight) 
+			winHeight = window.innerHeight; 
+		else if ((document.body) && (document.body.clientHeight)) 
+			winHeight = document.body.clientHeight; 
+				//通过深入Document内部对body进行检测，获取窗口大小 
+		if (document.documentElement && document.documentElement.clientHeight) 
+		{ 
+			winHeight = document.documentElement.clientHeight;  
+		};
+		// 获取窗口宽度
+		if(window.innerWidth)
+			winWidth = window.innerWidth;
+		else if ((document.body) && (document.body.
+			clientWidth))
+			winWidth = document.body.clientWidth;
+			//通过深入Document内部对body进行检测，获取窗口大小
+		if(document.documentElement && document.documentElement.clientWidth)
+		{
+			winWidth = document.documentElement.clientWidth;
+		}
+		if(winWidth > 1024 ){
+			document.getElementById("banner-back").style.height = winHeight - 20 + 'px';
+		};
+		};
 
-	    findWH();
-	    window.onresize = findWH;
+		findWH(); 
+		window.onresize=findWH;
 
-	    // Scroll to 效果
-	    $(function () {
-	        // if 判断窗口大小，移动端取消一些效果
-	        if (winWidth > 1024) {
-	            //导航栏在页面滑动至一定位置才会出现
-	            // introduction of our team
-	            $(".intro-culture").css('display', 'none');
-	            $(".intro-idea").css('display', 'none');
-	            $(".intro-team").css('display', 'none');
-	            //introduction of our apartment
-	            $(".apart-art").css('display', 'none');
-	            $(".apart-pro").css('display', 'none');
-	            $(".apart-sys").css('display', 'none');
+		// Scroll to 效果
+		$(function(){
+			// if 判断窗口大小，移动端取消一些效果
+			if (winWidth > 1024) {
+				//导航栏在页面滑动至一定位置才会出现
+			// introduction of our team
+			$(".intro-culture").css('display', 'none');
+			$(".intro-idea").css('display', 'none');
+			$(".intro-team").css('display', 'none');
+			//introduction of our apartment
+			$(".apart-art").css('display', 'none');
+			$(".apart-pro").css('display', 'none');
+			$(".apart-sys").css('display', 'none');
 
-	            $(window).scroll(function (event) {
-	                height = $(window).scrollTop();
-	                if (height > 500) {
-	                    $('.index-menu').fadeIn();
-	                } else {
-	                    $('.index-menu').fadeOut();
-	                };
-	                if (height > 600) {
-	                    $('.scroll-top').fadeIn();
-	                } else {
-	                    $('.scroll-top').fadeOut();
-	                };
-	                if (height > 750 && height < 1500) {
-	                    $('.intro-culture').slideDown();
-	                } else {
-	                    $('.intro-culture').fadeOut();
-	                };
-	                if (height > 1000 && height < 1900) {
-	                    $('.intro-idea').slideDown();
-	                } else {
-	                    $('.intro-idea').fadeOut();
-	                };
-	                if (height > 1400 && height < 2200) {
-	                    $('.intro-team').slideDown();
-	                } else {
-	                    $('.intro-team').fadeOut();
-	                };
-	                if (height > 1800 && height < 2600) {
-	                    $('.apart-art').slideDown();
-	                } else {
-	                    $('.apart-art').fadeOut();
-	                };
-	                if (height > 2200 && height < 3000) {
-	                    $('.apart-pro').slideDown();
-	                } else {
-	                    $('.apart-pro').fadeOut();
-	                };
-	                if (height > 2500 && height < 3500) {
-	                    $('.apart-sys').slideDown();
-	                } else {
-	                    $('.apart-sys').fadeOut();
-	                };
-	            });
+			$(window).scroll(function(event) {
+				height = $(window).scrollTop();
+				if(height > 500){
+					$('.index-menu').fadeIn();
+				}else{
+					$('.index-menu').fadeOut();
+				};
+				if(height > 600){
+					$('.scroll-top').fadeIn();
+				}else{
+					$('.scroll-top').fadeOut();
+				};
+				if(height > 750 && height < 1500){
+					$('.intro-culture').slideDown();
+				}else{
+					$('.intro-culture').fadeOut();
+				};
+				if(height > 1000 && height < 1900){
+					$('.intro-idea').slideDown();
+				}else{
+					$('.intro-idea').fadeOut();
+				};
+				if(height > 1400 && height < 2200){
+					$('.intro-team').slideDown();
+				}else{
+					$('.intro-team').fadeOut();
+				};
+				if(height > 1800 && height < 2600){
+					$('.apart-art').slideDown();
+				}else{
+					$('.apart-art').fadeOut();
+				};
+				if(height > 2200 && height < 3000){
+					$('.apart-pro').slideDown();
+				}else{
+					$('.apart-pro').fadeOut();
+				};
+				if(height > 2500 && height < 3500){
+					$('.apart-sys').slideDown();
+				}else{
+					$('.apart-sys').fadeOut();
+				};
+			});
 
-	            var nice = $("html").niceScroll();
-	            // The document page (body) scroll smoothly
+				var nice = $("html").niceScroll();  
+				// The document page (body) scroll smoothly
+			
+			};//if end
+			$(".scroll-top").css('display', 'none');
 
-	        };//if end
-	        $(".scroll-top").css('display', 'none');
-
-	        // 点击join us now ,页面平滑滚动至相应位置
-	        $(".nav-join").click(function (event) {
-	            $('html,body').animate({ scrollTop: $('#enroll-container').offset().top }, 800);
-	        });
-	        $(".scroll-top").click(function (event) {
-	            $('html,body').animate({ scrollTop: $('#banner-back').offset().top }, 800);
-	        });
-	        //点击banner中向下箭头，页面向下滚动
-	        $(".scroll-bottom").click(function (event) {
-	            $('html,body').animate({ scrollTop: $('#index-des').offset().top }, 800);
-	        });
-	        // 点击导航栏中的简介，页面滑动至相应位置
-	        $(".index-menu li:eq(1) a").click(function (event) {
-	            $('html,body').animate({ scrollTop: $('#index-des').offset().top }, 800);
-	        });
-	        $(".read-more").click(function (event) {
-	            $('html,body').animate({ scrollTop: $('.apart').offset().top - 65 }, 800);
-	        });
-
-	    });
+				// 点击join us now ,页面平滑滚动至相应位置
+				$(".nav-join").click(function(event) {
+					$('html,body').animate({scrollTop:$('#enroll-container').offset().top}, 800);
+				});
+				$(".scroll-top").click(function(event) {
+					$('html,body').animate({scrollTop:$('#banner-back').offset().top}, 800);
+				});
+				//点击banner中向下箭头，页面向下滚动
+				$(".scroll-bottom").click(function(event) {
+					$('html,body').animate({scrollTop:$('#index-des').offset().top}, 800);
+				});
+				// 点击导航栏中的简介，页面滑动至相应位置
+				$(".index-menu li:eq(1) a").click(function(event) {
+					$('html,body').animate({scrollTop:$('#index-des').offset().top}, 800);
+				});
+				$(".read-more").click(function(event) {
+					$('html,body').animate({scrollTop:$('.apart').offset().top - 65}, 800);
+				});
+		
+		});
 	</script>
 	<script>
-	    $(document).ready(function () {
-	        $('.flicker-example').flicker();
-	    });
+		$(document).ready(function(){
+		$('.flicker-example').flicker();
+	});
 	</script>
 	<!-- textarea文本框字数限制 -->
 	<script language="javascript">
-	    function textdown(e) {
-	        textevent = e;
-	        if (textevent.keyCode == 8) {
-	            return;
-	        }
-	        if (document.getElementById('text').value.length >= 200) {
-	            alert("最多输入200个字")
-	            if (!document.all) {
-	                textevent.preventDefault();
-	            }
-	            else {
-	                textevent.returnValue = false;
-	            }
-	        }
-	    }
-	    function textup() {
-	        var s = document.getElementById('text').value;
-	        //判断ID为text的文本区域字数是否超过200个 
-	        if (s.length > 200) {
-	            document.getElementById('text').value = s.substring(0, 200);
-	        }
-	    }
+		function textdown(e) 
+		{
+		 textevent = e ; 
+		if(textevent.keyCode == 8) 
+		{ 
+		return; 
+		} 
+		if(document.getElementById('text').value.length >= 200)  
+		{ 
+		alert("最多输入200个字")  
+		if(!document.all) 
+		{ 
+		textevent.preventDefault(); 
+		} 
+		else 
+		{ 
+		textevent.returnValue = false; 
+		} 
+		} 
+		} 
+		function textup() 
+		{ 
+		var s = document.getElementById('text').value; 
+		//判断ID为text的文本区域字数是否超过200个 
+		if(s.length > 200)  
+		{ 
+		document.getElementById('text').value=s.substring(0,200); 
+		} 
+		}
 	</script>
 
 
-</asp:Content>
-
+</body>
+</html>
