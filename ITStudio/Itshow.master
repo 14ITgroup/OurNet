@@ -16,7 +16,7 @@
     <form id="form1" runat="server">
         <div>
         <ul class="index-menu">
-		    <a href="index.html"><img src="images/it-ico.png" alt="IT-Logo"></a>
+		    <a href="index.aspx"><img src="images/it-ico.png" alt="IT-Logo"></a>
 		    <li><a href="#">首页</a></li>
 		    <li><a href="#">简介</a></li>
 		    <li><a href="#">作品</a></li>
