@@ -251,11 +251,16 @@
 	float: none;
 	margin: 0 11.5%;
 }
-.main>div+a{
+.main>img+a{
 	margin: 216px 0 0 0 ;
 	position: absolute;
 	top: -70px;
 	left:65%; 
+}
+.main>div+img{
+	position: absolute;
+	top: 70px;
+	left:5%; 
 }
 /*  .main>ul>li>a>img:hover{
 	width: 144px;
@@ -275,47 +280,47 @@
 	left:81%;
 	font:  14px/20px '微软雅黑' san-serif ;
 }
-.main #one{
-	min-height:260px;
-	width: 77%;
-	background: url(../images/Team_bg1.png) no-repeat 100% 100%;
-} 
-.main #two{
-	min-height:260px;
-	width: 77%;
-	background: url(../images/Team_bg2.png) no-repeat 100% 100%;
+.main .line{
+	margin: 0 10%;
 }
-.main>ul>li{
-	width: 144px;
-	height: 143px;
-	float:left;
-	margin: 0 5% 0 5%;
-}
-.main>ul>li>a>img{
-	position: relative;
-	top: -70px;
-	margin-left:100%; 
+.main .line>ul
+{
+	clear: both;
 	width: 100%;
 }
-.main>ul>li>a>img+img{
-	display: none;
-	position: relative;
-	top: -216px;
-	z-index: 100;
-	width: 100%;
+.main .line>ul>li:first-child{
+	margin: 180px 0 -75px 18%;
 }
+.main .line>ul>li{
+	float: left;
+	margin: 180px 0 -75px 10%;
+}
+
+.main>div>ul>li>a>div{
+	width: 12em;
+	height: 12em;
+	background: url(../images/Team_people.png) no-repeat ;
+	background-size: 100% 100%;
+}
+
+.main>div>ul>li>a>div:hover {
+	background: url(../images/Team_people_hover.png) no-repeat ;
+}
+
 .main>ul+a{
 	position: absolute;
-	top: 925px;
+	top: 980px;
 	left: 65%; 
 } 
 .main>a+p{
 	position: absolute;
-	top: 980px;
+	top: 1040px;
 	left: 81%; 
+	font:  14px/20px '微软雅黑' san-serif ;
+
 }
 .main>p+img{
 	position: absolute;
-	top: 882px;
+	top: 940px;
 	left: 78%; 
 }
