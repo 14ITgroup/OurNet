@@ -276,9 +276,11 @@
 }
 .main>img+p{
 	position: absolute;
-	top: 210px;
+	top: 175px;
 	left:81%;
-	font:  14px/20px '微软雅黑' san-serif ;
+	width: 90px;
+	height: 45px;
+	background: url(../images/cao1.png);
 }
 .main .line{
 	margin: 0 10%;
@@ -314,11 +316,13 @@
 } 
 .main>a+p{
 	position: absolute;
-	top: 1040px;
+	top: 1010px;
 	left: 81%; 
-	font:  14px/20px '微软雅黑' san-serif ;
-
+	width: 90px;
+	height: 45px;
+	background: url(../images/cao2.png) no-repeat ;
 }
+
 .main>p+img{
 	position: absolute;
 	top: 940px;
