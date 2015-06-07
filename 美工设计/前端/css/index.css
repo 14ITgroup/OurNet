@@ -369,7 +369,7 @@ font-size:1.667em;
 	position: fixed;
 	top: -10px;
 	z-index: 1000;
-	/*overflow: hidden;*/
+	overflow: hidden;
 
 }
 .index-menu>a:first-child{
@@ -721,6 +721,13 @@ font-size:1.667em;
 @media screen and (max-device-width: 1364px){
 	.banner-container{
 		width: 64%;
+	}
+	.flickerplate ul.flicks>li .flick-title img{
+		width: 607px;
+		height: 306px;
+	}
+	.flickerplate ul.flicks>li .flick-sub-text a{
+		margin-left: 68%;
 	}
 	.flickerplate .arrow-navigation.left,
 	.flickerplate .arrow-navigation.right{
