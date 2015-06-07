@@ -4,11 +4,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link rel="stylesheet" media="screen and (min-width: 1920px)" href="css/index-big.css"/>
+	<link rel="stylesheet"  href="css/index.css"/>
+	<link rel="stylesheet" media="screen and (max-width: 1440px)" href="css/index-small.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
 	<link rel="stylesheet"  href="css/index.css">
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
+	<!--Include flickerplate-->
+	<script src="js/flickerplate.min.js" type="text/javascript"></script>
+	<!--Execute flickerplate-->
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

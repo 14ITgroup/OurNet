@@ -89,7 +89,7 @@ public class captcha
 
     #region 字体颜色
     //字体颜色
-    private Color fontColor = Color.Blue;
+    private Color fontColor = Color.Purple;
 
     /// <summary>
     /// 字体颜色(默认为Blue)

@@ -1,14 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Itshow.master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="ITStudio_index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <script src="js/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
-	<script src="js/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
-	<!--Include flickerplate-->
-	<script src="js/flickerplate.min.js" type="text/javascript"></script>
-	<!--Execute flickerplate-->
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
- 	<div class="banner-back" id="banner-back">
+    <div class="banner-back" id="banner-back">
 		<a href="index.html">
 			<img src="images/it-ico.png" alt="IT-Logo">
 		</a>
@@ -156,31 +152,31 @@
 			</div>
 		</li>
 	</ul>
-	<div class="enroll-container" id="enroll-container">
-	    <div class="enroll"><a href="#">我要报名！</a></div>
-      	<div class="picture">
-	        <img src="./images/map.jpg" alt="#">
-	        <p>
-	          QQ：09897765<br/>工作室电话：1234567890<br/>地址：中国 山东青岛 中国海洋大学（崂山校区）
-	          <span>信息科学与工程学院北楼B503</span>
-	        </p>
-      	</div>
-      	<form action="post" class="form">
-      		<p>姓名<span>*</span><input type="text"></p>
-	      	<p>院系(专业)<span>*</span><input type="text"></p>
-	      	<p>电话<span>*</span><input type="text"></p>
+    <div class="enroll-container" id="enroll-container">
+	      <div class="enroll"><asp:LinkButton runat="server" ID="app" OnClick="Application_Click" OnClientClick="return Verification();" >我要报名！</asp:LinkButton></div>
+        	<div class="picture">
+	         <img src="./images/map.jpg" alt="#"/>
+	            <p>
+	             QQ：09897765<br/>工作室电话：1234567890<br/>地址：中国 山东青岛 中国海洋大学（崂山校区）
+	             <span>信息科学与工程学院北楼B503</span>
+	            </p>
+        	</div>
+      	    <div  class="form">
+      		<p>姓名<span>*</span><asp:TextBox runat="server" ID="TxtName"></asp:TextBox></p>
+	      	<p>院系(专业)<span>*</span><asp:TextBox runat="server" ID="TxtMajor"></asp:TextBox></p>
+	      	<p>电话<span>*</span><asp:TextBox runat="server" ID="TxtTel"></asp:TextBox></p>
 	      	<p>方向选择<span>*</span>
-	      		<select name="" id="">
-	      			<option value="">美术设计</option>
-	      			<option value="">程序开发</option>
-	      			<option value="">系统维护</option>
-	      		</select>
+	      		<asp:DropDownList runat="server" ID="DdlJob">
+	      			<asp:ListItem Value="1" Text="美术设计" />
+	      			<asp:ListItem Value="2" Text="程序开发" />
+	      			<asp:ListItem Value="3" Text="系统维护" />
+	      		</asp:DropDownList>
 	      	</p>
 	      	<p>
 	      		个人简介<span>*</span>
-	      		<textarea name="vlaue" id="text" onKeyDown="textdown(event)" onKeyUp="textup()"></textarea>
+	      		<textarea name="vlaue" runat="server" id="TxtIntroduction" onKeyDown="textdown(event)" onKeyUp="textup()"></textarea>
 	      	</p>
-      	</form>
+      	</div>
 	    <div style="clear: both"></div>
   	</div>
 
@@ -305,13 +301,13 @@
 	    });
 	</script>
 	<!-- textarea文本框字数限制 -->
-	<script language="javascript">
+	<script type="text/javascript">
 	    function textdown(e) {
 	        textevent = e;
 	        if (textevent.keyCode == 8) {
 	            return;
 	        }
-	        if (document.getElementById('text').value.length >= 200) {
+	        if (document.getElementById('ContentPlaceHolder1_TxtIntroduction').value.length >= 200) {
 	            alert("最多输入200个字")
 	            if (!document.all) {
 	                textevent.preventDefault();
@@ -322,14 +318,40 @@
 	        }
 	    }
 	    function textup() {
-	        var s = document.getElementById('text').value;
+	        var s = document.getElementById('ContentPlaceHolder1_TxtIntroduction').value;
 	        //判断ID为text的文本区域字数是否超过200个 
 	        if (s.length > 200) {
-	            document.getElementById('text').value = s.substring(0, 200);
+	            document.getElementById('ContentPlaceHolder1_TxtIntroduction').value = s.substring(0, 200);
 	        }
 	    }
 	</script>
-
-
+    <script type="text/javascript">
+        function Verification(){
+            if (document.getElementById('ContentPlaceHolder1_TxtName').value = "")
+            {
+                var a = alert("请告诉我们您的姓名");
+                return false;
+            }
+            else if (document.getElementById('ContentPlaceHolder1_TxtMajor').value == "")
+            {
+                var a = alert("请填写您的专业信息");
+                return false;
+            }
+            else if (document.getElementById('ContentPlaceHolder1_TxtTel').value == "")
+            {
+                var a = alert("请填写您的电话");
+                return false;
+            }
+            else if (document.getElementById('ContentPlaceHolder1_TxtTel').value.Length != 11) {
+                var a = alert("请如实填写您的电话");
+                return false;
+            }
+            else
+            {
+                //document.getElementById("Application").click();
+                return true;
+            }
+        }
+    </script>
 </asp:Content>
 

@@ -11,4 +11,20 @@ public partial class ITStudio_index : System.Web.UI.Page
     {
 
     }
+    public void Application_Click(object sender, EventArgs e)
+    {
+        using (var db = new ITStudioEntities())
+        {
+ 
+                applications ap = new applications();
+                ap.name = TxtName.Text;
+                ap.major = TxtMajor.Text;
+                ap.time = DateTime.Now;
+                ap.gender = false;
+                ap.job = DdlJob.SelectedValue;
+                ap.introduction = TxtIntroduction.InnerText;
+                db.applications.Add(ap);
+                db.SaveChanges();
+        }
+    }
 }
