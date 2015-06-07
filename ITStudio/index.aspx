@@ -153,7 +153,7 @@
 		</li>
 	</ul>
     <div class="enroll-container" id="enroll-container">
-	      <div class="enroll"><asp:LinkButton runat="server" ID="app" OnClick="Application_Click" OnClientClick="return Verification();" >我要报名！</asp:LinkButton></div>
+	      <asp:Button runat="server" CssClass="enroll" ID="app" OnClick="Application_Click" OnClientClick="return Verification();" PostBackUrl="~/index.aspx" Text="我要报名!"> </asp:Button>
         	<div class="picture">
 	         <img src="./images/map.jpg" alt="#"/>
 	            <p>
@@ -327,7 +327,7 @@
 	</script>
     <script type="text/javascript">
         function Verification(){
-            if (document.getElementById('ContentPlaceHolder1_TxtName').value = "")
+            if (document.getElementById('ContentPlaceHolder1_TxtName').value == "")
             {
                 var a = alert("请告诉我们您的姓名");
                 return false;
@@ -340,10 +340,6 @@
             else if (document.getElementById('ContentPlaceHolder1_TxtTel').value == "")
             {
                 var a = alert("请填写您的电话");
-                return false;
-            }
-            else if (document.getElementById('ContentPlaceHolder1_TxtTel').value.Length != 11) {
-                var a = alert("请如实填写您的电话");
                 return false;
             }
             else

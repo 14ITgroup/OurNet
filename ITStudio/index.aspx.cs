@@ -17,12 +17,12 @@ public partial class ITStudio_index : System.Web.UI.Page
         {
  
                 applications ap = new applications();
-                ap.name = TxtName.Text;
-                ap.major = TxtMajor.Text;
+                ap.name = TxtName.Text.Trim();
+                ap.major = TxtMajor.Text.Trim();
                 ap.time = DateTime.Now;
                 ap.gender = false;
-                ap.job = DdlJob.SelectedValue;
-                ap.introduction = TxtIntroduction.InnerText;
+                ap.job = DdlJob.SelectedItem.Text;
+                ap.introduction = TxtIntroduction.Value.Trim();
                 db.applications.Add(ap);
                 db.SaveChanges();
         }
