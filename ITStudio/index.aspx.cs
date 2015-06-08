@@ -15,12 +15,12 @@ public partial class ITStudio_index : System.Web.UI.Page
     {
         using (var db = new ITStudioEntities())
         {
- 
                 applications ap = new applications();
                 ap.name = TxtName.Text.Trim();
                 ap.major = TxtMajor.Text.Trim();
                 ap.time = DateTime.Now;
                 ap.gender = false;
+                ap.tel = TxtTel.Text.Trim();
                 ap.job = DdlJob.SelectedItem.Text;
                 ap.introduction = TxtIntroduction.Value.Trim();
                 db.applications.Add(ap);
