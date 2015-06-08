@@ -13,6 +13,15 @@ public partial class admin_addWorks : System.Web.UI.Page
         {
             btnSubmit.Enabled = false;
             btnSubmit.Text = "请填写完整";
+            using (var db = new ITStudioEntities())
+            {
+                //作者
+                ddlAuthor.DataSource = db.members.ToList();
+                ddlAuthor.DataValueField = "id";
+                ddlAuthor.DataTextField = "name";
+                ddlAuthor.DataBind();
+                ddlAuthor.Items.Insert(0, new ListItem("请选择作者", "0"));
+            }
         }
     }
 
@@ -48,7 +57,8 @@ public partial class admin_addWorks : System.Web.UI.Page
             LblStatus.Visible = true;
             return;
         }
-        //存储作品到works表
+        //存储作品到works表 
+        //存储作品和成员关系
         using (var db = new ITStudioEntities())
         {
             var work = new works();
@@ -59,6 +69,12 @@ public partial class admin_addWorks : System.Web.UI.Page
             work.time = txtTime.Text;
             work.link = txtLink.Text;
             db.works.Add(work);
+            db.SaveChanges();
+            works work2 = db.works.SingleOrDefault(a => a.picture == work.picture);
+            var map = new workmap();
+            map.memberId = Convert.ToInt32(ddlAuthor.SelectedValue);
+            map.workId=work2.id;
+            db.workmap.Add(map);
             db.SaveChanges();
         }
         ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('添加成功');</script>");

@@ -32,9 +32,18 @@ public partial class admin_editWorks : System.Web.UI.Page
                 txtIntroduction.InnerText = work.introduction;
                 txtLink.Text = work.link;
                 txtTime.Text = work.time;
-                ImgCurrentWorkPic.ImageUrl = "/upload/workPicture/" + work.picture;
+                ImgCurrentWorkPic.ImageUrl = work.picture;
                 ddlType.SelectedValue = work.typeId.ToString();
+                workmap map = db.workmap.SingleOrDefault(a => a.workId == id);
+                int memberId = map.memberId;
+                //作者
+                ddlAuthor.DataSource = db.members.ToList();
+                ddlAuthor.DataValueField = "id";
+                ddlAuthor.DataTextField = "name";
+                ddlAuthor.DataBind();
+                ddlAuthor.SelectedValue = memberId.ToString();
             }
+          
         }
     }
 

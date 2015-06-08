@@ -36,6 +36,10 @@
                 <asp:ListItem Value="4">其他作品</asp:ListItem>
             </asp:DropDownList>
             <br />
+            作者：<br />
+            <asp:DropDownList ID="ddlAuthor" runat="server" style="font-size: x-large">
+            </asp:DropDownList>
+            <br />
             作品完成时间：<br /><asp:TextBox ID="txtTime" runat="server" placeholder="请填写时间" Font-Bold="True" Font-Size="X-Large" MaxLength="40" Width="459px" onfocus="checkForm()" onblur="checkForm()"></asp:TextBox>
         
         
@@ -56,9 +60,10 @@
                 var txtTime = document.getElementById('<%=txtTime.ClientID%>');
                 var fulPicture = document.getElementById('<%=fulPicture.ClientID%>');
                 var txtIntroduction = document.getElementById('<%=txtIntroduction.ClientID%>');
+                var ddlAuthor = document.getElementById('<%=ddlAuthor.ClientID%>');
                 var btnSubmit = document.getElementById('<%=btnSubmit.ClientID%>');
 
-                if (txtTitle.value == '' || txtIntroduction.value == "" || fulPicture.value == '' || txtTime.value == "") {
+                if (txtTitle.value == '' || txtIntroduction.value == "" || fulPicture.value == '' || txtTime.value == ""||ddlAuthor.value==0) {
                     btnSubmit.disabled = true;
                     btnSubmit.value = '请填写完整';
                 }

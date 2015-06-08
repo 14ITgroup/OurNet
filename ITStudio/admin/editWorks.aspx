@@ -27,7 +27,7 @@
             <span class="auto-style1">当前作品图片：</span><br />
             <asp:Image ID="ImgCurrentWorkPic" runat="server" /><br />
             <span class="auto-style1">上传作品图片：<br /></span>
-            <asp:FileUpload ID="fulPicture" runat="server" />
+            <asp:FileUpload ID="fulPicture" runat="server" style="font-size: x-large" />
             <asp:Label ID="lblUploadMessage" runat="server" Font-Size="20pt" Text="状态正常" Visible="False"></asp:Label>
             <br />
             <span class="auto-style1">作品类型：<br />
@@ -36,6 +36,10 @@
                 <asp:ListItem Value="2">CG作品</asp:ListItem>
                 <asp:ListItem Value="3">FLASH作品</asp:ListItem>
                 <asp:ListItem Value="4">其他作品</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            作者：<br />
+            <asp:DropDownList ID="ddlAuthor" runat="server" style="font-size: x-large">
             </asp:DropDownList>
             <br />
             作品完成时间：<br /><asp:TextBox ID="txtTime" runat="server" placeholder="请填写时间" Font-Bold="True" Font-Size="X-Large" MaxLength="40" Width="459px" onfocus="checkForm()" onblur="checkForm()"></asp:TextBox>

@@ -27,6 +27,16 @@ public partial class admin_Default2 : System.Web.UI.Page
             using (var db = new ITStudioEntities())
             {
                 members mem = db.members.SingleOrDefault(a => a.id == id);
+                //删除封面图片
+                string photoPath = mem.others;//相对路径
+                if (photoPath != null)
+                {
+                    photoPath = Server.MapPath(photoPath); //必须经过这一步操作才能变成有效路径
+                    if (System.IO.File.Exists(photoPath))//先判断文件是否存在，再执行操作
+                    {
+                        System.IO.File.Delete(photoPath); //删除文件
+                    }
+                }
                 db.members.Remove(mem);
                 db.SaveChanges();
             }

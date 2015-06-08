@@ -29,19 +29,18 @@ public partial class admin_myWorks : System.Web.UI.Page
             {
                 works work = db.works.SingleOrDefault(a => a.id == id);
                 //删除封面图片
-                string coverPicName = work.picture;
+                string coverPicName = work.picture;//相对路径
                 if (coverPicName != null)
                 {
-                    string CoverPicPath = "/Images/workPicture/" + coverPicName; //相对路径
-                    CoverPicPath = Server.MapPath(CoverPicPath); //必须经过这一步操作才能变成有效路径
-                    if (System.IO.File.Exists(CoverPicPath))//先判断文件是否存在，再执行操作
+                    coverPicName = Server.MapPath(coverPicName); //必须经过这一步操作才能变成有效路径
+                    if (System.IO.File.Exists(coverPicName))//先判断文件是否存在，再执行操作
                     {
-                        System.IO.File.Delete(CoverPicPath); //删除文件
+                        System.IO.File.Delete(coverPicName); //删除文件
                     }
                 }
-
-
                 db.works.Remove(work);
+                workmap map = db.workmap.SingleOrDefault(a => a.workId == id);
+                db.workmap.Remove(map);
                 db.SaveChanges();
             }
             ArticlesBind(getPageNum(), getPageSize());
@@ -54,7 +53,6 @@ public partial class admin_myWorks : System.Web.UI.Page
         {
             var dataSource = from items in db.works
                              orderby items.id descending
-
                              select new { items.id, items.title, items.time, items.link };
             int totalAmount = dataSource.Count();
             Session["pageCount"] = Math.Ceiling((double)totalAmount / (double)PageSize); //总页数，向上取整
