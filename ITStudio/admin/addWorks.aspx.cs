@@ -53,7 +53,7 @@ public partial class admin_addWorks : System.Web.UI.Page
         {
             var work = new works();
             work.typeId = Convert.ToInt32(ddlType.SelectedValue);
-            work.picture = workPicName;
+            work.picture = "/upload/workPicture/"+workPicName;
             work.title = title;
             work.introduction = content;
             work.time = txtTime.Text;
