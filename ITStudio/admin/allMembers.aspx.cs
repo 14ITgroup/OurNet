@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class admin_myNotice : System.Web.UI.Page
+public partial class admin_Default2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -19,29 +19,28 @@ public partial class admin_myNotice : System.Web.UI.Page
     }
     protected void RptArticles_ItemCommand(object source, RepeaterCommandEventArgs e)
     {
-        if (e.CommandName == "delete") //删除文章
+        if (e.CommandName == "delete") //删除人员
         {
             string IDStr = e.CommandArgument.ToString().Trim();
 
             int id = Convert.ToInt32(IDStr);
             using (var db = new ITStudioEntities())
             {
-                notices not = db.notices.SingleOrDefault(a => a.id == id);
-                db.notices.Remove(not);
+                members mem = db.members.SingleOrDefault(a => a.id == id);
+                db.members.Remove(mem);
                 db.SaveChanges();
             }
             ArticlesBind(getPageNum(), getPageSize());
-            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('文章删除成功');</script>");
+            ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('人员删除成功');</script>");
         }
     }
     void ArticlesBind(int CurrentPage, int PageSize) //文章绑定
     {
         using (var db = new ITStudioEntities())
         {
-            var dataSource = from items in db.notices
+            var dataSource = from items in db.members
                              orderby items.id descending
-
-                             select new { items.id, items.title, items.time };
+                             select new { items.id, items.name, items.grade,items.direction };
             int totalAmount = dataSource.Count();
             Session["pageCount"] = Math.Ceiling((double)totalAmount / (double)PageSize); //总页数，向上取整
             dataSource = dataSource.Skip(PageSize * (CurrentPage - 1)).Take(PageSize); //分页
@@ -65,7 +64,7 @@ public partial class admin_myNotice : System.Web.UI.Page
         {
             using (var db = new ITStudioEntities())
             {
-                var dataSource = from items in db.works
+                var dataSource = from items in db.members
                                  orderby items.id
                                  select new { items };
                 int totalAmount = dataSource.Count();

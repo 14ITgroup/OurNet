@@ -12,13 +12,8 @@ public partial class admin_myWorks : System.Web.UI.Page
         if (!IsPostBack)
         {
             Session["pagenum"] = 1;
-            // querystring共有：page（文章的页码）、
             int currentPage = 1;
             int pageSize = getPageSize();
-            if (Request.QueryString["page"] != null)
-            {
-                currentPage = Convert.ToInt32(Request.QueryString["page"]);
-            }
             ArticlesBind(currentPage, pageSize);
         }
     }

@@ -25,7 +25,7 @@
         <br />
         <div onmouseover="checkForm()">
             <span class="auto-style1">上传作品图片：<br />
-            </span><asp:FileUpload ID="fulPicture" runat="server" />
+            </span><asp:FileUpload ID="fulPicture" runat="server" style="font-size: x-large" />
             <asp:Label ID="lblUploadMessage" runat="server" Font-Size="20pt" Text="状态正常" Visible="False"></asp:Label>
             <br />
             <span class="auto-style1">作品类型：<br />

@@ -34,7 +34,10 @@
                             <li><a href="addNotice.aspx">添加公告</a></li>
                             <li><a href="myWorks.aspx">管理作品</a></li>
                             <li><a href="addWorks.aspx">添加作品</a></li>
+                            <li><a href="allMembers.aspx">管理人员</a></li>
+                            <li><a href="addMember.aspx">添加人员</a></li>
                             <li><a href="Admins.aspx">帐号管理</a></li>
+                           
                         </ul>
                     </nav>
                 </div>
