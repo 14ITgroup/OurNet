@@ -54,7 +54,7 @@ public partial class admin_Default : System.Web.UI.Page
         {
             var mem = new members();
             mem.grade = Convert.ToInt32(ddlGrade.SelectedValue);
-            mem.others = "/upload/memberPhoto/" + photo;
+            mem.photo = "/upload/memberPhoto/" + photo;
             mem.name = name;
             mem.introduction = content;
             mem.direction = direction;
