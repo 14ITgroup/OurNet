@@ -1,10 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Itshow.master" AutoEventWireup="true" CodeFile="work.aspx.cs" Inherits="_Default"%>
 
+<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 	<title>Work</title>
-	<link rel="stylesheet" href="./css/decoration_work.css">
+	<link rel="stylesheet" href="./css/decoration_work.css"/>
 	<link rel="stylesheet" href="./css/index.css" />
+    <style type="text/css">
+        .rig_fenye{ height:36px; margin:0 auto; margin-left:150px;}
+        .rig_fenye li{ width:37px; height:36px; float:left; background:url(../index_img/shuzi.gif); line-height:32px; text-align:center;}
+        .rig_fenye li:hover{ width:37px; height:36px; float:left; background:url(../index_img/dang.gif); line-height:31px; text-align:center;}
+        .rig_fenye li a{ color:#3c383b; font-size:14px; font-family:Arial; font-weight:bolder; text-decoration:none; display:block; margin-right:1px;}
+        .rig_fenye li a:hover{ color:#752900; font-size:14px; font-family:Arial; font-weight:bolder;}
+
+        .paginator a { float:left; height:36px; line-height:32px; padding:0px 14px; background:url(/images/shuzi.gif) no-repeat center center; text-align:center;text-decoration:none; color:#333;
+         font-size:14px; font-family:Arial; font-weight:bolder; }
+        .paginator .cpb { float:left; height:36px; padding:0px 14px; line-height:32px;  background:url(/images/dang.gif) no-repeat center center; text-align:center;text-decoration:none; color:#752900;
+         font-size:14px; font-family:Arial; font-weight:bolder; }
+        .paginator a:hover { float:left; height:36px; padding:0px 14px; line-height:32px; background:url(/images/dang.gif) no-repeat center center; text-align:center;text-decoration:none; color:#752900;
+         font-size:14px; font-family:Arial; font-weight:bolder;}
+         .npb{ float:left;}
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 	<div class="hide" style="display:none;">
@@ -51,7 +68,7 @@
 				</ul>
 			</div>
 			<div class="clr"></div>
-			<div class="pages">
+<%--			<div class="pages">
 				<ul>
 					<li><a href=""><div></div></a></li>
 					<li><a href="">1</a></li>
@@ -63,10 +80,20 @@
 					<li><a href="">25</a></li>
 					<li><a href=""><div></div></a></li>
 				</ul>
-			</div>
+			</div>--%>
+        <div class="rig_fenye" style="position:relative; top: -7px; left: 306px;">
+            <webdiyer:AspNetPager ID="AspNetPager" runat="server" HorizontalAlign="Center" NumericButtonType="Text" MoreButtonType="Text"
+              ShowFirstLast="false" PagingButtonType="Text" ImagePath="/images/" ButtonImageExtension=".gif" ButtonImageNameExtension="n"
+               DisabledButtonImageNameExtension="g" ShowPageIndexBox="Never" CurrentPageButtonClass="cpb" NextPrevButtonClass="npb" ButtonImageAlign="left"
+              CssClass="paginator" CurrentPageButtonPosition="Center" OnPageChanged="AspNetPager_PageChanged" NumericButtonCount="4" PageSize="4">
+            </webdiyer:AspNetPager>
 		</div>
+      </div>
 		<div class="clr"></div>
 </div>
+     
+
+
 <script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
 
 <script type="text/javascript">

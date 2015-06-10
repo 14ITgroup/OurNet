@@ -11,7 +11,24 @@ public partial class _Default : System.Web.UI.Page
     {
         Session["pageNum"]=1;
         int currentPage = Convert.ToInt16(Session["pageNum"]);
-        ArticlesBind(currentPage);
+        //ArticlesBind(currentPage);
+        using (var db = new ITStudioEntities())
+        {
+            PagedDataSource pd = new PagedDataSource();
+            pd.DataSource = (from items in db.works
+                            orderby items.id descending
+                            select items).ToList();
+            pd.AllowPaging = true;
+            if (pd.DataSourceCount > AspNetPager.PageSize)
+            {
+                this.AspNetPager.AlwaysShow = true;
+            }
+            this.AspNetPager.RecordCount = pd.DataSourceCount;
+            pd.PageSize = this.AspNetPager.PageSize;
+            pd.CurrentPageIndex = 1;
+            rptWorks.DataSource = pd;
+            rptWorks.DataBind();
+        }
     }
     void ArticlesBind(int CurrentPage) //文章绑定
     {
@@ -45,4 +62,26 @@ public partial class _Default : System.Web.UI.Page
             }
         }
     }
+    protected void AspNetPager_PageChanged(object sender, EventArgs e)
+    {
+        using (var db = new ITStudioEntities())
+        {
+            PagedDataSource pd = new PagedDataSource();
+            pd.DataSource = (from items in db.works
+                             orderby items.id descending
+                             select items).ToList();
+            pd.AllowPaging = true;
+            if (pd.DataSourceCount > AspNetPager.PageSize)
+            {
+                this.AspNetPager.AlwaysShow = true;
+            }
+            this.AspNetPager.RecordCount = pd.DataSourceCount;
+            pd.PageSize = this.AspNetPager.PageSize;
+            pd.CurrentPageIndex = this.AspNetPager.CurrentPageIndex - 1;
+            rptWorks.DataSource = pd;
+            rptWorks.DataBind();
+        }
+    }
+
+
 }
