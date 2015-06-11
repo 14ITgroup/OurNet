@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class personal_diaplay : System.Web.UI.Page
+public partial class personal_display : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -13,20 +13,21 @@ public partial class personal_diaplay : System.Web.UI.Page
         using (var db = new ITStudioEntities())
         {
             var dataSource = from u in db.members
-                             where (u.id == 1)
+                             where (u.id == ID)
                              select new
                              {
                                  u.name,
                                  u.introduction,
                                  u.photo,
                                  u.grade,
+                                 u.direction,
                              };
             RptMenber.DataSource = dataSource.ToList();
             RptMenber.DataBind();
         }
         using (var db = new ITStudioEntities())
         {
-
+            
         }
     }
 }
