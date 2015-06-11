@@ -5,8 +5,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="banner-back" id="banner-back">
-		<a href="index.html">
-			<img src="images/it-ico.png" alt="IT-Logo">
+		<a href="index.aspx">
+			<img src="images/it-ico.png" alt="IT-Logo"/>
 		</a>
 		<a href="#" class="nav-join">Join us now</a>
 		<div style="clear: both"></div>
@@ -14,12 +14,12 @@
 			<ul>
 				<li >
 					<div class="flick-title">
-						<img src="images/banner-1_03.png" alt="banner">
+						<img src="images/banner-1_03.png" alt="banner"/>
 					</div>
 				</li>
 				<li>
 					<div class="flick-title">
-						<img src="images/banner-2_03.png" alt="banner">
+						<img src="images/banner-2_03.png" alt="banner"/>
 					</div>
 					<div class="flick-sub-text">
 						<a href="#" class="read-more"></a>
@@ -27,7 +27,7 @@
 				</li>
 				<li>
 					<div class="flick-title">
-						<img src="images/banner-3_03.png" alt="banner">
+						<img src="images/banner-3_03.png" alt="banner"/>
 					</div>
 					<div class="flick-sub-text">
 						<a href="#" class="read-more"></a>
@@ -35,7 +35,7 @@
 				</li>
 				<li>
 					<div class="flick-title">
-						<img src="images/banner-4_03.png" alt="banner">
+						<img src="images/banner-4_03.png" alt="banner"/>
 					</div>
 					<div class="flick-sub-text">
 						<a href="#" class="read-more"></a>
@@ -44,17 +44,17 @@
 			</ul>
 		</div>
 		<a href="#" class="scroll-bottom">
-				<img src="images/arrow.png" alt="arrow">
+				<img src="images/arrow.png" alt="arrow"/>
 			</a>
 	</div>
 
 	<a href="#" class="scroll-top">
-		<img src="images/top_02.png" alt="arrow-to-top" width="45" height="115">
+		<img src="images/top_02.png" alt="arrow-to-top" width="45" height="115"/>
 	</a>
 	<div class="index-des" id="index-des">
 		<div class="index-des-contain">
-			<img src="images/itwork-ico.png" alt="IT">
-			<img src="images/since-2002.png" alt="since 2002">
+			<img src="images/itwork-ico.png" alt="IT"/>
+			<img src="images/since-2002.png" alt="since 2002"/>
 			<p>用自己的指挥、思想、热情创造着未来</p>
 			<p>
 				爱特工作室是在中国海洋大学信息科学与工程学院院领导主持下成立于2002年的、是以计算机技术人才培养，网站开发为特色的技术性团体。自成立以来，爱特以发现人才，培养人才，输送人才为最终目的，经过几年的发展，现在已成为海大最强的技术团队。
@@ -75,9 +75,9 @@
 	<ul class="intro-back">
 		<li>
 			<div>
-				<img src="images/part1.jpg" alt="picture">
+				<img src="images/part1.jpg" alt="picture"/>
 				<div class="intro-culture">
-					<img src="images/team-culture_03.png" alt="团队文化">
+					<img src="images/team-culture_03.png" alt="团队文化"/>
 					<p>
 						爱特以发现培养更多的计算机人才为宗旨，志在使团队能够在全国高校网络技术团队中达到领先地位；爱特让热爱互联网技术的人才在这里尽情发挥自己的技术,享受团队开发的乐趣。
 					</p>
@@ -95,15 +95,15 @@
 					</p>
 					<div class="clr"></div>
 				</div>
-				<img src="images/part2.jpg" alt="picture">
+				<img src="images/part2.jpg" alt="picture"/>
 				<div style="clear: both"></div>
 			</div>
 		</li>
 		<li>
 			<div>
-				<img src="images/part3.jpg" alt="picture" >
+				<img src="images/part3.jpg" alt="picture" />
 				<div class="intro-team">
-					<img src="images/team-good_11.png" alt="优秀的团队">
+					<img src="images/team-good_11.png" alt="优秀的团队"/>
 					<p>
 						我们有优秀的团队，我们和谐的生活在一起，像家人一样互相关心，还能尽情地探讨问题，做自己喜欢做的事情。
 					</p>
@@ -114,14 +114,14 @@
 		</li>
 	</ul>
 	<div class="apart">
-		<img src="images/apartment.png" alt="部门介绍">
+		<img src="images/apartment.png" alt="部门介绍"/>
 	</div>
 	<ul class="intro-back">
 		<li>
 			<div>
-				<img src="images/ps.png" alt="picture" style="margin: 40px 0">
+				<img src="images/ps.png" alt="picture" style="margin: 40px 0"/>
 				<div class="apart-art">
-					<img src="images/art-design_15.png" alt="美术设计">
+					<img src="images/art-design_15.png" alt="美术设计"/>
 					<p> 爱特工作室是在中国海洋大学信息科学与工程学院院领导主持下成立于2002年的、是以计算机技术人才培养，网站开发为特色的技术性团体。</p>
 				</div>
 				<div style="clear: both"></div>
@@ -130,18 +130,18 @@
 		<li>
 			<div>
 				<div class="apart-pro">
-					<img src="images/pro-design_19.png" alt="程序开发">
+					<img src="images/pro-design_19.png" alt="程序开发"/>
 					<p>
 						我们在做一件足以使我们每个人自豪的事情，我们试图用我们的智慧、思考、热情和双手改变一切，这就是我们----爱特工作室，一群年轻的人把自己的诚挚表达出来的地方。
 					</p>
 				</div>
-				<img src="images/vs.png" alt="picture" width="371" height="261" style="margin: 40px 0">
+				<img src="images/vs.png" alt="picture" width="371" height="261" style="margin: 40px 0"/>
 				<div style="clear: both"></div>
 			</div>
 		</li>
 		<li>
 			<div>
-				<img src="images/维护-.png" alt="picture" width="371" height="261" style="margin: 40px 0">
+				<img src="images/维护-.png" alt="picture" width="371" height="261" style="margin: 40px 0"/>
 				<div class="apart-sys">
 					<img src="images/fix-pro_23.png" alt="系统维护">
 					<p>

@@ -13,8 +13,10 @@ public partial class ITStudio_index : System.Web.UI.Page
     }
     public void Application1(object sender, EventArgs e)
     {
-        using (var db = new ITStudioEntities())
+        try
         {
+            using (var db = new ITStudioEntities())
+            {
                 applications ap = new applications();
                 ap.name = TxtName.Text.Trim();
                 ap.major = TxtMajor.Text.Trim();
@@ -25,6 +27,15 @@ public partial class ITStudio_index : System.Web.UI.Page
                 ap.introduction = TxtIntroduction.Value.Trim();
                 db.applications.Add(ap);
                 db.SaveChanges();
+            }
+            Response.Write("<script>alert('恭喜您，报名成功');window.window.location.href='index.aspx';</script> ");
+        }
+        catch
+        {
+            Response.Write("<script>alert('报名失败，请重试');window.window.location.href='index.aspx';</script> ");
+        }
+        finally
+        { 
         }
     }
 }

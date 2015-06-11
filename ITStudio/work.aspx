@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Itshow.master" AutoEventWireup="true" CodeFile="work.aspx.cs" Inherits="_Default"%>
 
-<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>
+<%--<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>--%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
@@ -27,7 +27,7 @@
 	<div class="hide" style="display:none;">
 			<div class="X"><a href="work.html"></a></div>
 			<div class="arrp arrl"><a href="#"></a></div>
-			<img src="./images/84.jpg" alt="">
+			<img src="./images/84.jpg" alt=""/>
 			<div class="arrp arrr"><a href="#"></a></div>
 			<p>After spending many afternoons learning and observing how we worked, Modulus was able to design different spaces for the needs of our team. They spent countless hours going back and forth with us discussing everything from lighting to acoustics. It was incredible. Designing for a bunch of designers isn't the easiest of jobs.</p>
 	</div>

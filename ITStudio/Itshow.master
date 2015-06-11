@@ -9,7 +9,7 @@
 	<link rel="stylesheet" media="screen and (max-width: 1440px)" href="css/index-small.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-	<link rel="stylesheet"  href="css/index.css">
+	<link rel="stylesheet"  href="css/index.css"/>
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
@@ -24,7 +24,7 @@
     <form id="form1" runat="server">
         <div>
         <ul class="index-menu">
-		    <a href="index.aspx"><img src="images/it-ico.png" alt="IT-Logo"></a>
+		    <a href="index.aspx"><img src="images/it-ico.png" alt="IT-Logo"/></a>
 		    <li><a href="#">首页</a></li>
 		    <li><a href="#">简介</a></li>
 		    <li><a href="#">作品</a></li>
