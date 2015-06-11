@@ -14,6 +14,7 @@
         <EntityTypeShape EntityType="ITStudioModel.workTypes" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="ITStudioModel.FK_workmap_members" ManuallyRouted="false" />
         <AssociationConnector Association="ITStudioModel.FK_workmap_works" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ITStudioModel.outWorks" Width="1.5" PointX="2.5116327323539336" PointY="6.84690550288507" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
