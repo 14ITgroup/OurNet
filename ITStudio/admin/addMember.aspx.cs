@@ -74,7 +74,7 @@ public partial class admin_Default : System.Web.UI.Page
         {
             var mem = new members();
             mem.grade = Convert.ToInt32(ddlGrade.SelectedValue);
-            mem.photo = "/upload/memberPhoto/" + photo;
+            mem.photo = photo;
             mem.name = name;
             mem.introduction = content;
             mem.direction = direction;
@@ -116,7 +116,7 @@ public partial class admin_Default : System.Web.UI.Page
             picSaveName = DateTime.Now.ToString("yyyyMMddHHmmssffff") + random + picFileExtension; //当前时间
 
             //取得文件在服务器上保存的位置C:\Inetpub\wwwroot\WebSite1\images\20022775_m.jpg 
-            string serverpath = Server.MapPath("~/upload/memberPhoto/") + picSaveName;
+            string serverpath = Server.MapPath("../upload/memberPhoto/") + picSaveName;
             try
             {
                 fulPhoto.PostedFile.SaveAs(serverpath);//将上传的文件另存为 
