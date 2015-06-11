@@ -21,38 +21,45 @@
 
         <!-- 电脑端界面 -->
         <div class="main">
-            <img src="./images/personal_pic.gif" alt="person">
-            <div></div>
-            <h1>赵飞</h1>
-            <ul>
-                <img src="./images/personal_line.jpg" alt="">
-                <p>since 2009</p>
-                <img src="./images/personal_line.jpg" alt="">
-            </ul>
-            <h5>性格开朗、稳重、有活力，待人热情、真诚。工作认真负责，积极主动，能吃苦耐劳。有较强的组织能力、实际动手能力和团体协作精神，能迅速的适应各种环境，并融合其中</h5>
-            <p>星座：未知<br>
-                血型：未知<br>
-                爱好：妹子吧<br>
-                方向：<a href="#">美术设计</a>/<a href="#">平面设计</a>/<a href="#">html</a>/<a href="#">css</a>/<a href="#">jvavascript</a>/<a href="#">jquery</a>/<a href="#">用户体验设计 </a>
-                <br>
-            </p>
-            <div></div>
+            <div>
+            <asp:Repeater ID="RptMenber" runat="server">
+                <HeaderTemplate>
+
+                </HeaderTemplate>
+
+                <ItemTemplate>
+                    <img src="<%#Eval("photo") %>" alt="person">
+                    <h1><%#Eval("name") %></h1>
+                    <ul>
+                       <img src="./images/personal_line.jpg" alt="">
+                       <p>since <%#Eval("grade") %></p>
+                       <img src="./images/personal_line.jpg" alt="">
+                    </ul>
+                    <h5><%#Eval("introduction") %></h5>
+                    方向：<%#Eval("direction") %>
+                </ItemTemplate>
+
+                <FooterTemplate>
+
+                </FooterTemplate>
+            </asp:Repeater>
+                </div>
             <p>主要作品</p>
             <ul class="clr"></ul>
             <div>
-                <asp:Repeater ID="Repeater1" runat="server">
+                <asp:Repeater ID="RptWork" runat="server">
                     <HeaderTemplate>
                         <ul class="work-pres-personal">
                     </HeaderTemplate>
 
                     <ItemTemplate>
                         <a href="work.aspx">
-                            <img src="./images/personal_wenzhang1.jpg" alt="pic1">
-                            <img src="images/display1_hover.jpg" alt="作品">
+                            <img src="<%#Eval("picture") %>" alt="pic1">
+                            <img src="<%#Eval("picture") %>" alt="作品">
                         </a>
-                        &nbsp;<h3><a href="#">Design for TRAVIS</a></h3>
-                        <p>2014.12.25</p>
-                        <p>Troye Sivan</p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3><a href="#"><%#Eval("introduction") %></a></h3>
+                        <p><%#Eval("time") %></p>
+                        <p><%#Eval("title") %></p>
                     </ItemTemplate>
 
                     <FooterTemplate>
