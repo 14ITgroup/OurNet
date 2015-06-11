@@ -33,20 +33,30 @@
                 </FooterTemplate>
             </asp:Repeater>
             <p>主要作品</p>
-            <ul class="clr"></ul>
-            <asp:Repeater ID="RptWorks" runat="server"></asp:Repeater>
-            <div>
+            
+            <asp:Repeater ID="RptWorks" runat="server">
+                <HeaderTemplate>
+                    <ul class="clr"></ul>
+                </HeaderTemplate>
+                
+                <ItemTemplate>
+                  <div>
                 <ul class="work-pres-personal">
                     <a href="#">
-                        <img src="./images/personal_wenzhang1.jpg" alt="pic1">
-                        <img src="images/display1_hover.jpg" alt="作品">
+                        <img src="<%#Eval("photo") %>" alt="pic1"/>
+                        <img src="<%#Eval("photo") %>" alt="作品"/>
                     </a>
-                    <h3><a href="#">Design for TRAVIS</a></h3>
-                    <p>2014.12.25</p>
-                    <p>Troye Sivan</p>
+                    <h3><a href="#"><%#Eval("introduction") %></a></h3>
+                    <p><%#Eval("time") %></p>
+                    <p><%#Eval("title") %></p>
                 </ul>
-            </div>
-            <div class="clr"></div>
+                 </div>
+                </ItemTemplate>
+
+                <FooterTemplate>
+                    <div class="clr"></div>
+                </FooterTemplate>
+            </asp:Repeater>        
 		</div>
 
         <!-- 移动端界面 -->
@@ -115,6 +125,7 @@
         $(this).children('img:first-child').css('display', 'block');
         $(this).children('img+img').css('display', 'none');
     });
-</script>
+</script>
+
 </asp:Content>
 

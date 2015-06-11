@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControl;
+using System.Web.UI.WebControls;
 
 public partial class personal_display : System.Web.UI.Page
 {
@@ -24,10 +24,18 @@ public partial class personal_display : System.Web.UI.Page
                              };
             RptMenber.DataSource = dataSource.ToList();
             RptMenber.DataBind();
-        }
-        using (var db = new ITStudioEntities())
-        {
-            
+
+            var dataSource1 = from u in db.outWorks
+                              where (u.id == ID)
+                              select new
+                              {
+                                  u.picture,
+                                  u.introduction,
+                                  u.title,
+                                  u.time,
+                              };
+            RptMenber.DataSource = dataSource1.ToList();
+            RptMenber.DataBind();
         }
     }
 }
