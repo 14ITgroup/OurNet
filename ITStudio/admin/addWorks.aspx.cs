@@ -13,14 +13,14 @@ public partial class admin_addWorks : System.Web.UI.Page
         {
             btnSubmit.Enabled = false;
             btnSubmit.Text = "请填写完整";
+
             using (var db = new ITStudioEntities())
             {
                 //作者
-                ddlAuthor.DataSource = db.members.ToList();
-                ddlAuthor.DataValueField = "id";
-                ddlAuthor.DataTextField = "name";
-                ddlAuthor.DataBind();
-                ddlAuthor.Items.Insert(0, new ListItem("请选择作者", "0"));
+                ChklstAuthors.DataSource = db.members.ToList();
+                ChklstAuthors.DataValueField = "id";
+                ChklstAuthors.DataTextField = "name";
+                ChklstAuthors.DataBind();
             }
         }
     }
@@ -57,26 +57,9 @@ public partial class admin_addWorks : System.Web.UI.Page
             LblStatus.Visible = true;
             return;
         }
-        //存储作品到works表 
-        //存储作品和成员关系
-        using (var db = new ITStudioEntities())
-        {
-            var work = new works();
-            work.typeId = Convert.ToInt32(ddlType.SelectedValue);
-            work.picture = "/upload/workPicture/"+workPicName;
-            work.title = title;
-            work.introduction = content;
-            work.time = txtTime.Text;
-            work.link = txtLink.Text;
-            db.works.Add(work);
-            db.SaveChanges();
-            works work2 = db.works.SingleOrDefault(a => a.picture == work.picture);
-            var map = new workmap();
-            map.memberId = Convert.ToInt32(ddlAuthor.SelectedValue);
-            map.workId=work2.id;
-            db.workmap.Add(map);
-            db.SaveChanges();
-        }
+
+        submitWork(title, content, workPicName); // 添加作品
+        
         ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('添加成功');</script>");
         txtTitle.Text = "";
         txtIntroduction.InnerText = "";
@@ -84,6 +67,50 @@ public partial class admin_addWorks : System.Web.UI.Page
         txtTime.Text = "";
         ddlType.SelectedValue = "1";
     }
+
+    /// <summary>
+    /// 存储作品到works表;存储作品和多个成员关系
+    /// </summary>
+    /// <param name="title">作品名称</param>
+    /// <param name="content">作品描述</param>
+    /// <param name="workPicName">作品图片</param>
+    void submitWork(string title, string content, string workPicName)
+    {
+        using (var db = new ITStudioEntities())
+        {
+            var work = new works(); // 要添加的作品
+            work.typeId = Convert.ToInt32(ddlType.SelectedValue);
+            work.picture = "/upload/workPicture/" + workPicName;
+            work.title = title;
+            work.introduction = content;
+            work.time = txtTime.Text;
+            work.link = txtLink.Text;
+            db.works.Add(work);
+            db.SaveChanges();
+            int workId = work.id;
+            // works work2 = db.works.SingleOrDefault(a => a.picture == work.picture); //意义不明，可能是为了获取刚添加的作品。
+
+            // 存储多个作者到 workmap 表
+            for (int i = 0; i < ChklstAuthors.Items.Count; i++) // 遍历CheckBoxList
+            {
+                if (ChklstAuthors.Items[i].Selected == true)
+                {
+                    int memberId = 1;
+                    if (Filter.IsNumeric(ChklstAuthors.Items[i].Value))
+                    {
+                        memberId = Convert.ToInt32(ChklstAuthors.Items[i].Value);
+                    }
+
+                    var map = new workmap();
+                    map.memberId = memberId;
+                    map.workId = workId;
+                    db.workmap.Add(map);
+                    db.SaveChanges();
+                }
+            }
+        }
+    }
+
     string uploadWorkPic() //上传封面图片，返回文件名。
     {
         string picSaveName = null;

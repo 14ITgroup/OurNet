@@ -11,9 +11,29 @@ public partial class admin_Default : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
+            bindYears();
             btnSubmit.Enabled = false;
             btnSubmit.Text = "请填写完整";
         }
+    }
+
+    /// <summary>
+    /// 生成并绑定年份下拉菜单
+    /// </summary>
+    void bindYears()
+    {
+        int minYearOffset = 5; //相对今年的最小和最大偏移
+        int maxYearOffset = 1;
+
+        List<string> years = new List<string>(); 
+        int thisYear = DateTime.Now.Year;
+        for (int index = -minYearOffset; index <= maxYearOffset; index++)
+        {
+            years.Add((thisYear + index).ToString());
+        }
+        ddlGrade.DataSource = years;
+        ddlGrade.DataBind();
+        ddlGrade.SelectedValue = thisYear.ToString(); // 预选中今年年份
     }
 
     protected void BtnSubmit_Click(object sender, EventArgs e)

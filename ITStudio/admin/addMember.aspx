@@ -21,12 +21,7 @@
         <br />
         <br />
         年级：<asp:DropDownList ID="ddlGrade" runat="server" style="font-size: x-large" Width="91px">
-                <asp:ListItem Value="2011">2011</asp:ListItem>
-                <asp:ListItem>2012</asp:ListItem>
-                <asp:ListItem>2013</asp:ListItem>
-                <asp:ListItem>2014</asp:ListItem>
-                <asp:ListItem>2015</asp:ListItem>
-                <asp:ListItem>2016</asp:ListItem>
+                
             </asp:DropDownList>
             </span><br />
         

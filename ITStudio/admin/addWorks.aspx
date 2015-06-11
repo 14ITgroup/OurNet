@@ -10,14 +10,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-        <hgroup class="title">
+    <hgroup class="title">
         <h1 class="auto-style1"><%: Title %></h1>
     </hgroup>
 
     <div>
         <span class="auto-style1">作品名称：</span><br />
         <asp:TextBox ID="txtTitle" runat="server" placeholder="请填写标题" Font-Bold="True" Font-Size="X-Large" MaxLength="40" Width="1024px" onfocus="checkForm()" onblur="checkForm()"></asp:TextBox>
-        
+
         <br />
         <span class="auto-style1">作品描述：</span><br />
         <textarea id="txtIntroduction" name="txtIntroduction" style="width: 1024px; height: 342px;" onfocus="checkForm()" onblur="checkForm()" runat="server"></textarea>
@@ -25,28 +25,32 @@
         <br />
         <div onmouseover="checkForm()">
             <span class="auto-style1">上传作品图片：<br />
-            </span><asp:FileUpload ID="fulPicture" runat="server" style="font-size: x-large" />
+            </span>
+            <asp:FileUpload ID="fulPicture" runat="server" Style="font-size: x-large" />
             <asp:Label ID="lblUploadMessage" runat="server" Font-Size="20pt" Text="状态正常" Visible="False"></asp:Label>
             <br />
             <span class="auto-style1">作品类型：<br />
-            <asp:DropDownList ID="ddlType" runat="server" style="font-size: x-large">
-                <asp:ListItem Value="1">网站作品</asp:ListItem>
-                <asp:ListItem Value="2">CG作品</asp:ListItem>
-                <asp:ListItem Value="3">FLASH作品</asp:ListItem>
-                <asp:ListItem Value="4">其他作品</asp:ListItem>
-            </asp:DropDownList>
-            <br />
-            作者：<br />
-            <asp:DropDownList ID="ddlAuthor" runat="server" style="font-size: x-large">
-            </asp:DropDownList>
-            <br />
-            作品完成时间：<br /><asp:TextBox ID="txtTime" runat="server" placeholder="请填写时间" Font-Bold="True" Font-Size="X-Large" MaxLength="40" Width="459px" onfocus="checkForm()" onblur="checkForm()"></asp:TextBox>
-        
-        
-            <br />
-            网站链接(可不填写)：<br />
-        <asp:TextBox ID="txtLink" runat="server" placeholder="请填写网站链接" Font-Bold="True" Font-Size="X-Large" MaxLength="40" Width="459px" onfocus="checkForm()" onblur="checkForm()"></asp:TextBox>
-        
+                <asp:DropDownList ID="ddlType" runat="server" Style="font-size: x-large">
+                    <asp:ListItem Value="1">网站作品</asp:ListItem>
+                    <asp:ListItem Value="2">CG作品</asp:ListItem>
+                    <asp:ListItem Value="3">FLASH作品</asp:ListItem>
+                    <asp:ListItem Value="4">其他作品</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                作者：
+                <asp:CheckBoxList ID="ChklstAuthors" runat="server">
+                </asp:CheckBoxList>
+                <%--<asp:DropDownList ID="ddlAuthor" runat="server" style="font-size: x-large">
+            </asp:DropDownList>--%>
+                <br />
+                作品完成时间：<br />
+                <asp:TextBox ID="txtTime" runat="server" placeholder="请填写时间" Font-Bold="True" Font-Size="X-Large" MaxLength="40" Width="459px" onfocus="checkForm()" onblur="checkForm()"></asp:TextBox>
+
+
+                <br />
+                网站链接(可不填写)：<br />
+                <asp:TextBox ID="txtLink" runat="server" placeholder="请填写网站链接" Font-Bold="True" Font-Size="X-Large" MaxLength="40" Width="459px" onfocus="checkForm()" onblur="checkForm()"></asp:TextBox>
+
             </span>
             <br />
 
@@ -60,10 +64,10 @@
                 var txtTime = document.getElementById('<%=txtTime.ClientID%>');
                 var fulPicture = document.getElementById('<%=fulPicture.ClientID%>');
                 var txtIntroduction = document.getElementById('<%=txtIntroduction.ClientID%>');
-                var ddlAuthor = document.getElementById('<%=ddlAuthor.ClientID%>');
+                
                 var btnSubmit = document.getElementById('<%=btnSubmit.ClientID%>');
 
-                if (txtTitle.value == '' || txtIntroduction.value == "" || fulPicture.value == '' || txtTime.value == ""||ddlAuthor.value==0) {
+                if (txtTitle.value == '' || txtIntroduction.value == "" || fulPicture.value == '' || txtTime.value == "" || !isAuthorChecked()) {
                     btnSubmit.disabled = true;
                     btnSubmit.value = '请填写完整';
                 }
@@ -71,6 +75,17 @@
                     btnSubmit.disabled = false;
                     btnSubmit.value = '提交';
                 }
+            }
+
+            function isAuthorChecked() {
+                var chklstAuthors = document.getElementById('<%= ChklstAuthors.ClientID%>');
+                var checks = chklstAuthors.getElementsByTagName('input');
+                for (var index = 0; index < checks.length; index++) {
+                    if (checks[index].type == "checkbox" && checks[index].checked == true) {
+                        return true;
+                    }
+                }
+                return false;
             }
         </script>
     </div>
