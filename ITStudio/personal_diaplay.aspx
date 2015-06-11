@@ -30,7 +30,8 @@
                 <img src="./images/personal_line.jpg" alt="">
             </ul>
             <h5>性格开朗、稳重、有活力，待人热情、真诚。工作认真负责，积极主动，能吃苦耐劳。有较强的组织能力、实际动手能力和团体协作精神，能迅速的适应各种环境，并融合其中</h5>
-            <p>星座：未知<br>
+            <p>
+                星座：未知<br>
                 血型：未知<br>
                 爱好：妹子吧<br>
                 方向：<a href="#">美术设计</a>/<a href="#">平面设计</a>/<a href="#">html</a>/<a href="#">css</a>/<a href="#">jvavascript</a>/<a href="#">jquery</a>/<a href="#">用户体验设计 </a>
@@ -39,27 +40,24 @@
             <div></div>
             <p>主要作品</p>
             <ul class="clr"></ul>
-            <div>
-                <asp:Repeater ID="Repeater1" runat="server">
-                    <HeaderTemplate>
+
+                    <div>
+
+
+
                         <ul class="work-pres-personal">
-                    </HeaderTemplate>
-
-                    <ItemTemplate>
-                        <a href="work.aspx">
-                            <img src="./images/personal_wenzhang1.jpg" alt="pic1">
-                            <img src="images/display1_hover.jpg" alt="作品">
-                        </a>
-                        &nbsp;<h3><a href="#">Design for TRAVIS</a></h3>
-                        <p>2014.12.25</p>
-                        <p>Troye Sivan</p>
-                    </ItemTemplate>
-
-                    <FooterTemplate>
+                            <a href="work.aspx">
+                                <img src="./images/personal_wenzhang1.jpg" alt="pic1">
+                                <img src="images/display1_hover.jpg" alt="作品">
+                            </a>
+                            &nbsp;<h3><a href="#">Design for TRAVIS</a></h3>
+                            <p>2014.12.25</p>
+                            <p>Troye Sivan</p>
                         </ul>
-                    </FooterTemplate>
-                </asp:Repeater>
-            </div>
+
+
+                    </div>
+
             <div class="clr"></div>
         </div>
 
