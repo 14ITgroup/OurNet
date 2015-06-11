@@ -80,7 +80,7 @@ public partial class admin_addWorks : System.Web.UI.Page
         {
             var work = new works(); // 要添加的作品
             work.typeId = Convert.ToInt32(ddlType.SelectedValue);
-            work.picture = "/upload/workPicture/" + workPicName;
+            work.picture = workPicName;
             work.title = title;
             work.introduction = content;
             work.time = txtTime.Text;

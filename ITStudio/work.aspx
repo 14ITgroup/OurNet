@@ -36,28 +36,28 @@
 			<div class="all">
 				<ul class="index_works">
 					<li>
-						<a href="#"><img src="./images/all.png" height="19" width="19" alt=""/>All Design</a>
+						<a href="work.aspx"><img src="./images/all.png" height="19" width="19" alt=""/>All Design</a>
 					</li>
 					<li>
-						<a href="#"><img src="./images/web_design.png" height="27" width="32" alt=""/>Web Design</a>
+						<a href="work.aspx?type=1"><img src="./images/web_design.png" height="27" width="32" alt=""/>Web Design</a>
 					</li>
 					<li>
-						<a href="#"><img src="./images/App_design.png" height="28" width="19" alt=""/>App Design</a>
+						<a href="work.aspx?type=2"><img src="./images/App_design.png" height="28" width="19" alt=""/>App Design</a>
 					</li>
 					<li>
-						<a href="#"><img src="./images/Pic_design.png" height="25" width="25" alt=""/>Pic Design</a>
+						<a href="work.aspx?type=3"><img src="./images/Pic_design.png" height="25" width="25" alt=""/>Pic Design</a>
 					</li>
 					<li>
-						<a href="#"><img src="./images/band_design.png" height="25" width="25" alt=""/>Band Design</a>
+						<a href="work.aspx?type=4"><img src="./images/band_design.png" height="25" width="25" alt=""/>Band Design</a>
 					</li>
 				</ul>
 			</div>
 			<div class="works">
 				<ul class="display_works">
-                     <asp:Repeater ID="rptWorks" runat="server" OnItemCommand="rptWorks_ItemCommand">
+                     <asp:Repeater ID="rptWorks" runat="server">
                         <ItemTemplate>
                             <li>
-                                <asp:ImageButton ID="imgWork" runat="server" CommandName="imgWork" CommandArgument='<%#Eval("id")%>' ImageUrl='<%#Eval("picture")%>' Height="200px" Width="330px"/>
+                                <asp:ImageButton ID="imgWork" runat="server" CommandName="imgWork" CommandArgument='<%#Eval("id")%>' ImageUrl='<%#"upload/workPicture/"+Eval("picture")%>' Height="200px" Width="330px"/>
 						        <p><a href="#"><%#Eval("title")%></a></p>
 						        <p><a href="#"><%#Eval("time")%></a></p>
 						        <p><a href="#" runat="server"><%#Eval("link")%></a></p>
@@ -68,26 +68,37 @@
 				</ul>
 			</div>
 			<div class="clr"></div>
-<%--			<div class="pages">
+			<div class="pages">
 				<ul>
-					<li><a href=""><div></div></a></li>
-					<li><a href="">1</a></li>
-					<li><a href="">2</a></li>
-					<li><a href="">3</a></li>
-					<li><a href="">4</a></li>
-					<li><a href="">5</a></li>
-					<li>...</li>
-					<li><a href="">25</a></li>
-					<li><a href=""><div></div></a></li>
+                    <li>
+                        <asp:HyperLink ID="HlPreviousPage" runat="server"><div></div></asp:HyperLink>
+                    </li>
+                    <li><a href="work.aspx?page=1&type=<%=Request.QueryString["type"] %>">1</a></li>
+                    <li id="LiDots1" Visible="false" runat="server">...</li>
+                    <asp:Repeater ID="RptPageNums" runat="server">
+                        <ItemTemplate>
+                            <li><a href="work.aspx?page=<%#(Container.DataItem as string).ToString() %>&type=<%=Request.QueryString["type"] %>">
+                                <%#(Container.DataItem as string).ToString() %>
+                                </a>
+                            </li>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                    
+					<li id="LiDots2" Visible="false" runat="server">...</li>
+					<li id="LiLastPage" runat="server">
+                        <asp:HyperLink ID="HlLastPage" runat="server"></asp:HyperLink></li>
+					<li>
+                        <asp:HyperLink  ID="HlNextPage" runat="server"><div></div></asp:HyperLink>
+                    </li>
 				</ul>
-			</div>--%>
-        <div class="rig_fenye" style="position:relative; top: -7px; left: 306px;">
+			</div>
+        <%--<div class="rig_fenye" style="position:relative; top: -7px; left: 306px;">
             <webdiyer:AspNetPager ID="AspNetPager" runat="server" HorizontalAlign="Center" NumericButtonType="Text" MoreButtonType="Text"
               ShowFirstLast="false" PagingButtonType="Text" ImagePath="/images/" ButtonImageExtension=".gif" ButtonImageNameExtension="n"
                DisabledButtonImageNameExtension="g" ShowPageIndexBox="Never" CurrentPageButtonClass="cpb" NextPrevButtonClass="npb" ButtonImageAlign="left"
-              CssClass="paginator" CurrentPageButtonPosition="Center" OnPageChanged="AspNetPager_PageChanged" NumericButtonCount="4" PageSize="4">
+              CssClass="paginator" CurrentPageButtonPosition="Center" OnPageChanged="AspNetPager_PageChanged" NumericButtonCount="4" PageSize="6" AlwaysShow="True">
             </webdiyer:AspNetPager>
-		</div>
+		</div>--%>
       </div>
 		<div class="clr"></div>
 </div>
