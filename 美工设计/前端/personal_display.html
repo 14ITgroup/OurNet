@@ -26,29 +26,51 @@
         <div class="line" style="background:url(./images/Team_bg1.png) no-repeat 100%;background-size: 100% 100%;min-height:850px;min-width:80%;margin-bottom:50px;">
             <ul>
                 <li>
-                    <a href="personal.html"><div></div></a>
+                    <img src="images/Team_people.png" alt="团队成员">
+                    <a href="personal.html">
+                        <h3>赵飞</h3>
+                        <h4>美术设计</h4>
+                    </a>
                 </li>
                 <li>
-                    <a href="personal.html"><div></div></a>
+                    <img src="images/Team_people.png" alt="团队成员">
+                    <a href="personal.html">
+                        <h3>赵飞</h3>
+                        <h4>美术设计</h4>
+                    </a>
                 </li>
                 <li>
-                    <a href="personal.html"><div></div></a>
+                    <img src="images/Team_people.png" alt="团队成员">
+                    <a href="personal.html">
+                        <h3>赵飞</h3>
+                        <h4>美术设计</h4>
+                    </a>
                 </li>
             </ul>
             <ul>
                 <li>
-                    <a href="personal.html"><div></div></a>
+                    <img src="images/Team_people.png" alt="团队成员">
+                    <a href="personal.html">
+                        <h3>赵飞</h3>
+                        <h4>美术设计</h4>
+                    </a>
                 </li>
                 <li>
-                    <a href="personal.html"><div></div></a>
+                    <img src="images/Team_people.png" alt="团队成员">
+                    <a href="personal.html">
+                        <h3>赵飞</h3>
+                        <h4>美术设计</h4>
+                    </a>
                 </li>
                 <li>
-                    <a href="personal.html"><div></div></a>
+                    <img src="images/Team_people.png" alt="团队成员">
+                    <a href="personal.html">
+                        <h3>赵飞</h3>
+                        <h4>美术设计</h4>
+                    </a>
                 </li>
             </ul>
         </div>
-        <ul id="one" style="margin-bottom:100px;">
-        </ul>
         <ul class="clr"></ul>
         <a href=""><img src="./images/Team_buttonr.png" alt=""></a>
         <p></p><img src="./images/Team_flag.png" alt="">
@@ -156,6 +178,19 @@
             };
         }
     });
+
+    $(".line ul a").css('display', 'none');
+    $(".line ul li").mouseenter(function(event) {
+        $(this).children('a').show();
+        $(this).children('img').hide();
+        
+    });
+    $(".line ul li").mouseleave(function(event) {
+        $(this).children('img').show()
+        $(this).children('a').hide();
+        
+    });
+
 </script>
 </body>
 </html>
