@@ -39,8 +39,8 @@
             </asp:DropDownList>
             <br />
             作者：<br />
-            <asp:DropDownList ID="ddlAuthor" runat="server" style="font-size: x-large">
-            </asp:DropDownList>
+                <asp:CheckBoxList ID="ChklstAuthors" runat="server">
+                </asp:CheckBoxList>
             <br />
             作品完成时间：<br /><asp:TextBox ID="txtTime" runat="server" placeholder="请填写时间" Font-Bold="True" Font-Size="X-Large" MaxLength="40" Width="459px" onfocus="checkForm()" onblur="checkForm()"></asp:TextBox>
         

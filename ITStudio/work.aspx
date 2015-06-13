@@ -7,7 +7,7 @@
 	<title>Work</title>
 	<link rel="stylesheet" href="./css/decoration_work.css"/>
 	<link rel="stylesheet" href="./css/index.css" />
-    <style type="text/css">
+<%--    <style type="text/css">
         .rig_fenye{ height:36px; margin:0 auto; margin-left:150px;}
         .rig_fenye li{ width:37px; height:36px; float:left; background:url(../index_img/shuzi.gif); line-height:32px; text-align:center;}
         .rig_fenye li:hover{ width:37px; height:36px; float:left; background:url(../index_img/dang.gif); line-height:31px; text-align:center;}
@@ -21,7 +21,7 @@
         .paginator a:hover { float:left; height:36px; padding:0px 14px; line-height:32px; background:url(/images/dang.gif) no-repeat center center; text-align:center;text-decoration:none; color:#752900;
          font-size:14px; font-family:Arial; font-weight:bolder;}
          .npb{ float:left;}
-    </style>
+    </style>--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 	<div class="hide" style="display:none;">

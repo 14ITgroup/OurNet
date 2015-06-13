@@ -34,14 +34,20 @@ public partial class admin_editWorks : System.Web.UI.Page
                 txtTime.Text = work.time;
                 ImgCurrentWorkPic.ImageUrl = work.picture;
                 ddlType.SelectedValue = work.typeId.ToString();
-                workmap map = db.workmap.SingleOrDefault(a => a.workId == id);
-                int memberId = map.memberId;
-                //作者
-                ddlAuthor.DataSource = db.members.ToList();
-                ddlAuthor.DataValueField = "id";
-                ddlAuthor.DataTextField = "name";
-                ddlAuthor.DataBind();
-                ddlAuthor.SelectedValue = memberId.ToString();
+                //作者               
+                ChklstAuthors.DataSource = db.members.ToList();
+                ChklstAuthors.DataValueField = "id";
+                ChklstAuthors.DataTextField = "name";
+                ChklstAuthors.DataBind();
+                for (int i = 0; i < ChklstAuthors.Items.Count; i++) // 遍历CheckBoxList
+                {
+                    int memberId = Convert.ToInt32(ChklstAuthors.Items[i].Value);
+                    workmap map = db.workmap.SingleOrDefault(a => a.workId == id &&a.memberId==memberId);
+                    if (map!=null)
+                    {
+                        ChklstAuthors.Items[i].Selected = true;
+                    }
+                }
             }
           
         }
@@ -111,6 +117,7 @@ public partial class admin_editWorks : System.Web.UI.Page
         // 写入数据库
         using (var db = new ITStudioEntities())
         {
+            //修改works表
             works work = db.works.SingleOrDefault(a => a.id == id);
             work.typeId = Convert.ToInt32(ddlType.SelectedValue);
             if (workPicName != null)
@@ -122,6 +129,32 @@ public partial class admin_editWorks : System.Web.UI.Page
             work.introduction = content;
             work.time = txtTime.Text;
             work.link = txtLink.Text;
+            //修改workmap表
+            for (int i = 0; i < ChklstAuthors.Items.Count; i++) // 遍历CheckBoxList
+            {
+                int memberId = Convert.ToInt32(ChklstAuthors.Items[i].Value);
+                workmap map = db.workmap.SingleOrDefault(a => a.workId == id && a.memberId == memberId);
+                if (map != null)
+                {
+                    db.workmap.Remove(map);
+                }
+            }
+            for (int i = 0; i < ChklstAuthors.Items.Count; i++) // 遍历CheckBoxList
+            {
+                if (ChklstAuthors.Items[i].Selected == true)
+                {
+                    int memberId = 1;
+                    if (Filter.IsNumeric(ChklstAuthors.Items[i].Value))
+                    {
+                        memberId = Convert.ToInt32(ChklstAuthors.Items[i].Value);
+                    }
+
+                    var map = new workmap();
+                    map.memberId = memberId;
+                    map.workId = id;
+                    db.workmap.Add(map);
+                }
+            }
             db.SaveChanges();
         }
         ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('修改成功');</script>");
