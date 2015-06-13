@@ -948,17 +948,23 @@ font-size:1.667em;
 	margin: 134px 0 -75px 10%;
 }
 
-.main>div>ul>li>a>div{
-	width: 12em;
-	height: 12em;
-	background: url(../images/Team_people.png) no-repeat ;
-	background-size: 100% 100%;
+.line ul li a{
+	display: block;
+	width: 144px;
+	height: 143px;
+	border-radius: 50%;
+	background: #40C381;
 }
-
-.main>div>ul>li>a>div:hover {
-	background: url(../images/Team_people_hover.png) no-repeat ;
+.line ul a h3{
+	padding-top: 31%;
+	padding-bottom: 3%;
 }
-
+.line ul li a h3,.line ul a h4{
+	text-align: center;
+	/*margin-top: 50%;*/
+	font-size: 18px;
+	color: #fff;
+}
 .main>ul+a{
 	position: absolute;
 	top: 980px;

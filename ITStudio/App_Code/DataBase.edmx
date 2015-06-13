@@ -17,9 +17,9 @@
             <DefiningQuery>SELECT 
       [outWorks].[memberId] AS [memberId], 
       [outWorks].[workId] AS [workId], 
-      [outWorks].[picture] AS [picture], 
       [outWorks].[time] AS [time], 
       [outWorks].[title] AS [title], 
+      [outWorks].[picture] AS [picture], 
       [outWorks].[introduction] AS [introduction]
       FROM [dbo].[outWorks] AS [outWorks]</DefiningQuery>
           </EntitySet>
@@ -109,16 +109,16 @@
           <Key>
             <PropertyRef Name="memberId" />
             <PropertyRef Name="workId" />
-            <PropertyRef Name="picture" />
             <PropertyRef Name="time" />
             <PropertyRef Name="title" />
+            <PropertyRef Name="picture" />
             <PropertyRef Name="introduction" />
           </Key>
           <Property Name="memberId" Type="int" Nullable="false" />
           <Property Name="workId" Type="int" Nullable="false" />
-          <Property Name="picture" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="time" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="picture" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="introduction" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <Association Name="FK_workmap_members">
@@ -250,16 +250,16 @@
           <Key>
             <PropertyRef Name="memberId" />
             <PropertyRef Name="workId" />
-            <PropertyRef Name="picture" />
             <PropertyRef Name="time" />
             <PropertyRef Name="title" />
+            <PropertyRef Name="picture" />
             <PropertyRef Name="introduction" />
           </Key>
           <Property Name="memberId" Type="Int32" Nullable="false" />
           <Property Name="workId" Type="Int32" Nullable="false" />
-          <Property Name="picture" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="time" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="picture" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="introduction" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <Association Name="FK_workmap_members">
@@ -378,9 +378,9 @@
               <MappingFragment StoreEntitySet="outWorks">
                 <ScalarProperty Name="memberId" ColumnName="memberId" />
                 <ScalarProperty Name="workId" ColumnName="workId" />
-                <ScalarProperty Name="picture" ColumnName="picture" />
                 <ScalarProperty Name="time" ColumnName="time" />
                 <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="picture" ColumnName="picture" />
                 <ScalarProperty Name="introduction" ColumnName="introduction" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -401,6 +401,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
