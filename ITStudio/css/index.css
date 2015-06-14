@@ -737,6 +737,7 @@ font-size:1.667em;
 	display: block;
 	width: 27px;
 	height: 30px;
+	line-height: 27px;
 }
 
 .main .pages>ul>li:first-child>a>div

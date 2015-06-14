@@ -27,6 +27,7 @@ public partial class personal_display : System.Web.UI.Page
 
             var dataSource1 = from u in db.outWorks
                               where (u.memberId == ID)
+                              orderby u.time descending
                               select new
                               {
                                   u.picture,
@@ -34,8 +35,10 @@ public partial class personal_display : System.Web.UI.Page
                                   u.title,
                                   u.time,
                               };
-            RptMenber.DataSource = dataSource1.ToList();
-            RptMenber.DataBind();
+            RptWorks.DataSource = dataSource1.Take(3).ToList();
+            RptWorks.DataBind();
+            RptWorks2.DataSource = dataSource1.Take(2).ToList();
+            RptWorks3.DataSource = dataSource1.Skip(2).Take(2).ToList();
         }
     }
 }
