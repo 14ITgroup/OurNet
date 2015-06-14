@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Itshow.master" AutoEventWireup="true" CodeFile="work.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="作品展示" Language="C#" MasterPageFile="~/Itshow.master" AutoEventWireup="true" CodeFile="work.aspx.cs" Inherits="_Default" %>
 
 <%--<%@ Register Assembly="AspNetPager" Namespace="Wuqi.Webdiyer" TagPrefix="webdiyer" %>--%>
 

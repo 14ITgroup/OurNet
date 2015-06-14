@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Itshow.master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="ITStudio_index" %>
+﻿<%@ Page Title="首页" Language="C#" MasterPageFile="~/Itshow.master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="ITStudio_index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 
@@ -51,6 +51,7 @@
 	<a href="#" class="scroll-top">
 		<img src="images/top_02.png" alt="arrow-to-top" width="45" height="115"/>
 	</a>
+    <a href="#"  name="intro-team"></a>
 	<div class="index-des" id="index-des">
 		<div class="index-des-contain">
 			<img src="images/itwork-ico.png" alt="IT"/>
@@ -152,6 +153,7 @@
 			</div>
 		</li>
 	</ul>
+    <a href="#" name="join-us"></a>
     <div class="enroll-container" id="enroll-container">
 	      <div class="enroll"><asp:LinkButton runat="server" ID="app" OnClick="Application1" OnClientClick="return Verification();" >我要报名! </asp:LinkButton></div>
         	<div class="picture">
