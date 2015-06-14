@@ -25,17 +25,17 @@ public partial class personal_display : System.Web.UI.Page
             RptMenber.DataSource = dataSource.ToList();
             RptMenber.DataBind();
 
-        //    var dataSource1 = from u in db.outWorks
-        //                      where (u.id == ID)
-        //                      select new
-        //                      {
-        //                          u.picture,
-        //                          u.introduction,
-        //                          u.title,
-        //                          u.time,
-        //                      };
-        //    RptMenber.DataSource = dataSource1.ToList();
-        //    RptMenber.DataBind();
+            var dataSource1 = from u in db.outWorks
+                              where (u.memberId == ID)
+                              select new
+                              {
+                                  u.picture,
+                                  u.introduction,
+                                  u.title,
+                                  u.time,
+                              };
+            RptMenber.DataSource = dataSource1.ToList();
+            RptMenber.DataBind();
         }
     }
 }

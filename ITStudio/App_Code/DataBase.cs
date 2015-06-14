@@ -44,6 +44,7 @@ public partial class members
     public string direction { get; set; }
     public string introduction { get; set; }
     public string others { get; set; }
+    public string ico { get; set; }
 
     public virtual ICollection<workmap> workmap { get; set; }
 }
@@ -60,10 +61,11 @@ public partial class outWorks
 {
     public int memberId { get; set; }
     public int workId { get; set; }
+    public string picture { get; set; }
     public string time { get; set; }
     public string title { get; set; }
-    public string picture { get; set; }
     public string introduction { get; set; }
+    public int id { get; set; }
 }
 
 public partial class workmap

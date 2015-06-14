@@ -25,10 +25,10 @@
         <div>
         <ul class="index-menu">
 		    <a href="index.aspx"><img src="images/it-ico.png" alt="IT-Logo"/></a>
-		    <li><a href="#">首页</a></li>
+		    <li><a href="index.aspx">首页</a></li>
 		    <li><a href="#">简介</a></li>
-		    <li><a href="#">作品</a></li>
-		    <li><a href="#">团队</a></li>
+		    <li><a href="work.aspx">作品</a></li>
+		    <li><a href="person.aspx">团队</a></li>
 		    <li><a href="#">留言板</a></li>
 		    <a href="#" class="nav-join">Join us now</a>
 		    <div style="clear: both"></div>

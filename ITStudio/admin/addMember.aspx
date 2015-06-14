@@ -46,6 +46,10 @@
             <asp:Label ID="lblUploadMessage" runat="server" Font-Size="20pt" Text="状态正常" Visible="False"></asp:Label>
             <br />
             <br />
+            <span class="auto-style1">上传头像：</span><asp:FileUpload ID="fulIco" runat="server" style="font-size: x-large" />
+            <asp:Label ID="lblUploadMessage2" runat="server" Font-Size="20pt" Text="状态正常" Visible="False"></asp:Label>
+            <br />
+            <br />
             <span class="auto-style1">简介：<br />
         <textarea id="txtIntroduction" name="txtIntroduction" style="width: 636px; height: 284px;" onfocus="checkForm()" onblur="checkForm()" runat="server"></textarea><br />
         

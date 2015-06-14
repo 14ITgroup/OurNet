@@ -17,10 +17,11 @@
             <DefiningQuery>SELECT 
       [outWorks].[memberId] AS [memberId], 
       [outWorks].[workId] AS [workId], 
+      [outWorks].[picture] AS [picture], 
       [outWorks].[time] AS [time], 
       [outWorks].[title] AS [title], 
-      [outWorks].[picture] AS [picture], 
-      [outWorks].[introduction] AS [introduction]
+      [outWorks].[introduction] AS [introduction], 
+      [outWorks].[id] AS [id]
       FROM [dbo].[outWorks] AS [outWorks]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_workmap_members" Association="ITStudioModel.Store.FK_workmap_members">
@@ -65,6 +66,7 @@
           <Property Name="direction" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="introduction" Type="nvarchar(max)" Nullable="false" />
           <Property Name="others" Type="nvarchar(max)" />
+          <Property Name="ico" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
         <EntityType Name="notices">
           <Key>
@@ -109,17 +111,19 @@
           <Key>
             <PropertyRef Name="memberId" />
             <PropertyRef Name="workId" />
+            <PropertyRef Name="picture" />
             <PropertyRef Name="time" />
             <PropertyRef Name="title" />
-            <PropertyRef Name="picture" />
             <PropertyRef Name="introduction" />
+            <PropertyRef Name="id" />
           </Key>
           <Property Name="memberId" Type="int" Nullable="false" />
           <Property Name="workId" Type="int" Nullable="false" />
+          <Property Name="picture" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="time" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="picture" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="introduction" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_workmap_members">
           <End Role="members" Type="ITStudioModel.Store.members" Multiplicity="1">
@@ -205,6 +209,7 @@
           <Property Name="direction" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="introduction" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="others" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ico" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="workmap" Relationship="ITStudioModel.FK_workmap_members" FromRole="members" ToRole="workmap" />
         </EntityType>
         <EntityType Name="notices">
@@ -250,17 +255,19 @@
           <Key>
             <PropertyRef Name="memberId" />
             <PropertyRef Name="workId" />
+            <PropertyRef Name="picture" />
             <PropertyRef Name="time" />
             <PropertyRef Name="title" />
-            <PropertyRef Name="picture" />
             <PropertyRef Name="introduction" />
+            <PropertyRef Name="id" />
           </Key>
           <Property Name="memberId" Type="Int32" Nullable="false" />
           <Property Name="workId" Type="Int32" Nullable="false" />
+          <Property Name="picture" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="time" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="picture" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="introduction" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="FK_workmap_members">
           <End Role="members" Type="ITStudioModel.members" Multiplicity="1">
@@ -330,6 +337,7 @@
                 <ScalarProperty Name="direction" ColumnName="direction" />
                 <ScalarProperty Name="introduction" ColumnName="introduction" />
                 <ScalarProperty Name="others" ColumnName="others" />
+                <ScalarProperty Name="ico" ColumnName="ico" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -378,10 +386,11 @@
               <MappingFragment StoreEntitySet="outWorks">
                 <ScalarProperty Name="memberId" ColumnName="memberId" />
                 <ScalarProperty Name="workId" ColumnName="workId" />
+                <ScalarProperty Name="picture" ColumnName="picture" />
                 <ScalarProperty Name="time" ColumnName="time" />
                 <ScalarProperty Name="title" ColumnName="title" />
-                <ScalarProperty Name="picture" ColumnName="picture" />
                 <ScalarProperty Name="introduction" ColumnName="introduction" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

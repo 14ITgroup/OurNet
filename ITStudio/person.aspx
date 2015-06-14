@@ -16,7 +16,7 @@
                 <asp:Repeater ID="RptMember1" runat="server">
                     <ItemTemplate>
                         <li>
-                            <img src="./upload/memberPhoto/<%#Eval("photo")%>" alt="团队成员">
+                            <img src="./upload/memberPhoto/<%#Eval("ico")%>" alt="团队成员">
                             <a href="personal_display.aspx?id=<%#Eval("id")%>">
                                 <h3><%#Eval("name")%></h3>
                                 <h4><%#Eval("job")%></h4>
@@ -29,7 +29,7 @@
                 <asp:Repeater ID="RptMember2" runat="server">
                     <ItemTemplate>
                         <li>
-                            <img src="./upload/memberPhoto/<%#Eval("photo")%>" alt="团队成员">
+                            <img src="./upload/memberPhoto/<%#Eval("ico")%>" alt="团队成员">
                             <a href="personal_display.aspx?id=<%#Eval("id")%>">
                                 <h3><%#Eval("name")%></h3>
                                 <h4><%#Eval("job")%></h4>
@@ -67,7 +67,7 @@
                 <ItemTemplate>
                     <li>
                         <a href="personal_display.aspx?id=<%#Eval("id")%>">
-                            <img src="./upload/memberPhoto/<%#Eval("photo")%>" alt="赵飞"></a>
+                            <img src="./upload/memberPhoto/<%#Eval("ico")%>" alt="赵飞"></a>
                         <h3><%#Eval("name")%><br>
                             <span><%#Eval("job")%></span>
                         </h3>
@@ -79,11 +79,6 @@
 
     </div>
     <div style="clear: both"></div>
-    <div class="footer-bg">
-        <div class="footer-container">
-            <img src="images/bottom-img_03.png" alt="Copyrights@2015 爱特工作室 All rights reserved.">
-        </div>
-    </div>
     <script type="text/javascript">
         $(".hide-per").css('display', 'none');
         var $b = $("#b");

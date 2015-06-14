@@ -68,6 +68,13 @@ public partial class admin_Default : System.Web.UI.Page
             LblStatus.Visible = true;
             return;
         }
+        string ico = uploadMemIco();
+        if (photo == null || photo.Trim() == "")
+        {
+            LblStatus.Text = "请选择头像";
+            LblStatus.Visible = true;
+            return;
+        }
         
         //存储成员到members表
         using (var db = new ITStudioEntities())
@@ -75,6 +82,7 @@ public partial class admin_Default : System.Web.UI.Page
             var mem = new members();
             mem.grade = Convert.ToInt32(ddlGrade.SelectedValue);
             mem.photo = photo;
+            mem.ico = ico;
             mem.name = name;
             mem.introduction = content;
             mem.direction = direction;
@@ -134,6 +142,56 @@ public partial class admin_Default : System.Web.UI.Page
         else
         {
             lblUploadMessage.Text = "请选择文件";
+            return null;
+        }
+    }
+    string uploadMemIco() //上传封面图片，返回文件名。
+    {
+        string picSaveName = null;
+        int maxFileSize = 1048576; // 限制为1MiB以下
+        if (fulIco.HasFile)
+        {
+            //取得文件MIME内容类型 
+            string uploadFileType = this.fulIco.PostedFile.ContentType.ToLower();
+            if (!uploadFileType.Contains("image"))    //图片的MIME类型为"image/xxx"，这里只判断是否图片。 
+            {
+                lblUploadMessage2.Text = "只能上传图片类型文件！";
+                lblUploadMessage2.Visible = true;
+                return null;
+            }
+
+            if (fulIco.FileContent.Length > maxFileSize) // 限制为1MiB以下
+            {
+                lblUploadMessage2.Text = "图片文件大小不可超过 1 MB";
+                lblUploadMessage2.Visible = true;
+                return null;
+            }
+
+            string picPath = fulIco.PostedFile.FileName;
+            string picFileName = fulIco.FileName;
+            string picFileExtension = picFileName.Substring(picFileName.LastIndexOf('.')); //带.的扩展名
+            string random = RandomStatic.ProduceIntRandom(0, 999999).ToString("D6"); //6位随机数
+            picSaveName = DateTime.Now.ToString("yyyyMMddHHmmssffff") + random + picFileExtension; //当前时间
+
+            //取得文件在服务器上保存的位置C:\Inetpub\wwwroot\WebSite1\images\20022775_m.jpg 
+            string serverpath = Server.MapPath("../upload/memberPhoto/") + picSaveName;
+            try
+            {
+                fulIco.PostedFile.SaveAs(serverpath);//将上传的文件另存为 
+                lblUploadMessage2.Text = "上传成功";
+                lblUploadMessage2.Visible = true;
+                return picSaveName;
+            }
+            catch (Exception error)
+            {
+                lblUploadMessage2.Text = "上传失败，原因为： " + error.ToString();
+                lblUploadMessage2.Visible = true;
+                return null;
+            }
+        }
+        else
+        {
+            lblUploadMessage2.Text = "请选择文件";
             return null;
         }
     }
