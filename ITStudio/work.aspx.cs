@@ -193,7 +193,7 @@ public partial class _Default : System.Web.UI.Page
     /// <summary>
     /// 获取queryString指定的页码
     /// </summary>
-    /// <returns>如果不合法或未指定，返回1。</returns>
+    /// <returns>如果不合法或未指定或等于0，返回1。</returns>
     int getPageNum()
     {
         int pageNum = 1;
@@ -205,6 +205,10 @@ public partial class _Default : System.Web.UI.Page
             if (Filter.IsNumeric(pageStr))
             {
                 pageNum = Convert.ToInt32(pageStr);
+                if (pageNum == 0)
+                {
+                    pageNum = 1;
+                }
             }
         }
 
