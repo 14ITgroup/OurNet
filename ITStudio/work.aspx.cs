@@ -57,10 +57,10 @@ public partial class _Default : System.Web.UI.Page
                                  items.introduction
                              };
             dataSource = dataSource.Skip(pageSize * (CurrentPage - 1)).Take(pageSize); // 分页
-            if (dataSource.Count() == 0)
-            {
-                Response.Redirect("error.html");
-            }
+            //if (dataSource.Count() == 0)
+            //{
+            //    Response.Redirect("error.html");
+            //}
             rptWorks.DataSource = dataSource.ToList();
             rptWorks.DataBind();
         }

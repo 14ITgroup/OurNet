@@ -32,7 +32,7 @@ public partial class admin_editWorks : System.Web.UI.Page
                 txtIntroduction.InnerText = work.introduction;
                 txtLink.Text = work.link;
                 txtTime.Text = work.time;
-                ImgCurrentWorkPic.ImageUrl = work.picture;
+                ImgCurrentWorkPic.ImageUrl = "/upload/workPicture/" + work.picture;
                 ddlType.SelectedValue = work.typeId.ToString();
                 //作者               
                 ChklstAuthors.DataSource = db.members.ToList();

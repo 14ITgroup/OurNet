@@ -64,10 +64,10 @@
 			</p>
 			<h2>作品展示</h2>
 			<ul>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
+				<li><a href="work.aspx?page=1&type=1"></a></li>
+				<li><a href="work.aspx?page=1&type=2"></a></li>
+				<li><a href="work.aspx?page=1&type=3"></a></li>
+				<li><a href="work.aspx?page=1&type=4"></a></li>
 				<div style="clear: both"></div>
 			</ul>
 		</div>
