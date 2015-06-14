@@ -1250,6 +1250,10 @@ font-size:1.667em;
 	.main-mobile-person ul li:nth-child(2){
 		margin-right: 0;
 	}
+	.main-mobile-person ul li img{
+		width: 339px;
+		height: 190px;
+	}
 	.main-mobile-person ul{
 		width: 73%;
 		margin: 0 auto;
@@ -1308,7 +1312,8 @@ font-size:1.667em;
 	.main_mobile .display_works>li>a>img{
 		float: left;
 		margin-right:30px; 
-		width: 90%;
+		width: 339px;
+  		height: 190px;
 	}
 	.main_mobile .display_works>li>a,
 	.main_mobile .display_works>li>p{
