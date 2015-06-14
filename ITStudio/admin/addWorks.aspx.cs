@@ -59,7 +59,10 @@ public partial class admin_addWorks : System.Web.UI.Page
         }
 
         submitWork(title, content, workPicName); // 添加作品
-        
+        for (int i = 0; i < ChklstAuthors.Items.Count; i++) // 遍历CheckBoxList
+        {
+            ChklstAuthors.Items[i].Selected = false;       
+        }
         ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('添加成功');</script>");
         txtTitle.Text = "";
         txtIntroduction.InnerText = "";

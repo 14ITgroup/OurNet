@@ -39,16 +39,16 @@
 						<a href="work.aspx"><img src="./images/all.png" height="19" width="19" alt=""/>All Design</a>
 					</li>
 					<li>
-						<a href="work.aspx?type=1"><img src="./images/web_design.png" height="27" width="32" alt=""/>Web Design</a>
+						<a href="work.aspx?page=1&type=1"><img src="./images/web_design.png" height="27" width="32" alt=""/>Web Design</a>
 					</li>
 					<li>
-						<a href="work.aspx?type=2"><img src="./images/App_design.png" height="28" width="19" alt=""/>App Design</a>
+						<a href="work.aspx?page=1&type=2"><img src="./images/App_design.png" height="28" width="19" alt=""/>App Design</a>
 					</li>
 					<li>
-						<a href="work.aspx?type=3"><img src="./images/Pic_design.png" height="25" width="25" alt=""/>Pic Design</a>
+						<a href="work.aspx?page=1&type=3"><img src="./images/Pic_design.png" height="25" width="25" alt=""/>Pic Design</a>
 					</li>
 					<li>
-						<a href="work.aspx?type=4"><img src="./images/band_design.png" height="25" width="25" alt=""/>Band Design</a>
+						<a href="work.aspx?page=1&type=4"><img src="./images/band_design.png" height="25" width="25" alt=""/>Band Design</a>
 					</li>
 				</ul>
 			</div>
@@ -57,10 +57,11 @@
                      <asp:Repeater ID="rptWorks" runat="server">
                         <ItemTemplate>
                             <li>
-                                <asp:ImageButton ID="imgWork" runat="server" CommandName="imgWork" CommandArgument='<%#Eval("id")%>' ImageUrl='<%#"upload/workPicture/"+Eval("picture")%>' Height="200px" Width="330px"/>
+<%--                            <asp:ImageButton ID="imgWork" runat="server" CommandName="imgWork" CommandArgument='<%#Eval("id")%>' ImageUrl='<%#"upload/workPicture/"+Eval("picture")%>' c"/>--%>
+                                <asp:Image ID="imgWork" runat="server" ImageUrl='<%#"upload/workPicture/"+Eval("picture")%>' Height="200px" Width="330px"/>
 						        <p><a href="#"><%#Eval("title")%></a></p>
 						        <p><a href="#"><%#Eval("time")%></a></p>
-						        <p><a href="#" runat="server"><%#Eval("link")%></a></p>
+                                <p><a href='#' onclick="window.open('<%#Eval("link")%>')" target="_blank"><%#Eval("link")%></a></p>
 				        	</li>
                         </ItemTemplate>
                     </asp:Repeater>
