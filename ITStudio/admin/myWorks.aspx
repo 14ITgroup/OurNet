@@ -32,8 +32,7 @@
         <ItemTemplate>
             <tr>
                 <td>
-                    <asp:HyperLink ID="HyperLinkArticle" runat="server" Text='<%#Eval("title")%>' Target="_blank"
-                        NavigateUrl='<%#"no.aspx?id="+Eval("id") %>'>HyperLink</asp:HyperLink>
+                    <%#Eval("title")%>
                 </td>
                 <td>
                     <%#Eval("time")%>

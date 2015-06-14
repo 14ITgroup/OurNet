@@ -39,8 +39,17 @@ public partial class admin_myWorks : System.Web.UI.Page
                     }
                 }
                 db.works.Remove(work);
-                workmap map = db.workmap.SingleOrDefault(a => a.workId == id);
-                db.workmap.Remove(map);
+                var dataSource =(from items in db.workmap
+                                 orderby items.id descending 
+                                 where items.workId==id
+                                 select items).ToList();
+                // 对 LINQ 查询而返回的结果集进行处理
+                // 要么使用 Single() 取出单条记录
+                // 要么就迭代集合进行处理
+                foreach (workmap o in dataSource)
+                {
+                    db.workmap.Remove(o);
+                }             
                 db.SaveChanges();
             }
             ArticlesBind(getPageNum(), getPageSize());
@@ -100,7 +109,6 @@ public partial class admin_myWorks : System.Web.UI.Page
         {
             pageSize = Convert.ToInt32(DdlPageSize.SelectedValue);
         }
-
         return pageSize;
     }
 
