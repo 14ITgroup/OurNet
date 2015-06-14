@@ -15,6 +15,21 @@ public partial class _Default : System.Web.UI.Page
         int typeId = getWorkTypeId();
         worksBind(currentPage, pageSize, typeId);
         pageNumsBind();
+
+        using (var db = new ITStudioEntities())
+        {
+            var dataSource = from u in db.works
+                             select new
+                             {
+                                 u.time,
+                                 u.id,
+                                 u.title,
+                                 u.introduction,
+                                 u.picture,
+                             };
+            RptWorkOnMobile.DataSource = dataSource.ToList();
+            RptWorkOnMobile.DataBind();
+        }
     }
 
     

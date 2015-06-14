@@ -20,9 +20,7 @@
                 </ul>
                 <h5>
                     <asp:Label ID="Label1" runat="server" Text=""><%#Eval("introduction") %></asp:Label></h5>
-                <br />
                 <p>方向：<a> <%#Eval("direction") %></a></p>
-                <br />
             </ItemTemplate>
         </asp:Repeater>
          <div></div>
@@ -37,8 +35,8 @@
                 <div>
                     <ul class="work-pres-personal">
                         <a href="#">
-                            <img src="./upload/workPicture/<%#Eval("photo") %>" alt="pic1" />
-                            <img src="./upload/workPicture/<%#Eval("photo") %>" alt="作品" />
+                            <img src="./upload/workPicture/<%#Eval("picture") %>" alt="pic1" />
+                            <img src="./upload/workPicture/<%#Eval("picture") %>" alt="作品" />
                         </a>
                         <h3><a href="#"><%#Eval("introduction") %></a></h3>
                         <p><%#Eval("time") %></p>
@@ -67,7 +65,8 @@
 <%--                    <h3>星座：未知</h3>
                     <h3>血型：未知</h3>
                     <h3>爱好：妹子吧</h3>--%>
-                    <h4>方向： <%#Eval("direction") %></h4>
+                    <span><h4>方向： <%#Eval("direction") %></h4></span>
+                    
                 </div>
             </ItemTemplate>
         </asp:Repeater>
@@ -77,7 +76,7 @@
                 <ItemTemplate>
                     <li>
                         <a href="#">
-                            <img src="./upload/workPicture/<%#Eval("photo") %>" alt="作品" />
+                            <img src="./upload/workPicture/<%#Eval("picture") %>" alt="作品" />
                         </a>
                         <h2><%#Eval("introduction") %></h2>
                         <p><%#Eval("time") %></p>
@@ -92,7 +91,7 @@
                 <ItemTemplate>
                     <li>
                         <a href="#">
-                            <img src="./upload/workPicture/<%#Eval("photo") %>" alt="作品" />
+                            <img src="./upload/workPicture/<%#Eval("picture") %>" alt="作品" />
                         </a>
                         <h2><%#Eval("introduction") %></h2>
                         <p><%#Eval("time") %></p>
