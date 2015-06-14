@@ -53,7 +53,10 @@ public partial class admin_Default : System.Web.UI.Page
             LblStatus.Visible = true;
             return;
         }
+
         string content = txtIntroduction.InnerText;
+        content = content.Replace("\n", "<br />"); // 尝试替换\n为<br />
+        
         if (content == null || content.Trim() == "")
         {
             LblStatus.Text = "请填写简介";
