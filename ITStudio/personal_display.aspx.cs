@@ -24,6 +24,8 @@ public partial class personal_display : System.Web.UI.Page
                              };
             RptMenber.DataSource = dataSource.ToList();
             RptMenber.DataBind();
+            RptMember2.DataSource = dataSource.ToList();
+            RptMember2.DataBind();
 
             var dataSource1 = from u in db.outWorks
                               where (u.memberId == ID)
