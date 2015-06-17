@@ -18,13 +18,13 @@ public partial class ITStudio_index : System.Web.UI.Page
             using (var db = new ITStudioEntities())
             {
                 applications ap = new applications();
-                ap.name = TxtName.Text.Trim();
-                ap.major = TxtMajor.Text.Trim();
+                ap.name = takeMaxChar(HttpUtility.HtmlEncode(TxtName.Text.Trim()));
+                ap.major = takeMaxChar(HttpUtility.HtmlEncode(TxtMajor.Text.Trim()));
                 ap.time = DateTime.Now;
-                ap.gender = false;
-                ap.tel = TxtTel.Text.Trim();
-                ap.job = DdlJob.SelectedItem.Text;
-                ap.introduction = TxtIntroduction.Value.Trim();
+                ap.gender = false; //####ToDo：增加性别选择
+                ap.tel = takeMaxChar(HttpUtility.HtmlEncode(TxtTel.Text.Trim())); //####ToDo:验证格式
+                ap.job = takeMaxChar(HttpUtility.HtmlEncode(DdlJob.SelectedItem.Text));
+                ap.introduction = HttpUtility.HtmlEncode(TxtIntroduction.Value.Trim());
                 db.applications.Add(ap);
                 db.SaveChanges();
             }
@@ -37,5 +37,15 @@ public partial class ITStudio_index : System.Web.UI.Page
         finally
         { 
         }
+    }
+
+    string takeMaxChar(string raw)
+    {
+        int maxLength = 50;
+        if (raw.Length > maxLength)
+        {
+            raw = raw.Substring(0, maxLength);
+        }
+        return raw;
     }
 }
