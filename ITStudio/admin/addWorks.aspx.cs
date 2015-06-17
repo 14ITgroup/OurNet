@@ -35,10 +35,10 @@ public partial class admin_addWorks : System.Web.UI.Page
             LblStatus.Visible = true;
             return;
         }
-        string content = txtIntroduction.InnerText;
-        if (content == null || content.Trim() == "")
+        string introduction = txtIntroduction.InnerText;
+        if (introduction == null || introduction.Trim() == "")
         {
-            LblStatus.Text = "请填写内容";
+            LblStatus.Text = "请填写简介";
             LblStatus.Visible = true;
             return;
         }
@@ -58,7 +58,17 @@ public partial class admin_addWorks : System.Web.UI.Page
             return;
         }
 
-        submitWork(title, content, workPicName); // 添加作品
+        int typeId = Convert.ToInt32(ddlType.SelectedValue);
+        string link = txtLink.Text.Trim();
+        if (link != null && link != "" 
+            && !link.StartsWith("http://",true,null) 
+            && !link.StartsWith("https://",true,null)
+            && !link.StartsWith("ftp://", true, null))
+        {
+            link = "http://" + link;
+        }
+
+        submitWork(typeId,title,time,introduction,workPicName,link); // 添加作品
         for (int i = 0; i < ChklstAuthors.Items.Count; i++) // 遍历CheckBoxList
         {
             ChklstAuthors.Items[i].Selected = false;       
@@ -71,23 +81,27 @@ public partial class admin_addWorks : System.Web.UI.Page
         ddlType.SelectedValue = "1";
     }
 
+    
     /// <summary>
     /// 存储作品到works表;存储作品和多个成员关系
     /// </summary>
-    /// <param name="title">作品名称</param>
-    /// <param name="content">作品描述</param>
-    /// <param name="workPicName">作品图片</param>
-    void submitWork(string title, string content, string workPicName)
+    /// <param name="typeId">类型在type表中的id</param>
+    /// <param name="title">作品标题</param>
+    /// <param name="time">作品完成时间</param>
+    /// <param name="introduction">作品简介</param>
+    /// <param name="workPicName">作品图片文件名（不含路径）</param>
+    /// <param name="link">作品链接</param>
+    void submitWork(int typeId,string title,string time, string introduction, string workPicName,string link)
     {
         using (var db = new ITStudioEntities())
         {
             var work = new works(); // 要添加的作品
-            work.typeId = Convert.ToInt32(ddlType.SelectedValue);
+            work.typeId = typeId;
             work.picture = workPicName;
             work.title = title;
-            work.introduction = content;
-            work.time = txtTime.Text;
-            work.link = txtLink.Text;
+            work.introduction = introduction;
+            work.time = time;
+            work.link = link;
             db.works.Add(work);
             db.SaveChanges();
             int workId = work.id;

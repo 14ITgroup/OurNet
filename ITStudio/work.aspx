@@ -49,7 +49,7 @@
                                 </a>
                                 <a href=""><p><%#Eval("title")%></p></a>
                                 <p><%#Eval("time")%></p>
-                                <p><a href="<%#Eval("link")%>"><%#Eval("link")%></a></p>
+                                <p><a href="<%#Eval("link")%>" target="_blank"><%#Eval("link")%></a></p>
                                 <div>
                                     <img src='<%#"upload/workPicture/"+Eval("picture")%>' alt="作品大图展示">
                                     <a href="#" class="X"></a>
@@ -225,6 +225,5 @@
             });
         });
 
-</script>
-</asp:Content>
+</script></asp:Content>
 

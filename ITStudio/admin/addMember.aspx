@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/BackStage.master" AutoEventWireup="true" CodeFile="addMember.aspx.cs" Inherits="admin_Default" %>
+﻿<%@ Page Title="添加人员" Language="C#" MasterPageFile="~/admin/BackStage.master" AutoEventWireup="true" CodeFile="addMember.aspx.cs" Inherits="admin_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
     <style type="text/css">
