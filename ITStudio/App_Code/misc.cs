@@ -93,3 +93,24 @@ public static class RandomStatic
         return r.Next(minValue, maxValue + 1);
     }
 }
+
+public class ITStudioHelper
+{
+    /// <summary>
+    /// 给不为空的，没有协议名的string URL头部添加http://。
+    /// </summary>
+    /// <param name="raw"></param>
+    /// <returns></returns>
+    public static string addProtocol(string raw)
+    {
+        if (raw != null && raw != ""
+            && !raw.StartsWith("http://", true, null)
+            && !raw.StartsWith("https://", true, null)
+            && !raw.StartsWith("ftp://", true, null))
+        {
+            raw = "http://" + raw;
+        }
+
+        return raw;
+    }
+}

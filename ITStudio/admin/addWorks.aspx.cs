@@ -59,14 +59,8 @@ public partial class admin_addWorks : System.Web.UI.Page
         }
 
         int typeId = Convert.ToInt32(ddlType.SelectedValue);
-        string link = txtLink.Text.Trim();
-        if (link != null && link != "" 
-            && !link.StartsWith("http://",true,null) 
-            && !link.StartsWith("https://",true,null)
-            && !link.StartsWith("ftp://", true, null))
-        {
-            link = "http://" + link;
-        }
+        string link = ITStudioHelper.addProtocol(txtLink.Text.Trim());
+        
 
         submitWork(typeId,title,time,introduction,workPicName,link); // 添加作品
         for (int i = 0; i < ChklstAuthors.Items.Count; i++) // 遍历CheckBoxList

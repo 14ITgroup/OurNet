@@ -128,7 +128,7 @@ public partial class admin_editWorks : System.Web.UI.Page
             work.title = title;
             work.introduction = content;
             work.time = txtTime.Text;
-            work.link = txtLink.Text;
+            work.link = ITStudioHelper.addProtocol(txtLink.Text);
             //修改workmap表
             for (int i = 0; i < ChklstAuthors.Items.Count; i++) // 遍历CheckBoxList
             {
