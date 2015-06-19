@@ -5,7 +5,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-      <h2>文章列表</h2>
+    <hgroup class="title">
+        <h1><%: Title %></h1>
+    </hgroup>
+      <h2>作品列表</h2>
     <p>
         当前共有
         <asp:Literal ID="LtlArticlesCount" runat="server"></asp:Literal>

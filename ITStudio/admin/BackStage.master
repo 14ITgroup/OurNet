@@ -7,7 +7,8 @@
     <meta charset="utf-8" />
     <title><%: Page.Title %>_爱特工作室</title>
     <link href="Content/Site.css" rel="stylesheet" />
-    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../favicon.ico" type="image/x-icon" rel="icon"/>
+    <link href="../favicon.ico" type="image/x-icon" rel="shortcut icon"/>
     <asp:PlaceHolder ID="PlaceHolder1" runat="server">
         <script src="<%: ResolveUrl("~/admin/Scripts/modernizr-2.6.2.js") %>"></script>
     </asp:PlaceHolder>
@@ -22,22 +23,22 @@
             <div class="content-wrapper">
                 <div class="float-left">
                     <p class="site-title">
-                        <a id="A1" runat="server" href="~/">
+                        <a id="A1" runat="server" href="../index.aspx">
                             <img src="/Images/logo.png" height="50" width="50" /></a>
                     </p>
                 </div>
                 <div class="float-right">
                     <nav>
                         <ul id="menu">
-                            <li><a href="index.aspx">后台管理首页</a></li>
+                            <li><a href="index.aspx">后台首页</a></li>
                             <li><a href="myNotice.aspx">管理公告</a></li>
                             <li><a href="addNotice.aspx">添加公告</a></li>
                             <li><a href="myWorks.aspx">管理作品</a></li>
                             <li><a href="addWorks.aspx">添加作品</a></li>
-                            <li><a href="allMembers.aspx">管理人员</a></li>
+                            <li><a href="allMembers.aspx">管理成员</a></li>
                             <li><a href="addMember.aspx">添加人员</a></li>
-                            <li><a href="Admins.aspx">帐号管理</a></li>
-                           
+                            <li><a href="Applications.aspx">管理申请</a></li>
+                            <li><a href="Admins.aspx">管理帐号</a></li>
                         </ul>
                     </nav>
                 </div>

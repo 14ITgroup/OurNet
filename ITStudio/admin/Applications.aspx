@@ -1,11 +1,14 @@
 ﻿<%@ Page Title="管理申请" Language="C#" MasterPageFile="~/admin/BackStage.master" AutoEventWireup="true" CodeFile="Applications.aspx.cs" Inherits="Applications" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="Server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
-             <h2>申请列表</h2>
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="Server">
+    <hgroup class="title">
+        <h1><%: Title %></h1>
+    </hgroup>
+    <h2>申请列表</h2>
     <p>
         当前共有
         <asp:Literal ID="LtlApplicationsCount" runat="server"></asp:Literal>
@@ -71,9 +74,9 @@
     <asp:Button ID="BtnNextPage" runat="server" OnClick="BtnNextPage_Click" Text="后一页" />
     <asp:Button ID="BtnHomePage" runat="server" OnClick="BtnHomePage_Click" Text="首页" />
     <asp:Button ID="BtnTrailerPage" runat="server" OnClick="BtnTrailerPage_Click" Text="尾页" />
-    <asp:TextBox ID="TxtPageNum" runat="server" Height="22px" style="font-size: large" Width="37px">1</asp:TextBox>
+    <asp:TextBox ID="TxtPageNum" runat="server" Height="22px" Style="font-size: large" Width="37px">1</asp:TextBox>
     <asp:Button ID="BtnJumpPage" runat="server" OnClick="BtnJumpPage_Click" Text="跳页" />
-    <asp:DropDownList ID="DdlSelect" runat="server" Height="36px"  Width="99px" CssClass="site-title" Font-Size="Large">
+    <asp:DropDownList ID="DdlSelect" runat="server" Height="36px" Width="99px" CssClass="site-title" Font-Size="Large">
         <asp:ListItem Value="1">美术设计</asp:ListItem>
         <asp:ListItem Value="2">程序开发</asp:ListItem>
         <asp:ListItem Value="3">系统维护</asp:ListItem>

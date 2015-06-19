@@ -58,9 +58,9 @@
                 <asp:Image ID="ImgCategories" runat="server" CssClass="pictureLeft" ImageUrl="Images/applications.png" />
             </asp:HyperLink>
         </abbr>
-        <abbr title="管理员管理">
-            <asp:HyperLink ID="HlkAdmins" runat="server" NavigateUrl="~/admin/Admins.aspx">
-                <asp:Image ID="ImgAdmins" runat="server" CssClass="pictureRight" ImageUrl="~/admin/images/admins.png" />
+        <abbr title="成员管理">
+            <asp:HyperLink ID="HlkAdmins" runat="server" NavigateUrl="allMembers.aspx">
+                <asp:Image ID="ImgAdmins" runat="server" CssClass="pictureRight" ImageUrl="Images/members.png" />
             </asp:HyperLink>
         </abbr>
     </p>
