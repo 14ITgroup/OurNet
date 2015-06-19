@@ -38,7 +38,7 @@
                     <%#Eval("time")%>
                 </td>
                 <td>
-                    <%#Eval("link")%>
+                    <a href='<%#Eval("link")%>' target="_blank"><%#Eval("link")%></a>
                 </td>
                 <td>
                     <asp:HyperLink ID="HlkEdit" runat="server" NavigateUrl='<%#"editWorks.aspx?id="+Eval("id")%>' Text="修改">修改</asp:HyperLink>
