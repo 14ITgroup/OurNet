@@ -44,15 +44,15 @@
                     <asp:Repeater ID="rptWorks" runat="server">
                         <ItemTemplate>
                             <li>
-                                <a href="#">
+                                <a>
                                     <img src='<%#"upload/workPicture/"+Eval("picture")%>' height="200px" width="330px" />
                                 </a>
-                                <a href=""><p><%#Eval("title")%></p></a>
+                                <a><p><%#Eval("title")%></p></a>
                                 <p><%#Eval("time")%></p>
                                 <p><a href="<%#Eval("link")%>" target="_blank"><%#Eval("link")%></a></p>
                                 <div>
                                     <img src='<%#"upload/workPicture/"+Eval("picture")%>' alt="作品大图展示">
-                                    <a href="#" class="X"></a>
+                                    <a class="X"></a>
                                     <p><%#Eval("introduction")%></p>
                                 </div>
                             </li>
@@ -161,19 +161,6 @@
 
 
     <script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
-
-    <%--<script type="text/javascript">
-        $(document).ready(function () {
-            $(".display_works>li>a").click(function () {
-                $(".hide").show();
-                $(".index-menu").hide();
-            });
-            $(".hide .X").click(function () {
-                $(".hide").hide();
-            });
-        });
-
-    </script>--%>
     <script type="text/javascript">
         $(document).ready(function () {
             var winWidth = 0;
@@ -181,8 +168,7 @@
                 // 获取窗口宽度
                 if (window.innerWidth)
                     winWidth = window.innerWidth;
-                else if ((document.body) && (document.body.
-                    clientWidth))
+                else if ((document.body) && (document.body.clientWidth))
                     winWidth = document.body.clientWidth;
                 //通过深入Document内部对body进行检测，获取窗口大小
                 if (document.documentElement && document.documentElement.clientWidth) {
@@ -200,7 +186,6 @@
                 });
                 $(document).on('click', '.X', function (event) {
                     $(".index-menu").fadeIn();
-                    console.log(this)
                     $(this).parent().removeClass('show-presention').fadeOut();
                 });
             };//if end

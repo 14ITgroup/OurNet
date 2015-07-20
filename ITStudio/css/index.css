@@ -149,7 +149,7 @@ a:hover{
 	vertical-align:middle;
 }
 .flickerplate ul.flicks>li .flick-inner .flick-content {
-	max-width:78.75em;
+	max-width: 52%;
 	margin-left:auto;
 	margin-right:auto;
 }
@@ -607,13 +607,13 @@ font-size:1.667em;
 .form p{
 	font: 14px "Microsoft YaHei",sans-serif;
 	color: #434040;
-	margin-bottom: 40px;
+	margin-bottom: 26px;
+	height: 30px;
 }
-.form p:last-child{
-	margin-top: 26px;
+.form p:nth-child(2) select{
+	margin-left: 29px;
 }
 .form input{
-	/*margin-left: 30px;*/
 	float: right;
 	width: 354px;
 	height: 30px;
@@ -639,7 +639,7 @@ font-size:1.667em;
 	outline: none;
 }
 .form select{
-	width: 175px;
+	width: 100px;
 	height: 30px;
 	margin-left: 5px;
 	border-radius: 3px;
@@ -684,7 +684,7 @@ font-size:1.667em;
 .all .index_works a{	
 	padding: 0 40px;	
 	float: left;
-	font: 16px/50px '微软雅黑' san-serif;
+	font: 16px/50px '微软雅黑',sans-serif;
 }
 .index_works a:hover{
 	color: black;
@@ -695,8 +695,14 @@ font-size:1.667em;
 	float: left;
 	width: 80%;
 }
+.main .display_works li:nth-child(3n+4){
+	clear: both;
+}
+.main .display_works li a{
+	cursor: pointer;
+}
 .main .display_works>li p{
-	font:16px/24px '微软雅黑' san-serif;
+	font:16px/24px '微软雅黑',sans-serif;
 	text-align: center;
 }
 .main .display_works>li>a>p:hover{
@@ -706,9 +712,6 @@ font-size:1.667em;
 	float: left;
 	width: 30%;
 	margin: 30px 20px 0 0;
-}
-    .display_works li:nth-child(4) {
-    clear: both;  
 }
 .display_works>li>a>img{
 	display: block;
@@ -838,7 +841,7 @@ font-size:1.667em;
 .main>div+h1{
 	float: left;
 	margin: 10px 0 10px 30px;
-	font: 30px/36px '微软雅黑' san-serif ;
+	font: 30px/36px '微软雅黑',sans-serif ;
 	font-weight: bold;
 }
 .main>ul+h5{
@@ -860,7 +863,7 @@ font-size:1.667em;
 .main>div+p{
 	float: left;
 	margin: 10px 0 10px 30px;
-	font: 30px/36px '微软雅黑' san-serif ;
+	font: 30px/36px '微软雅黑',sans-serif ;
 	font-weight: bold;
 }
 .main>ul>h3>a:hover{
@@ -956,7 +959,7 @@ font-size:1.667em;
 
 .line ul li a{
 	display: block;
-	width: 144px;
+	width: 143px;
 	height: 143px;
 	border-radius: 50%;
 	background: #40C381;
@@ -1017,9 +1020,6 @@ font-size:1.667em;
 	.flickerplate ul.flicks>li .flick-title img{
 		width: 695px;
 		height: 350px;
-	}
-	.flickerplate ul.flicks>li .flick-inner div.flick-content{
-		max-width: 59.75em;
 	}
 	.banner-container+a{
 		margin-top: 1%;
