@@ -21,7 +21,7 @@ public partial class ITStudio_index : System.Web.UI.Page
                 ap.name = takeMaxChar(HttpUtility.HtmlEncode(TxtName.Text.Trim()));
                 ap.major = takeMaxChar(HttpUtility.HtmlEncode(TxtMajor.Text.Trim()));
                 ap.time = DateTime.Now;
-                ap.gender = false; //####ToDo：增加性别选择
+                ap.gender = Convert.ToBoolean(DdlGender.SelectedValue);
                 ap.tel = takeMaxChar(HttpUtility.HtmlEncode(TxtTel.Text.Trim())); //####ToDo:验证格式
                 ap.job = takeMaxChar(HttpUtility.HtmlEncode(DdlJob.SelectedItem.Text));
                 ap.introduction = HttpUtility.HtmlEncode(TxtIntroduction.Value.Trim());

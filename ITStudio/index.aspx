@@ -169,10 +169,10 @@
             <p>姓名<span>*</span><asp:TextBox runat="server" ID="TxtName"></asp:TextBox></p>
             <p>
                 性别<span>*</span>
-                <select name="" id="">
-                    <option value="">男</option>
-                    <option value="">女</option>
-                </select>
+                <asp:DropDownList ID="DdlGender" runat="server">
+                    <asp:ListItem Text="男" Value="True"></asp:ListItem>
+                    <asp:ListItem Text="女" Value="False"></asp:ListItem>
+                </asp:DropDownList>
             </p>
             <p>院系(专业)<span>*</span><asp:TextBox runat="server" ID="TxtMajor"></asp:TextBox></p>
             <p>电话<span>*</span><asp:TextBox runat="server" ID="TxtTel"></asp:TextBox></p>
