@@ -743,6 +743,9 @@ a:hover {
 .main .display_works li a {
     cursor: pointer;
 }
+.main .display_works li>a+a p{
+    margin-top: 15px;
+}
 .main .display_works>li p {
     font: 16px/24px '微软雅黑', sans-serif;
     text-align: center;
