@@ -1405,6 +1405,13 @@ a:hover {
     .main_mobile .display_works>li>p {
         float: left;
     }
+    .main_mobile .display_works>li>a+a,
+    .main_mobile .display_works>li>p+p{
+        display: block;
+        width: 50%;
+        height: 66px;
+        overflow: hidden;
+    }
     .main_mobile .display_works>li p {
         font: 30px/50px '微软雅黑' san-serif;
         margin: 5px 0 0 0;
