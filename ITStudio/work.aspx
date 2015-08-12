@@ -45,7 +45,7 @@
                         <ItemTemplate>
                             <li>
                                 <a>
-                                    <img src='<%#"upload/workPicture/"+Eval("picture")%>' height="200px" width="330px" />
+                                    <img src='<%#"upload/workPicture/"+Eval("picture")%>' height="200px" width="330px" title="点击查看大图"/>
                                 </a>
                                 <a><p><%#Eval("title")%></p></a>
                                 <p><%#Eval("time")%></p>

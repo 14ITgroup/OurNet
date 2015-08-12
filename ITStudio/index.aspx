@@ -48,7 +48,7 @@
     </div>
 
     <a href="#" class="scroll-top">
-        <img src="images/top_02.png" alt="arrow-to-top" width="45" height="115" />
+        <img src="images/top_02.png" alt="arrow-to-top" width="45" height="115" title="回到顶部"/>
     </a>
     <a href="#" name="intro-team"></a>
     <div class="index-des" id="index-des">
@@ -60,7 +60,7 @@
                 爱特工作室是在中国海洋大学信息科学与工程学院院领导主持下成立于2002年的、是以计算机技术人才培养，网站开发为特色的技术性团体。自成立以来，爱特以发现人才，培养人才，输送人才为最终目的，经过几年的发展，现在已成为海大最强的技术团队。
             </p>
             <p>
-                从最初的只有三台小型服务器一个技术人员，发展到现在拥有几十台机器设备，以及包括美术设计，程序开发，系统维护三大方向的数十名技术人才。先进的团队文化和良好的技术氛围使得爱特脱颖而出，现已成为海大网络技术的中坚力量。
+                从最初的只有三台小型服务器一个技术人员，发展到现在拥有几十台机器设备，以及包括前端设计，程序开发，系统维护三大方向的数十名技术人才。先进的团队文化和良好的技术氛围使得爱特脱颖而出，现已成为海大网络技术的中坚力量。
             </p>
             <h2>作品展示</h2>
             <ul>
@@ -121,8 +121,13 @@
             <div>
                 <img src="images/ps.png" alt="picture" style="margin: 40px 0" />
                 <div class="apart-art">
-                    <img src="images/art-design_15.png" alt="美术设计" />
-                    <p>爱特工作室是在中国海洋大学信息科学与工程学院院领导主持下成立于2002年的、是以计算机技术人才培养，网站开发为特色的技术性团体。</p>
+                    <img src="images/art-design_15.png" alt="前端设计" />
+                    <p>
+                        在爱特，如果没有这群人，一切的一切都黯然无光。
+						无论多么绚丽的视觉效果，都是由他们天马行空的创作产生。
+						无论多么精致的图标按钮，都是由他们对每一个像素的精准把握而呈现出来。
+						当然也不能忘了我们最终看到的网页，每一个标记都是他们深思熟虑的结晶。
+                    </p>
                 </div>
                 <div style="clear: both"></div>
             </div>
@@ -132,7 +137,10 @@
                 <div class="apart-pro">
                     <img src="images/pro-design_19.png" alt="程序开发" />
                     <p>
-                        我们在做一件足以使我们每个人自豪的事情，我们试图用我们的智慧、思考、热情和双手改变一切，这就是我们----爱特工作室，一群年轻的人把自己的诚挚表达出来的地方。
+                        在爱特，如果没有这群人，一切的一切都只是空壳。
+						他们是互联网的基础，他们做的工作我们也许永远都想不到。
+						他们有一句名言是"Coding the World"。
+						今天，他们把这句话变成了真的，这个信息时代就是他们最棒的作品。                   
                     </p>
                 </div>
                 <img src="images/vs.png" alt="picture" width="371" height="261" style="margin: 40px 0" />
@@ -145,7 +153,10 @@
                 <div class="apart-sys">
                     <img src="images/fix-pro_23.png" alt="系统维护">
                     <p>
-                        我们有优秀的团队，我们和谐的生活在一起，像家人一样互相关心，还能尽情地探讨问题，做自己喜欢做的事情。
+                        他们是爱特的有一个亮点，如果没有这群人，我们的工作将没有保障。
+						他们用锐利的眼光洞悉着互联网技术的发展与动态。
+						他们用高超的电脑技术，在做着“黑客”一般的工作。
+						他们用辛苦的劳动证明了我对学院乃至学校的热诚服务。
                     </p>
                 </div>
                 <div style="clear: both"></div>
@@ -155,7 +166,8 @@
     <a href="#" name="join-us"></a>
     <div class="enroll-container" id="enroll-container">
         <div class="enroll">
-            <asp:LinkButton runat="server" ID="app" OnClick="Application1" OnClientClick="return Verification();">我要报名! </asp:LinkButton></div>
+            <asp:LinkButton runat="server" ID="app" OnClick="Application1" OnClientClick="return Verification();">我要报名! </asp:LinkButton>
+        </div>
         <div class="picture">
             <iframe width="407" height="335" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://j.map.baidu.com/xWZx4"></iframe>
             <p>
@@ -179,7 +191,7 @@
             <p>
                 方向选择<span>*</span>
                 <asp:DropDownList runat="server" ID="DdlJob">
-                    <asp:ListItem Value="1" Text="美术设计" />
+                    <asp:ListItem Value="1" Text="前端设计" />
                     <asp:ListItem Value="2" Text="程序开发" />
                     <asp:ListItem Value="3" Text="系统维护" />
                 </asp:DropDownList>
