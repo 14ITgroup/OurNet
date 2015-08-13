@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>404</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="js/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+	<div class="countainer">
+        <ul class="index-menu">
+        <a href="index.html"><img src="images/it-ico.png" alt="IT-Logo"></a>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="index.html#intro-team">简介</a></li>
+        <li><a href="work.html">作品</a></li>
+        <li><a href="personal_display.html">团队</a></li>
+        <li><a href="#">留言板</a></li>
+        <a href="index.html#join-us" class="nav-join">Join us now</a>
+        <div style="clear: both"></div>
+    </ul>
+
+        <!-- 电脑端界面 -->
+		<div class="main">
+            <div class="fofpic">
+                <p class="fof">4</p>
+			    <img src="./images/404gif.gif" alt="gif">
+                <p class="fof">4</p>
+                <p class="fof2">Ooops！你好像走错地方了，<br>赶快回家吧，不然你就真的走不出去了</p>
+                <div class="fof_button"><a href="">回到首页</a></div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+
+        <!-- 移动端界面 -->
+        <div class="main-mobile-person">
+            
+        </div>
+    <div class="footer-bg">
+        <div class="footer-container">
+            <img src="images/bottom-img_03.png" alt="Copyrights@2015 爱特工作室 All rights reserved.">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(".work-pres-personal>a img+img").css('display', 'none');
+    $(".work-pres-personal>a").mouseover(function(event) {
+        $(this).children('img+img').css('display', 'block');
+        $(this).children('img:first-child').css('display', 'none');
+    });
+    $(".work-pres-personal>a").mouseout(function(event) {
+        $(this).children('img:first-child').css('display', 'block');
+        $(this).children('img+img').css('display', 'none');
+    });
+</script>
+</body>
+</html>

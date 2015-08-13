@@ -1500,3 +1500,31 @@ a:hover {
         background: url(../images/page_arrow_r_hover.png);
     }
 }
+
+/*404界面*/
+.fof{
+    color:#40c381;
+    font-size: 250px;
+    font-weight: bolder;
+    float:left;
+}
+.fofpic img{
+    float:left;
+}
+.fofpic{
+    width: 750px;
+    margin:0 auto;
+    margin-top: 100px;
+}
+.fof2{
+    font:16px/30px '微软雅黑' sans-serif;
+    float: left;
+}
+.fof_button{
+    background: url(../images/bottom.png);
+}
+.fof_button a:hover{
+    background: url(../images/bottom_press.png);
+}
+
+
