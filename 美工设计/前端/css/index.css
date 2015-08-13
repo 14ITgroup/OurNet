@@ -1090,6 +1090,9 @@ a:hover {
     .main>div>ul {
         margin: 71px 11em 0 0;
     }
+    .main-404{
+        padding-top: 80px;
+    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -1502,17 +1505,23 @@ a:hover {
 }
 
 /*404界面*/
+.main-404{
+    height: 530px;
+    /*padding-top: 0px;*/
+}
 .fof{
     color:#40c381;
     font-size: 250px;
     font-weight: bolder;
     float:left;
+    position: relative;
 }
 .fofpic img{
     float:left;
+    margin: 0 -54px 0 -76px;
 }
 .fofpic{
-    width: 750px;
+    width: 680px;
     margin:0 auto;
     margin-top: 100px;
 }
@@ -1521,10 +1530,18 @@ a:hover {
     float: left;
 }
 .fof_button{
-    background: url(../images/bottom.png);
+    float: left;
+    font-weight: bold;
+    display: block;
+    width: 247px;
+    height: 68px;
+    font: 28px/62px 'Microsoft YaHei', sans-serif;
+    color: white;
+    background: url(../images/bottom.png) no-repeat;
+    margin-left: 97px;
+    text-align: center;
 }
-.fof_button a:hover{
+.fof_button:hover{
+    color: white;
     background: url(../images/bottom_press.png);
 }
-
-
