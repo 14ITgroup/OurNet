@@ -480,12 +480,12 @@ a:hover {
 }
 .index-des-contain li a {
     display: block;
-    width: 118px;
-    height: 118px;
     -webkit-transition: all 0.18s ease-in;
     -o-transition: all 0.18s ease-in;
     -moz-transition: all 0.18s ease-in;
     transition: all 0.18s ease-in;
+    width: 118px;
+    height: 118px;
 }
 .index-des-contain ul li:first-child a {
     background: url(../images/circle1.png);
@@ -824,18 +824,17 @@ a:hover {
     -moz-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     -o-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
-.main .display_works li>a img {
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-.main .display_works li>a img:hover {
-    -webkit-transform: scale(1.05);
+.main .display_works li:hover .works_dis{
+     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     -o-transform: scale(1.05);
     transform: scale(1.05);
 }
-
+.main .display_works li>a img {
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;    
+}
 
 /*work hover*/
 
@@ -1089,9 +1088,6 @@ a:hover {
     }
     .main>div>ul {
         margin: 71px 11em 0 0;
-    }
-    .main-404{
-        padding-top: 80px;
     }
 }
 
@@ -1545,3 +1541,4 @@ a:hover {
     color: white;
     background: url(../images/bottom_press.png);
 }
+
