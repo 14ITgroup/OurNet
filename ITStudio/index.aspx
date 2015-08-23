@@ -143,13 +143,13 @@
 						今天，他们把这句话变成了真的，这个信息时代就是他们最棒的作品。                   
                     </p>
                 </div>
-                <img src="images/vs.png" alt="picture" width="371" height="261" style="margin: 40px 0" />
+                <img src="images/vs.png" alt="picture" style="margin: 40px 0" />
                 <div style="clear: both"></div>
             </div>
         </li>
         <li>
             <div>
-                <img src="images/维护-.png" alt="picture" width="371" height="261" style="margin: 40px 0" />
+                <img src="images/维护-.png" alt="picture"  style="margin: 40px 0" />
                 <div class="apart-sys">
                     <img src="images/fix-pro_23.png" alt="系统维护">
                     <p>
