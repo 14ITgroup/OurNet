@@ -24,7 +24,7 @@
                 <div class="float-left">
                     <p class="site-title">
                         <a id="A1" runat="server" href="../index.aspx">
-                            <img src="/Images/logo.png" height="50" width="50" /></a>
+                            <img src="../Images/logo.png" height="50" width="50" /></a>
                     </p>
                 </div>
                 <div class="float-right">

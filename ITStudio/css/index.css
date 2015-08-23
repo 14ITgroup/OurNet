@@ -1090,6 +1090,9 @@ a:hover {
     .main>div>ul {
         margin: 71px 11em 0 0;
     }
+    .main-404{
+        padding-top: 80px;
+    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -1499,4 +1502,46 @@ a:hover {
     .main_mobile .pages ul li a div:hover {
         background: url(../images/page_arrow_r_hover.png);
     }
+}
+
+/*404界面*/
+.main-404{
+    height: 530px;
+    /*padding-top: 0px;*/
+}
+.fof{
+    color:#40c381;
+    font-size: 250px;
+    font-weight: bolder;
+    float:left;
+    position: relative;
+}
+.fofpic img{
+    float:left;
+    margin: 0 -54px 0 -76px;
+}
+.fofpic{
+    width: 680px;
+    margin:0 auto;
+    margin-top: 100px;
+}
+.fof2{
+    font:16px/30px '微软雅黑' sans-serif;
+    float: left;
+}
+.fof_button{
+    float: left;
+    font-weight: bold;
+    display: block;
+    width: 247px;
+    height: 68px;
+    font: 28px/62px 'Microsoft YaHei', sans-serif;
+    color: white;
+    background: url(../images/bottom.png) no-repeat;
+    margin-left: 97px;
+    text-align: center;
+}
+.fof_button:hover{
+    color: white;
+    background: url(../images/bottom_press.png);
 }

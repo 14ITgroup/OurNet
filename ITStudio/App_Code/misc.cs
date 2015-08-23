@@ -17,6 +17,10 @@ public class Filter
     /// <returns></returns>
     public static bool IsNumeric(string testedStr)
     {
+        if (testedStr == null)
+        {
+            return false;
+        }
         int strLength = testedStr.Length;
         for (int index = 0; index < strLength; index++)
         {
