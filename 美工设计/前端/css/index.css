@@ -711,8 +711,9 @@ a:hover {
 /*work*/
 
 .all .index_works {
-    margin: 116px 16% 0 13%;
-    width: 80%;
+    margin: 0 auto;
+    margin-top: 116px;
+    width: 42%;
 }
 .index_works li {
     display: block;
@@ -952,7 +953,7 @@ a:hover {
     height: 50%;
     margin: 0 auto;
 }
-.main>div>ul {
+.main>div>ul.work-pres-personal {
     margin: 71px 5em 0 0;
     float: left;
 }
