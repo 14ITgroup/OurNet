@@ -15,21 +15,8 @@ public partial class _Default : System.Web.UI.Page
         int typeId = getWorkTypeId();
         worksBind(currentPage, pageSize, typeId);
         pageNumsBind();
+        pageNumsBindMobile();
 
-        using (var db = new ITStudioEntities())
-        {
-            var dataSource = from u in db.works
-                             select new
-                             {
-                                 u.time,
-                                 u.id,
-                                 u.title,
-                                 u.introduction,
-                                 u.picture,
-                             };
-            RptWorkOnMobile.DataSource = dataSource.ToList();
-            RptWorkOnMobile.DataBind();
-        }
     }
 
     
@@ -63,6 +50,8 @@ public partial class _Default : System.Web.UI.Page
             //}
             rptWorks.DataSource = dataSource.ToList();
             rptWorks.DataBind();
+            RptWorkOnMobile.DataSource = dataSource.ToList();
+            RptWorkOnMobile.DataBind();
         }
     }
 
@@ -121,6 +110,63 @@ public partial class _Default : System.Web.UI.Page
             LiDots2.Visible = true;
         }
     }
+
+    void pageNumsBindMobile() 
+    {
+        List<string> pages = new List<string>();
+        int offset = 2; //从当前页码向前后各扩展页数
+        int pageCount = getPageCount(pageSize, getWorkTypeId());
+        int currentPage = getPageNum();
+        for (int index = -offset; index <= offset; index++) //最多从 current - offset 开始，current + Offset 结束
+        {
+            if ((1 < currentPage + index) && (currentPage + index) < pageCount) //不包含首页和尾页
+            {
+                pages.Add((currentPage + index).ToString());
+            }
+        }
+        RptPageNums1.DataSource = pages;
+        RptPageNums1.DataBind();
+
+
+        int workTypeId = getWorkTypeId();
+        //最后一页
+        if (pageCount > 1)
+        {
+            HlLastPage1.NavigateUrl = "work.aspx?page=" + pageCount.ToString() + "&type=" + workTypeId.ToString();
+            HlLastPage1.Text = pageCount.ToString();
+        }
+        else
+        {
+            LiLastPage1.Visible = false; //如果只有1页，尾页不显示（去重）
+        }
+
+        //前一页
+        string previousPage = "1";
+        if (currentPage > 1)
+        {
+            previousPage = (currentPage - 1).ToString();
+        }
+        HlPreviousPage1.NavigateUrl = "work.aspx?page=" + previousPage + "&type=" + workTypeId.ToString();
+
+        //后一页
+        string nextPage = pageCount.ToString();
+        if (currentPage < pageCount)
+        {
+            nextPage = (currentPage + 1).ToString();
+        }
+        HlNextPage1.NavigateUrl = "work.aspx?page=" + nextPage + "&type=" + workTypeId.ToString();
+
+        //前后省略号的显示
+        if (currentPage - offset > 2)
+        {
+            LiDots21.Visible = true;
+        }
+        if (currentPage + offset < pageCount - 1)
+        {
+            LiDots22.Visible = true;
+        }
+    }
+
     //protected void rptWorks_ItemCommand(object source, RepeaterCommandEventArgs e)
     //{
     //    if(e.CommandName=="imgWork")

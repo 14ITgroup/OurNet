@@ -45,9 +45,11 @@
                         <ItemTemplate>
                             <li>
                                 <a>
-                                    <img src='<%#"upload/workPicture/"+Eval("picture")%>' height="200px" width="330px" title="点击查看大图"/>
+                                    <img src='<%#"upload/workPicture/"+Eval("picture")%>' height="200px" width="330px" title="点击查看大图" />
                                 </a>
-                                <a><p><%#Eval("title")%></p></a>
+                                <a>
+                                    <p><%#Eval("title")%></p>
+                                </a>
                                 <p><%#Eval("time")%></p>
                                 <p><a href="<%#Eval("link")%>" target="_blank"><%#Eval("link")%></a></p>
                                 <div>
@@ -90,6 +92,9 @@
         </div>
     </div>
     <div class="clr"></div>
+
+
+
     <div class="main_mobile">
         <div class="all">
             <ul>
@@ -139,24 +144,29 @@
         <div class="clr"></div>
         <div class="pages">
             <ul>
-                <li><a href="">
-                    <div></div>
-                </a></li>
-                <li><a href="">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-                <li><a href="">4</a></li>
-                <li><a href="">5</a></li>
-                <li>...</li>
-                <li><a href="">25</a></li>
-                <li><a href="">
-                    <div></div>
-                </a></li>
+                <li>
+                    <asp:HyperLink ID="HlPreviousPage1" runat="server"><div></div></asp:HyperLink>
+                </li>
+                <li><a href="work.aspx?page=1&type=<%=Request.QueryString["type"] %>">1</a></li>
+                <li id="LiDots21" visible="false" runat="server">...</li>
+                <asp:Repeater ID="RptPageNums1" runat="server">
+                    <ItemTemplate>
+                        <li><a href="work.aspx?page=<%#(Container.DataItem as string).ToString() %>&type=<%=Request.QueryString["type"] %>">
+                            <%#(Container.DataItem as string).ToString() %>
+                        </a>
+                        </li>
+                    </ItemTemplate>
+                </asp:Repeater>
+                <li id="LiDots22" visible="false" runat="server">...</li>
+                <li id="LiLastPage1" runat="server">
+                    <asp:HyperLink ID="HlLastPage1" runat="server"></asp:HyperLink></li>
+                <li>
+                    <asp:HyperLink ID="HlNextPage1" runat="server"><div></div></asp:HyperLink>
+                </li>
             </ul>
         </div>
     </div>
     <div class="clr"></div>
-    </div>
 
 
 
@@ -210,5 +220,6 @@
             });
         });
 
-</script></asp:Content>
+    </script>
+</asp:Content>
 
