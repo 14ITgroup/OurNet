@@ -101,7 +101,7 @@ public partial class admin_Default : System.Web.UI.Page
     string uploadMemPho() //上传封面图片，返回文件名。
     {
         string picSaveName = null;
-        int maxFileSize = 1048576; // 限制为1MiB以下
+        int maxFileSize = 3145728; // 限制为3MiB以下
         if (fulPhoto.HasFile)
         {
             //取得文件MIME内容类型 
@@ -113,9 +113,9 @@ public partial class admin_Default : System.Web.UI.Page
                 return null;
             }
 
-            if (fulPhoto.FileContent.Length > maxFileSize) // 限制为1MiB以下
+            if (fulPhoto.FileContent.Length > maxFileSize) // 限制为3MiB以下
             {
-                lblUploadMessage.Text = "图片文件大小不可超过 1 MB";
+                lblUploadMessage.Text = "图片文件大小不可超过 3 MB";
                 lblUploadMessage.Visible = true;
                 return null;
             }
@@ -151,7 +151,7 @@ public partial class admin_Default : System.Web.UI.Page
     string uploadMemIco() //上传封面图片，返回文件名。
     {
         string picSaveName = null;
-        int maxFileSize = 1048576; // 限制为1MiB以下
+        int maxFileSize = 3145728; // 限制为3MiB以下
         if (fulIco.HasFile)
         {
             //取得文件MIME内容类型 
@@ -163,9 +163,9 @@ public partial class admin_Default : System.Web.UI.Page
                 return null;
             }
 
-            if (fulIco.FileContent.Length > maxFileSize) // 限制为1MiB以下
+            if (fulIco.FileContent.Length > maxFileSize) // 限制为3MiB以下
             {
-                lblUploadMessage2.Text = "图片文件大小不可超过 1 MB";
+                lblUploadMessage2.Text = "图片文件大小不可超过 3 MB";
                 lblUploadMessage2.Visible = true;
                 return null;
             }

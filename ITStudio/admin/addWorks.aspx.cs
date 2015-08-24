@@ -125,7 +125,7 @@ public partial class admin_addWorks : System.Web.UI.Page
     string uploadWorkPic() //上传封面图片，返回文件名。
     {
         string picSaveName = null;
-        int maxFileSize = 1048576; // 限制为1MiB以下
+        int maxFileSize = 3145728; // 限制为3MiB以下
         if (fulPicture.HasFile)
         {
             //取得文件MIME内容类型 
@@ -137,9 +137,9 @@ public partial class admin_addWorks : System.Web.UI.Page
                 return null;
             }
 
-            if (fulPicture.FileContent.Length > maxFileSize) // 限制为1MiB以下
+            if (fulPicture.FileContent.Length > maxFileSize) // 限制为3MiB以下
             {
-                lblUploadMessage.Text = "图片文件大小不可超过 1 MB";
+                lblUploadMessage.Text = "图片文件大小不可超过 3 MB";
                 lblUploadMessage.Visible = true;
                 return null;
             }
