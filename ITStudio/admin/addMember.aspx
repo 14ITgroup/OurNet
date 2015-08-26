@@ -29,7 +29,7 @@
         <br />
         &nbsp;<span class="auto-style1">部门：<asp:DropDownList ID="ddlDeparement" runat="server" style="font-size: x-large">
                 <asp:ListItem>程序开发</asp:ListItem>
-                <asp:ListItem>美术设计</asp:ListItem>
+                <asp:ListItem>前端设计</asp:ListItem>
                 <asp:ListItem>系统维护</asp:ListItem>
             </asp:DropDownList>
         
