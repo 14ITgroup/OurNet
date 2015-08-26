@@ -725,7 +725,8 @@ a:hover {
     margin: 12px 8px 0 0;
 }
 .all .index_works a {
-    padding: 0 40px;
+    padding: 0 20px;
+    margin: 0 20px;
     float: left;
     font: 16px/50px '微软雅黑', sans-serif;
 }
@@ -953,9 +954,12 @@ a:hover {
     height: 50%;
     margin: 0 auto;
 }
-.main>div>ul.work-pres-personal {
+.main>div>ul{
     margin: 71px 5em 0 0;
     float: left;
+}
+.main>div.all>ul.index_works{
+    float: none;
 }
 .main>div>ul:nth-child(3) {
     margin-right: 0;
@@ -1000,7 +1004,7 @@ a:hover {
 }
 .main>div+img {
     position: absolute;
-    top: 70px;
+    top: 83px;
     left: 5%;
 }
 .main>a+img {
@@ -1014,7 +1018,6 @@ a:hover {
     left: 81%;
     width: 90px;
     height: 45px;
-    background: url(../images/cao1.png);
 }
 .main .line {
     margin: 0 10%;
@@ -1059,7 +1062,6 @@ a:hover {
     left: 81%;
     width: 90px;
     height: 45px;
-    background: url(../images/cao2.png) no-repeat;
 }
 .main>p+img {
     position: absolute;
@@ -1089,6 +1091,11 @@ a:hover {
     }
     .main>div>ul {
         margin: 71px 11em 0 0;
+    }
+}
+@media screen and (max-width: 1600px){
+    .main .line>ul>li{
+        margin: 134px 0 -75px 6%;
     }
 }
 
