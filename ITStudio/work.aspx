@@ -33,11 +33,9 @@
                         <a href="work.aspx?type=3">
                             <img src="./images/Pic_design.png" height="25" width="25" alt="" />Pic Design</a>
                     </li>
-                    <li>
-                        <a href="work.aspx?type=4">
-                            <img src="./images/band_design.png" height="25" width="25" alt="" />Band Design</a>
-                    </li>
+                    <div class="clr"></div>
                 </ul>
+                <div class="clr"></div>
             </div>
             <div class="works">
                 <ul class="display_works">
