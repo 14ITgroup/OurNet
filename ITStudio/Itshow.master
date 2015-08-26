@@ -28,7 +28,7 @@
                 <li><a href="index.aspx">首页</a></li>
                 <li><a href="index.aspx#intro-team">简介</a></li>
                 <li><a href="work.aspx">作品</a></li>
-                <li><a href="person.aspx">团队</a></li>
+                <li><a href="person2013.aspx">团队</a></li>
                 <li><a onmouseover="this.innerText = '敬请期待';" onmouseout="this.innerText = '留言板';">留言板</a></li>
                 <a href="index.aspx#join-us" class="nav-join">Join us now</a>
                 <div style="clear: both"></div>
