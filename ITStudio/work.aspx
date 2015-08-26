@@ -67,11 +67,11 @@
                     <li>
                         <asp:HyperLink ID="HlPreviousPage" runat="server"><div></div></asp:HyperLink>
                     </li>
-                    <li><a href="work.aspx?page=1&type=<%=Request.QueryString["type"] %>">1</a></li>
+                    <li><a href="work.aspx?page=1&type=<%=getWorkTypeId() %>">1</a></li>
                     <li id="LiDots1" visible="false" runat="server">...</li>
                     <asp:Repeater ID="RptPageNums" runat="server">
                         <ItemTemplate>
-                            <li><a href="work.aspx?page=<%#(Container.DataItem as string).ToString() %>&type=<%=Request.QueryString["type"] %>">
+                            <li><a href="work.aspx?page=<%#(Container.DataItem as string).ToString() %>&type=<%=getWorkTypeId() %>">
                                 <%#(Container.DataItem as string).ToString() %>
                             </a>
                             </li>
@@ -145,7 +145,7 @@
                 <li>
                     <asp:HyperLink ID="HlPreviousPage1" runat="server"><div></div></asp:HyperLink>
                 </li>
-                <li><a href="work.aspx?page=1&type=<%=Request.QueryString["type"] %>">1</a></li>
+                <li><a href="work.aspx?page=1&type=<%=getWorkTypeId()%>">1</a></li>
                 <li id="LiDots21" visible="false" runat="server">...</li>
                 <asp:Repeater ID="RptPageNums1" runat="server">
                     <ItemTemplate>

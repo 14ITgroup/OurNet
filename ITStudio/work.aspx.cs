@@ -265,7 +265,7 @@ public partial class _Default : System.Web.UI.Page
     /// 从QueryString的 type中获取work的类型Id
     /// </summary>
     /// <returns>如果不合法或未指定，返回0（在linq查询中表示不限类型）</returns>
-    int getWorkTypeId()
+    public int getWorkTypeId()
     {
         int workType = 0; // 联系绑定函数，0表示不限类型
         string typeStr = Request.QueryString["type"];
