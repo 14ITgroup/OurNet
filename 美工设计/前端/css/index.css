@@ -888,7 +888,7 @@ a:hover {
 .main>img:first-child {
     margin: 0 auto;
     margin-top: 90px;
-    width: 37.6%;
+    width: 24.6%;
 }
 .main>img+div {
     margin: 10px 0 0 48%;
@@ -1126,6 +1126,9 @@ a:hover {
     }
     .main>ul+div {
         width: 84.8%;
+    }
+    .all .index_works{
+        width: 59%;
     }
 }
 
