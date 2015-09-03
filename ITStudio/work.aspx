@@ -149,7 +149,7 @@
                 <li id="LiDots21" visible="false" runat="server">...</li>
                 <asp:Repeater ID="RptPageNums1" runat="server">
                     <ItemTemplate>
-                        <li><a href="work.aspx?page=<%#(Container.DataItem as string).ToString() %>&type=<%=Request.QueryString["type"] %>">
+                        <li><a href="work.aspx?page=<%#(Container.DataItem as string).ToString() %>&type=<%=getWorkTypeId()%>">
                             <%#(Container.DataItem as string).ToString() %>
                         </a>
                         </li>
